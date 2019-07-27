@@ -21,13 +21,32 @@ $yb = $_GET['yb'];
 $aa = pow(($xb-$xa),2) + pow(($yb-$ya),2);
 $dist = sqrt($aa);
 
+
+
+
 function detect($unit){
-global $linhatrop2, $linhatrop, $p1nome, $p2nome, $p3nome, $p4nome, $p5nome, $p6nome, $p7nome, $p8nome, $p9nome, $p10nome, $p11nome, $p12nome, $p13nome, $p14nome, $p15nome, $p999nome, $t11nome, $t12nome, $t13nome, $t14nome, $t15nome, $t16nome, $t17nome, $t18nome, $t19nome, $t21nome, $t22nome, $t23nome, $t24nome, $t25nome, $t26nome, $t27nome, $t28nome, $t29nome;
+global $linhatrop2, $linhatrop, $p1nome, $p2nome, $p3nome, $p4nome, $p5nome, $p6nome, $p7nome, $p8nome, $p9nome, $p10nome, $p11nome, $p12nome, $p13nome, $p14nome, $p15nome, $p999nome;
 $povo = $linhatrop2->povo;
-$ptrop = "p".$povo."nome";
-$t = "t".$povo."".$unit."nome";
-echo $$t;
+$povok = 1;
+$unitk = 0;
+//Traz as variaveis para a funcao.
+while ($povok < 16) {
+If ($unitk < 10) {
+$ptrop = "p".$povok."nome";
+$t = "t".$povok."".$unit."nome";
+global $$t;
+$unitk = $unitk + 1;
+If ($unitk > 9) { $unitk = 1; }
 }
+$povok = $povok + 1;
+}
+//Da o echo.
+$ptrop2 = "p".$povo."nome";
+$t2 = "t".$povo."".$unit."nome";
+echo $$t2;
+}
+
+
 
 function getunit($num){
 global $login_usuario,$povo,$linhatropC;

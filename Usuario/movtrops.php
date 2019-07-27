@@ -93,11 +93,25 @@ $aa = pow(($x-$xa),2) + pow(($y-$ya),2);
 $dist = sqrt($aa);
 
 function detect($unit){
-global $linhatrop2, $linhatrop, $p1nome, $p2nome, $p3nome, $p4nome, $p5nome, $p6nome, $p7nome, $p8nome, $p9nome, $p10nome, $p11nome, $p12nome, $p13nome, $p14nome, $p15nome, $p999nome, $t11nome, $t12nome, $t13nome, $t14nome, $t15nome, $t16nome, $t17nome, $t18nome, $t19nome, $t21nome, $t22nome, $t23nome, $t24nome, $t25nome, $t26nome, $t27nome, $t28nome, $t29nome;
+global $linhatrop2, $linhatrop, $p1nome, $p2nome, $p3nome, $p4nome, $p5nome, $p6nome, $p7nome, $p8nome, $p9nome, $p10nome, $p11nome, $p12nome, $p13nome, $p14nome, $p15nome, $p999nome;
 $povo = $linhatrop2->povo;
-$ptrop = "p".$povo."nome";
-$t = "t".$povo."".$unit."nome";
-echo $$t;
+$povok = 1;
+$unitk = 0;
+//Traz as variaveis para a funcao.
+while ($povok < 16) {
+If ($unitk < 10) {
+$ptrop = "p".$povok."nome";
+$t = "t".$povok."".$unit."nome";
+global $$t;
+$unitk = $unitk + 1;
+If ($unitk > 9) { $unitk = 1; }
+}
+$povok = $povok + 1;
+}
+//Da o echo.
+$ptrop2 = "p".$povo."nome";
+$t2 = "t".$povo."".$unit."nome";
+echo $$t2;
 }
 
 function dist() {
@@ -111,8 +125,18 @@ $dist = sqrt($aa);
 }
 dist();
 
+
+
 function calctime($povo){
-global $dist, $t1, $t2, $t3, $t4, $t5, $t6, $t7, $t8, $t9, $t11v, $t12v, $t13v, $t14v, $t15v, $t16v, $t17v, $t18v, $t19v, $t21v, $t22v, $t23v, $t24v, $t25v, $t26v, $t27v, $t28v, $t29v;
+global $dist, $t1, $t2, $t3, $t4, $t5, $t6, $t7, $t8, $t9;
+//Traz as variaveis para a funcao.
+$unitk = 1;
+While ($unitk < 10) {
+$tropv = "t".$povo.$unitk."v";
+global $$tropv;
+$unitk = $unitk + 1;
+}
+
 If ($t1 >= 1) {$ta1 = "t".$povo."1v";} else { $ta1 = "lol";}
 If ($t2 >= 1) {$ta2 = "t".$povo."2v";} else { $ta2 = "lol";}
 If ($t3 >= 1) {$ta3 = "t".$povo."3v";} else { $ta3 = "lol";}

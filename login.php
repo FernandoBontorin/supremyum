@@ -1,7 +1,7 @@
 <?php
 include "Config/config_sistema.php";
 
-$consultal = mysql_query("select * from aldeias");
+$consultal = mysql_query("select * from dados_usuarios");
 $linhal = mysql_num_rows($consultal);
 ?>
 <html>
@@ -31,7 +31,7 @@ text-decoration: none;
 <td><input name="login" type="text" id="login" maxlength="200" /></td>
 <td><input name="senha" type="password" id="label" maxlength="15" /></td></tr></table>
 <br>
-<input type="submit" name="logar" value="Logar" id="logar" onclick="this.form.target='_parent';return true;"/>
+<input type="submit" name="logar" value="LOGIN" id="logar" onclick="this.form.target='_parent';return true;"/>
 <br>
 <a href="Senha/lembrar_senha.php" class="style3">Forgot pass?</a> <br></center>
 <div width="100%">

@@ -77,35 +77,35 @@ a:active {
 <td align="center">
 <b>Tropas</b>
 <hr>
-<a href="../manual/alemaes.php" target="iframemanu">Alemães</a>
+<a href="../manual/tropas.php?povo=1" target="iframemanu">Alemães</a>
 <hr>
-<a href="../manual/apaches.php" target="iframemanu">Apaches</a>
+<a href="../manual/tropas.php?povo=2" target="iframemanu">Apaches</a>
 <hr>
-<a href="../manual/astecas.php" target="iframemanu">Astecas</a>
+<a href="../manual/tropas.php?povo=3" target="iframemanu">Astecas</a>
 <hr>
-<a href="../manual/bizantinos.php" target="iframemanu">Bizantinos</a>
+<a href="../manual/tropas.php?povo=4" target="iframemanu">Bizantinos</a>
 <hr>
-<a href="../manual/britanicos.php" target="iframemanu">Britânicos</a>
+<a href="../manual/tropas.php?povo=5" target="iframemanu">Britânicos</a>
 <hr>
-<a href="../manual/cherokees.php" target="iframemanu">Cherokees</a>
+<a href="../manual/tropas.php?povo=6" target="iframemanu">Cherokees</a>
 <hr>
-<a href="../manual/espanhois.php" target="iframemanu">Espanhóis</a>
+<a href="../manual/tropas.php?povo=7" target="iframemanu">Espanhóis</a>
 <hr>
-<a href="../manual/franceses.php" target="iframemanu">Franceses</a>
+<a href="../manual/tropas.php?povo=8" target="iframemanu">Franceses</a>
 <hr>
-<a href="../manual/holandeses.php" target="iframemanu">Holandeses</a>
+<a href="../manual/tropas.php?povo=9" target="iframemanu">Holandeses</a>
 <hr>
-<a href="../manual/incas.php" target="iframemanu">Incas</a>
+<a href="../manual/tropas.php?povo=10" target="iframemanu">Incas</a>
 <hr>
-<a href="../manual/italianos.php" target="iframemanu">Italianos</a>
+<a href="../manual/tropas.php?povo=11" target="iframemanu">Italianos</a>
 <hr>
-<a href="../manual/portugueses.php" target="iframemanu">Portugueses</a>
+<a href="../manual/tropas.php?povo=12" target="iframemanu">Portugueses</a>
 <hr>
-<a href="../manual/russos.php" target="iframemanu">Russos</a>
+<a href="../manual/tropas.php?povo=13" target="iframemanu">Russos</a>
 <hr>
-<a href="../manual/suicos.php" target="iframemanu">Suíços</a>
+<a href="../manual/tropas.php?povo=14" target="iframemanu">Suíços</a>
 <hr>
-<a href="../manual/turcos.php" target="iframemanu">Turcos</a>
+<a href="../manual/tropas.php?povo=15" target="iframemanu">Turcos</a>
 <hr>
 </td>
 </table>

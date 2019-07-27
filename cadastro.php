@@ -25,9 +25,9 @@ Civilization:
 <br>
 <input type="radio" name="criarciv" id="criarciv" value="1" checked="true">Germans
 <input type="radio" name="criarciv" id="criarciv" value="2">Apaches
-<input type="radio" name="criarciv" id="criarciv" value="3" DISABLED>Aztecs
-<input type="radio" name="criarciv" id="criarciv" value="4" DISABLED>Byzantines
-<input type="radio" name="criarciv" id="criarciv" value="5" DISABLED>British
+<input type="radio" name="criarciv" id="criarciv" value="3">Aztecs
+<input type="radio" name="criarciv" id="criarciv" value="4">Byzantines
+<input type="radio" name="criarciv" id="criarciv" value="5">British
 <input type="radio" name="criarciv" id="criarciv" value="6" DISABLED>Cherokees
 <input type="radio" name="criarciv" id="criarciv" value="7" DISABLED>Spanish
 <input type="radio" name="criarciv" id="criarciv" value="8" DISABLED>French

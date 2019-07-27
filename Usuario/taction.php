@@ -455,53 +455,41 @@ If($resultdelatk) { } else { echo "Error 902: Atk DB Error!";}
 
 //Inicio do Sistema de Reforco.
 If ($action == "rfc") {
-$addt1 = "t1";
-$addt2 = "t2";
-$addt3 = "t3";
-$addt4 = "t4";
-$addt5 = "t5";
-$addt6 = "t6";
-$addt7 = "t7";
-$addt8 = "t8";
-$addt9 = "t9";
+
+//Cria o reforco.
+$updateref = mysql_query("insert into reforcos (ID,remetente,destino,povorem,povodest,t1,t2,t3,t4,t5,t6,t7,t8,t9) values (' ','$IDremetente','$IDdestino','$povorem','$povodest','$t1','$t2','$t3','$t4','$t5','$t6','$t7','$t8','$t9')");
+If($updateref) { echo"<font color='green'><b>Done!</b></font>";} else { echo "Error 906: Reinforcement Send DB Error!!!";}
 
 
-$consultaref = mysql_query("select * from tropas where IDaldeia = '$IDdestino'");
-$linharef = mysql_num_rows($consultaref);
-while($linharef = mysql_fetch_object($consultaref)) {
-$t1local = $linharef->$addt1;
-$t2local = $linharef->$addt2;
-$t3local = $linharef->$addt3;
-$t4local = $linharef->$addt4;
-$t5local = $linharef->$addt5;
-$t6local = $linharef->$addt6;
-$t7local = $linharef->$addt7;
-$t8local = $linharef->$addt8;
-$t9local = $linharef->$addt9;
+//Deleta o ATK.
+$delatk = "DELETE FROM ataques WHERE ID='$IDatk'";
+$resultdelatk = mysql_query($delatk);
+If($resultdelatk) { } else { echo "Error 902: Atk DB Error!";}
 
-$updateref = mysql_query("update tropas set $addt1 = $t1 + $t1local,  $addt2 = $t2 + $t2local, $addt3 = $t3 + $t3local, $addt4 = $t4 + $t4local, $addt5 = $t5 + $t5local, $addt6 = $t6 + $t6local, $addt7 = $t7 + $t7local, $addt8 = $t8 + $t8local, $addt9 = $t9 + $t9local, where ID = '$IDdestino'");
-If($updateref) { } else { echo "Error 901: Troop Send DB Error!!!";}
 
-}}
+}
 //Fim do Sistema de Reforco.
 
 
 
 
 function getname($unit){
-global $povoname, $tropaname, $povorem, $p1nome, $p2nome, $p3nome, $p4nome, $p5nome, $p6nome, $p7nome, $p8nome, $p9nome, $p10nome, $p11nome, $p12nome, $p13nome, $p14nome, $p15nome, $p999nome, $t11nome, $t12nome, $t13nome, $t14nome, $t15nome, $t16nome, $t17nome, $t18nome, $t19nome, $t21nome, $t22nome, $t23nome, $t24nome, $t25nome, $t26nome, $t27nome, $t28nome, $t29nome;
+global $povoname, $tropaname, $povorem, $p1nome, $p2nome, $p3nome, $p4nome, $p5nome, $p6nome, $p7nome, $p8nome, $p9nome, $p10nome, $p11nome, $p12nome, $p13nome, $p14nome, $p15nome, $p999nome;
+//Traz as variaveis para a funcao.
 $p = "p".$povorem."nome";
 $t = "t".$povorem."".$unit."nome";
+global $$t;
 $povoname = $$p;
 $tropaname = $$t;
 }
 
 function getname2($unit){
-global $povoname2, $tropaname2, $povodest, $p1nome, $p2nome, $p3nome, $p4nome, $p5nome, $p6nome, $p7nome, $p8nome, $p9nome, $p10nome, $p11nome, $p12nome, $p13nome, $p14nome, $p15nome, $p999nome, $t11nome, $t12nome, $t13nome, $t14nome, $t15nome, $t16nome, $t17nome, $t18nome, $t19nome, $t21nome, $t22nome, $t23nome, $t24nome, $t25nome, $t26nome, $t27nome, $t28nome, $t29nome;
-$p = "p".$povodest."nome";
-$t = "t".$povodest."".$unit."nome";
-$povoname2 = $$p;
-$tropaname2 = $$t;
+global $povoname2, $tropaname2, $povodest, $p1nome, $p2nome, $p3nome, $p4nome, $p5nome, $p6nome, $p7nome, $p8nome, $p9nome, $p10nome, $p11nome, $p12nome, $p13nome, $p14nome, $p15nome, $p999nome;
+$p2 = "p".$povodest."nome";
+$t2 = "t".$povodest."".$unit."nome";
+global $$t2;
+$povoname2 = $$p2;
+$tropaname2 = $$t2;
 }
 
 If($action == "atk") {
