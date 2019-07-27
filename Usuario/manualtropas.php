@@ -42,7 +42,7 @@ body {
 
 #iframemanual iframe {
 	width: 100%;
-	height: 80%;
+	height: 95%;
 }
 
 a:link {

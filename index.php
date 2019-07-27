@@ -8,18 +8,18 @@
 <body>
 <div id="barracima">
 </div>
-<div id="menu" name="menu">
+<div id="menu">
 <center>
-<h1><b>Supremyum</b></h1>
+<img src="img/banner.png" style="margin-top: 8px;" border="0" alt="Supremyum"></img>
 </center>
 </div>
-<div id="divisao" name="divisao">
+<div id="divisao">
 </div>
-<div id="barralado1" name="barralado1">
+<div id="barralado1">
 </div>
-<div id="centro" name="centro">
+<div id="centro">
 </div>
-<div id="barralado2" name="barralado2">
+<div id="barralado2">
 </div>
 <iframe name="iframe" id="iframe" src="login.php" scrolling="yes">
 </iframe>

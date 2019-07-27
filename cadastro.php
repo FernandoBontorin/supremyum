@@ -8,20 +8,20 @@
 
 <body>
 <a href="login.php">
-<div id="voltarlogin" name="voltarlogin">
+<div id="voltarlogin">
 <center>
-<b>Voltar</b>
+<b>Back</b>
 </center>
 </div>
 </a>
 <form action="cadastra_usuario.php" method="post" enctype="multipart/form-data" name="formcadastro">
 Login:<center><input name="login" type="text" id="login" size="40" maxlength="200" /></center>
-Senha:<center><input name="senha" type="password" id="label" size="20" maxlength="15" /></center>
-Repita sua senha: <center><input name="rep_senha" type="password" id="label2" size="20" maxlength="15" /></center>
+Password:<center><input name="senha" type="password" id="label" size="20" maxlength="15" /></center>
+Password Confirm: <center><input name="rep_senha" type="password" id="label2" size="20" maxlength="15" /></center>
 Email:<center><input name="email" type="text" id="label4" size="40" maxlength="200" /></center>
-Pergunta secreta:<center><input name="pergunta" type="text" id="label11" size="40" maxlength="200" /></center>
-Resposta:<center><input name="resposta" type="text" id="label12" size="40" maxlength="200" /></center>
-Civilização:
+Secret Ask:<center><input name="pergunta" type="text" id="label11" size="40" maxlength="200" /></center>
+Secret Answer:<center><input name="resposta" type="text" id="label12" size="40" maxlength="200" /></center>
+Civilization:
 <br>
 <input type="radio" name="criarciv" id="criarciv" value="1" checked="true">Alemães
 <input type="radio" name="criarciv" id="criarciv" value="2">Apaches

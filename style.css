@@ -14,8 +14,8 @@ body {
 	height: 100%;
 	margin: 0px;
 	border: 0px;
-	background: url(img/fundo.bmp);
-	background-repeat: repeat-x;
+	background: url(img/fundo.png);
+	background-repeat: repeat-y;
 	background-size: 100% 100%;
 	-moz-background-size: 100% 100%;
 }
