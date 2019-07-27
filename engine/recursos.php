@@ -56,24 +56,77 @@ var x = "111111111111";
 
 
 <?php
+$consulta3000999 = mysql_query("select * from dados_usuarios where Login = '$login_usuario'");
+	$linha590 = mysql_num_rows($consulta3000999);
+
+while($linha590 = mysql_fetch_object($consulta3000999)) {
+if  ($linha590->vilas ==1) {
+
+$consultaabcd = mysql_query("select * from config where tempo");
+while($linhaabcd = mysql_fetch_object($consultaabcd)) {
+	$tempoo = $linhaabcd->tempo;
+echo $tempoo;
 
 
-$consulta300053 = mysql_query("select * from aldeias where dono = '$login_usuario'");
-	$linha83 = mysql_num_rows($consulta300053);
 
-
-
-
-while($linha83 = mysql_fetch_object($consulta300053)) {
-
-
-$madeiraparaatt=($linha83->madeirahora);
-$attmadeira = mysql_query("UPDATE aldeias SET madeira = madeira + 1 WHERE dono = '$login_usuario'");
 
 
 }
 
 
+
+$consulta300053 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+	$linha83 = mysql_num_rows($consulta300053);
+while($linha833 = mysql_fetch_object($consulta300053)) {
+$madeirahora = $linha833->madeirahora;
+$ourohora = $linha833->ourohora;
+$ferrohora = $linha833->ferrohora;
+$comidahora = $linha833->comidahora;
+
+
+
+}
+while($linha83 = mysql_fetch_object($consulta300053)) {
+
+
+$madeiraparaatt=($linha83->madeirahora);
+$ouroparaatt=($linha83->ourohora);
+$ferroparaatt=($linha83->ferrohora);
+$comidaparaatt=($linha83->comidahora);
+
+}
+
+
+
+$uptempo = mysql_query("UPDATE config SET tempo = UTC_TIMESTAMP()");
+
+
+
+
+
+		$timesecond = time();
+echo "            ".$timesecond;
+
+$consultatime = mysql_query("select * from config where time");
+while($linhatime = mysql_fetch_object($consultatime)) {
+	$timee = $linhatime->time;
+
+
+$tempoparaup = $timesecond - $timee;
+echo "              ".$tempoparaup;
+
+
+
+
+$uptime = mysql_query("UPDATE config SET time = $timesecond");
+
+
+$attmadeira = mysql_query("UPDATE aldeias SET madeira = ($madeirahora / 3600) * $tempoparaup + madeira WHERE dono = '$login_usuario'");
+$attouro = mysql_query("UPDATE aldeias SET ouro = ($ourohora / 3600) * $tempoparaup + ouro WHERE dono = '$login_usuario'");
+$attferro = mysql_query("UPDATE aldeias SET ferro = ($ferrohora / 3600) * $tempoparaup + ferro WHERE dono = '$login_usuario'");
+$attcomida = mysql_query("UPDATE aldeias SET comida = ($comidahora / 3600) * $tempoparaup + comida WHERE dono = '$login_usuario'");
+}
+}}
 
 
 ?>

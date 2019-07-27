@@ -22,13 +22,9 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
 </head>
 <body>
 
-<div id="options" name="options">
-<center>
-<div id="textodaoptions" name="textodaoptions">
- <td colspan="2" valign="top" class="style3"><a href="msg.php"> Mensagens </a>  | <a href="dados_usuario.php" class="style3"> Dados do usu&aacute;rio </a> | <a href="../logout.php" class="style3">Logout</a> | <a href="home.php">Home</a></td>
-</div>
-</center>
-</div>
+<?php
+include "menu1.php";
+?>
 
 <center>
 <div id="msglinks" name="msglinks">

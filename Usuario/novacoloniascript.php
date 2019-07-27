@@ -38,10 +38,10 @@ $pop = $_POST['pop'];
 $localizacao = $_POST['loca'];
 $dono = $login_usuario;
 $pontosdeprevisao = ('0');
-$madeira = ('800');
-$ouro = ('800');
-$ferro = ('800');
-$comida = ('800');
+$madeira = ('500');
+$ouro = ('500');
+$ferro = ('500');
+$comida = ('700');
 $capacidade = ('1000');
 $lealdade = ('100');
 
@@ -68,29 +68,42 @@ if($nome == "") {
 }
 
 If($localizacao=="-x+y") {
-$x = rand(-100,0);
-$y = rand(0,100);
+$x = rand(-5,0);
+$y = rand(0,5);
 }
 
 If($localizacao=="-x-y") {
-$x = rand(-100,0);
-$y = rand(-100,0);
+$x = rand(-5,0);
+$y = rand(-5,0);
 }
 
 If($localizacao=="+x+y") {
-$x = rand(0,100);
-$y = rand(0,100);
+$x = rand(0,5);
+$y = rand(0,5);
 }
 
 If($localizacao=="+x-y") {
-$x = rand(0,100);
-$y = rand(-100,0);
+$x = rand(0,5);
+$y = rand(-5,0);
 }
 
+$xy = '' .$x .$y;
 echo$dono;
 
+
 // faz consulta no banco para inserir os dados do usuario
-$sql = "insert into aldeias (ID,dono,nome,povo,pop,pontosdeprevisao,madeira,ouro,ferro,comida,capacidade,lealdade,x,y) values ('','$dono','$nome','$civilizacao','$pop','$pontosdeprevisao','$madeira','$ouro','$ferro','$comida','$capacidade','$lealdade','$x','$y')";
+$sql = ("UPDATE dados_usuarios SET vilas = 1 WHERE Login = '$dono' ");
+$consulta78 = mysql_query($sql);
+
+
+
+
+
+
+
+
+// faz consulta no banco para inserir os dados do usuario
+$sql = "insert into aldeias (ID,dono,nome,povo,pontosdeprevisao,madeira,ouro,ferro,comida,capacidade,lealdade,x,y,xy) values ('','$dono','$nome','$civilizacao','$pontosdeprevisao','$madeira','$ouro','$ferro','$comida','$capacidade','$lealdade','$x','$y','$xy')";
 $consulta78 = mysql_query($sql);
 
 // verifica se o usuario foi cadastrado

@@ -70,10 +70,11 @@ if(!(empty($login_usuario) or empty($senha_usuario))) {
 	$erro = urlencode("Você não esta logado!");
 	header("Location: ../index.php");
 	exit;
-}
-
 $online = ("0");
 $consulta = mysql_query("update dados_usuarios set online = '$online' where Login = '$login_usuario'");
+}
+
+
 
 
 

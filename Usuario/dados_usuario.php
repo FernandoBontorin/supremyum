@@ -3,6 +3,8 @@ include "../validar_session.php";
 
 include "../Config/config_sistema.php";
 
+include "../engine/time.php";
+
 // faz consulta no banco
 $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usuario'");
 
