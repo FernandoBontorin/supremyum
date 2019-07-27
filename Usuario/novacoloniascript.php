@@ -62,7 +62,7 @@ $comidadb = $comidaproducao * $server_speed;
 
 // verifica se o usuario digitou o login
 if($nome == "") {
-	echo "Digite o nome da sua colonia";
+	echo "Write your village name!";
 	exit;
 } else {
 	// se o usuario digitou o login ele verifica
@@ -70,8 +70,8 @@ if($nome == "") {
 	$consulta = mysql_query("select * from aldeias where nome = '$nome'");
 	$linha = mysql_num_rows($consulta);
 	if($linha != 0) {
-		echo "O nome de colonia que você<br>
-			  Digitou já existe tente outro!";
+		echo "That name already exists!<br>
+			  Choose another!";
 		exit;
 	}
 }
@@ -123,14 +123,14 @@ $consulta79 = mysql_query($sqlM);
 // verifica se o usuario foi cadastrado
 if($consulta78) {
 	echo "<font color=green><b>
-		  Você criou sua colônia com sucesso!  <b><a href='quartelativar.php'>Prosseguir</a></b><br>
+		  Village created!  <b><a href='quartelativar.php'>Continue</a></b><br>
 		  
 		  </font></b>";
 	exit;
 } else {
-	echo "Não foi possivel criar sua colônia<br>
-		  tente mais tarde pode ser um problema no servidor!<br>
-		  Click <a href=index.php>aqui</a> para ir ate a home page do sistema.";
+	echo "Error<br>
+		 Report that bug!<br>
+		  Click <a href=index.php>here</a> to back to home page.";
 	exit;
 }
 

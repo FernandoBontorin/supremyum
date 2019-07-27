@@ -66,7 +66,7 @@ include "../engine/time.php";
 <div id="recursostop" name="recursostop">
 <table border="1">
 <td>
-<font color="brown">
+<font color="#F5DEB3">
 <?php
 
 
@@ -103,6 +103,7 @@ echo "<center><b>Iron   ".$ferronoestoque."/".$capacidadedosrecursos."</b></cent
 </font>
 </td>
 <td>
+<font color="#B22222">
 <?php
 echo "<center><b>Food   ".$comidanoestoque."/".$capacidadedacomida."</b></center>";
 

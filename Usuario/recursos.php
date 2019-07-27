@@ -71,12 +71,12 @@ echo "<center><b>ID: ".$linha7->ID."</b></center>";
 </td>
 <td>
 <?php
-echo "<center><b>Aldeia: ".$linha7->nome."</b></center>";
+echo "<center><b>Village: ".$linha7->nome."</b></center>";
 ?>
 </td>
 <td>
 <?php
-echo "<center><b>População: $linha7->popdisponivel  / ".$linha7->pop."</b></center>";
+echo "<center><b>Population: $linha7->popdisponivel  / ".$linha7->pop."</b></center>";
 
 
 
@@ -112,13 +112,13 @@ echo "<center><b>População: $linha7->popdisponivel  / ".$linha7->pop."</b></cent
 $consulta30005 = mysql_query("select * from aldeias where dono = '$login_usuario'");
 	$linha8 = mysql_num_rows($consulta30005);
 while($linha8 = mysql_fetch_object($consulta30005)) {
-echo "<center><b>Madeira Por Hora  = ".$linha8 ->madeirahora;"</b></center>";
+echo "<center><b>Wood per hour  = ".$linha8 ->madeirahora;"</b></center>";
 ?></td><td><?php
-echo "<center><b>Ouro Por Hora  = ".$linha8 ->ourohora;"</b></center>";
+echo "<center><b>Gold per hour  = ".$linha8 ->ourohora;"</b></center>";
 ?></td><td><?php
-echo "<center><b>Ferro Por Hora  = ".$linha8 ->ferrohora;"</b></center>";
+echo "<center><b>Iron per hour  = ".$linha8 ->ferrohora;"</b></center>";
 ?></td><td><?php
-echo "<center><b>Comida Por Hora  = ".$linha8 ->comidahora;"</b></center>";
+echo "<center><b>Food per hour  = ".$linha8 ->comidahora;"</b></center>";
 }
 
 
@@ -176,11 +176,11 @@ if  ($linha590->vilas ==1) {
 <form action="madeiraup.php" target="iframerecursos" name="madeiraupform" id="madeiraupform"  method="post" enctype="multipart/form-data">
 <tr>
 <td>
-Prod. de madeira: <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelmadeira;                   } ?>
+Wood level: <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelmadeira;                   } ?>
 </td>
 <td>
 
-<input type="submit" name="madeiraup" id="madeiraup" value="Aumentar para o nível  <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelmadeira + 1;                   } ?>"></input>
+<input type="submit" name="madeiraup" id="madeiraup" value="Increase to level  <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelmadeira + 1;                   } ?>"></input>
 
 
 
@@ -192,10 +192,10 @@ Prod. de madeira: <?php            $consulta30805 = mysql_query("select * from a
 <form action="ouroup.php" target="iframerecursos" name="ouroupform" id="ouroupform"  method="post" enctype="multipart/form-data">
 <tr>
 <td>
-Prod. de ouro: <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelouro;                   } ?>
+Gold level: <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelouro;                   } ?>
 </td>
 <td>
-<input type="submit" name="ouroup" id="ouroup" value="Aumentar para o nível  <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelouro + 1;                   } ?>"></input>
+<input type="submit" name="ouroup" id="ouroup" value="Increase to level  <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelouro + 1;                   } ?>"></input>
 </td>
 </tr>
 </form>
@@ -203,21 +203,21 @@ Prod. de ouro: <?php            $consulta30805 = mysql_query("select * from alde
 
 <tr>
 <td>
-Prod. de ferro: <?php             $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelferro;                   } ?>
+Iron level: <?php             $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelferro;                   } ?>
 </td>
 <td>
-<input type="submit" name="ferroup" id="ferroup" value="Aumentar para o nível  <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelferro + 1;                   } ?>"></input>
+<input type="submit" name="ferroup" id="ferroup" value="Increase to level  <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelferro + 1;                   } ?>"></input>
 </td>
 </form>
 <form action="comidaup.php" target="iframerecursos" name="comidaupform" id="comidaupform"  method="post" enctype="multipart/form-data">
 
 <tr>
 <td>
-Prod. de comida: <?php               $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelcomida;                   } ?>
+Food level: <?php               $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelcomida;                   } ?>
 </td>
 
 <td>
-<input type="submit" name="comidaup" id="comidaup" value="Aumentar para o nível  <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelcomida + 1;                   } ?>"></input>
+<input type="submit" name="comidaup" id="comidaup" value="Increase to level  <?php            $consulta30805 = mysql_query("select * from aldeias where dono = '$login_usuario'"); $linha598 = mysql_num_rows($consulta30805);  while($linha598 = mysql_fetch_object($consulta30805)) {echo $linha598->nivelcomida + 1;                   } ?>"></input>
 </td>
 
 </tr>

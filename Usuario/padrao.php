@@ -64,14 +64,13 @@ while($linha = mysql_fetch_object($consulta)) {
 <?php
 
 
-
 $consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'");
 	$linha5 = mysql_num_rows($consulta3000);
 	if($linha5 != 0) {
 
 while($linha7 = mysql_fetch_object($consulta3000)) {
 
-
+$id = $linha7->ID;
 echo "<center><b>ID: ".$linha7->ID."</b></center>";
 ?>
 </td>

@@ -23,25 +23,25 @@ Secret Ask:<center><input name="pergunta" type="text" id="label11" size="40" max
 Secret Answer:<center><input name="resposta" type="text" id="label12" size="40" maxlength="200" /></center>
 Civilization:
 <br>
-<input type="radio" name="criarciv" id="criarciv" value="1" checked="true">Alemães
+<input type="radio" name="criarciv" id="criarciv" value="1" checked="true">Germans
 <input type="radio" name="criarciv" id="criarciv" value="2">Apaches
-<input type="radio" name="criarciv" id="criarciv" value="3">Astecas
-<input type="radio" name="criarciv" id="criarciv" value="4">Bizantinos
-<input type="radio" name="criarciv" id="criarciv" value="5">Britânicos
+<input type="radio" name="criarciv" id="criarciv" value="3">Aztecs
+<input type="radio" name="criarciv" id="criarciv" value="4">Byzantines
+<input type="radio" name="criarciv" id="criarciv" value="5">British
 <input type="radio" name="criarciv" id="criarciv" value="6">Cherokees
-<input type="radio" name="criarciv" id="criarciv" value="7">Espanhóis
-<input type="radio" name="criarciv" id="criarciv" value="8">Franceses
-<input type="radio" name="criarciv" id="criarciv" value="9">Holandeses
+<input type="radio" name="criarciv" id="criarciv" value="7">Spanish
+<input type="radio" name="criarciv" id="criarciv" value="8">French
+<input type="radio" name="criarciv" id="criarciv" value="9">Dutch
 <input type="radio" name="criarciv" id="criarciv" value="10">Incas
-<input type="radio" name="criarciv" id="criarciv" value="11">Italianos
-<input type="radio" name="criarciv" id="criarciv" value="12">Portugueses
-<input type="radio" name="criarciv" id="criarciv" value="13">Russos
-<input type="radio" name="criarciv" id="criarciv" value="14">Suíços
-<input type="radio" name="criarciv" id="criarciv" value="15">Turcos
+<input type="radio" name="criarciv" id="criarciv" value="11">Italians
+<input type="radio" name="criarciv" id="criarciv" value="12">Portuguese
+<input type="radio" name="criarciv" id="criarciv" value="13">Russians
+<input type="radio" name="criarciv" id="criarciv" value="14">Swiss
+<input type="radio" name="criarciv" id="criarciv" value="15">Turks
 <center>
 <br>
-      <input type="submit" name="cadastrar" value="Cadastrar" id="cadastrar" />
-      <input type="reset" name="limpar" value="Limpar dados" id="label13" />
+      <input type="submit" name="cadastrar" value="Register!" id="cadastrar" />
+      <input type="reset" name="limpar" value="Clear" id="label13" />
 <br>
 </center>
 </form>

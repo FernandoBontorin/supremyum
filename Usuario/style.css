@@ -141,7 +141,7 @@ hr {
 
 
 a:link {
-	color: gold;
+	color: #006400;
 	display: ;
 	text-decoration: none;
 	font-weight:bold;
@@ -149,7 +149,7 @@ a:link {
 }
 
 a:visited {
-	color: gold;
+	color: #006400;
 	display: ;
 	text-decoration: none;
 	font-weight:bold;
@@ -272,6 +272,13 @@ position: absolute;
 	right: 0;
 	margin-right: 5px;
 	margin-top: 80px;
+}
+
+#linkmov {
+	position: absolute;
+	left: 0;
+	margin-left: 5px;
+	margin-top: 160px;
 }
 
 #linkmartelo img {

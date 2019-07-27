@@ -60,7 +60,7 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
   <tr>
     <td height="45">&nbsp;</td>
     <td>&nbsp;</td>
-    <td valign="top"><span class="style1">Dados do usuario</span> </td>
+    <td valign="top"><span class="style1">Options</span> </td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -70,7 +70,7 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
 <center>
 <?php
 while($linha = mysql_fetch_object($consulta)) {
-	echo "<b>Olá ".$linha->Login."!</b>";
+	echo "<b>Hi ".$linha->Login."!</b>";
 ?></center></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -81,13 +81,13 @@ while($linha = mysql_fetch_object($consulta)) {
   <tr>
     <td height="22">&nbsp;</td>
     <td>&nbsp;</td>
-    <td colspan="2" valign="top" class="style3"> Dados do usu&aacute;rio | <a href="mudar_senha.php" class="style3">Mudar senha</a> | <a href="../logout.php" class="style3">Logout</a> | <a href="home.php">Home</a></td>
+    <td colspan="2" valign="top" class="style3"> Options | <a href="mudar_senha.php" class="style3">Change Password</a> | <a href="../logout.php" class="style3">Logout</a> | <a href="home.php">Home</a></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td height="24"></td>
-    <td colspan="4" valign="top"><p><span class="style5"><span class="style4">Aten&ccedil;&atilde;o:</span></span><span class="style3"> Altere apenas os dados que voc&ecirc; deseja modificar! <br />
+    <td colspan="4" valign="top"><p><span class="style5"><span class="style4">Atention:</span></span><span class="style3"> Change your data carefully!<br />
     </span></p></td>
     <td></td>
   </tr>
@@ -107,7 +107,7 @@ while($linha = mysql_fetch_object($consulta)) {
 	      <td height="24">&nbsp;</td>
             <td width="15">&nbsp;</td>
             <td width="66" valign="top"><label for="Submit"></label>
-            <input type="submit" name="atualizar" value="Atualizar" id="atualizar" /></td>
+            <input type="submit" name="atualizar" value="Change email" id="atualizar" /></td>
             <td width="179">&nbsp;</td>
           </tr><center>
 
@@ -140,8 +140,8 @@ while($linha = mysql_fetch_object($consulta)) {
 $consulta3002 = mysql_query("select * from aldeias where dono = '$login_usuario'");
 	$linha5 = mysql_num_rows($consulta3002);
 	if($linha5 == 0) {
-		echo "<br>Você ainda não tem uma colônia<br>
-			  Para criar uma, clique <a href=novacolonia.php>Aqui</a><br>
+		echo "<br>You don't have a village<br>
+			  To create one, click <a href=novacolonia.php>HERE</a><br>
 			";
 	}
 

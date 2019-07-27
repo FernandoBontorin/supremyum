@@ -14,7 +14,7 @@ body {
 	height: 100%;
 	margin: 0px;
 	border: 0px;
-	background: url(img/fundo.png);
+	background: url(img/fundo.jpg);
 	background-repeat: repeat-y;
 	background-size: 100% 100%;
 	-moz-background-size: 100% 100%;
@@ -135,10 +135,27 @@ body h1 {
 	
 }
 
+#bg1 {
+	position: absolute;
+	width: 22.5%;
+	height: 85%;
+	float: left;
+	background: url(img/sitelado.png);
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+}
 
 
-
-
+#bg2 {
+	position: absolute;
+	margin-left: 77.5%;
+	width: 22.5%;
+	height: 85%;
+	float: right;
+	background: url(img/sitelado2.png);
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+}
 
 
 

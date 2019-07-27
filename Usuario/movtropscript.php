@@ -22,10 +22,11 @@ $y = $_POST['y'];
 $consultatrop = mysql_query("select * from aldeias where dono = '$login_usuario'");
 	$linhatrop = mysql_num_rows($consultatrop);
 while($linhatrop = mysql_fetch_object($consultatrop)) {
+$idmy = $linhatrop->ID;
 $consultatrop2 = mysql_query("select * from dados_usuarios where Login = '$login_usuario'");
 	$linhatrop2 = mysql_num_rows($consultatrop2);
 while($linhatrop2 = mysql_fetch_object($consultatrop2)) {
-$consultatropE = mysql_query("select * from tropas where dono = '$login_usuario'");
+$consultatropE = mysql_query("select * from tropas where IDaldeia = '$idmy'");
 	$linhatropC = mysql_num_rows($consultatropE);
 while($linhatropC = mysql_fetch_object($consultatropE)) {
 $povo = $linhatrop2->povo;
@@ -184,6 +185,58 @@ $sqlsend = "insert into ataques (ID,remetente,destino,tempocmc,tempofinal,povore
 $consultasend = mysql_query($sqlsend);
 If($consultasend) { } else { echo "Error 900: Troop Send DB Error!";}
 
+function discounttroops() {
+global $idmy, $povo, $linhatropC, $t1, $t2, $t3, $t4, $t5, $t6, $t7, $t8, $t9, $t1s, $t2s, $t3s, $t4s, $t5s, $t6s, $t7s, $t8s, $t9s, $newt1, $newt2, $newt3, $newt4, $newt5, $newt6, $newt7, $newt8, $newt9 ;
+$ta1 = "linhatropC";
+$ta1x = "t".$povo."1";
+$tatual1 = $$ta1->$ta1x;
+$ta2 = "linhatropC";
+$ta2x = "t".$povo."2";
+$tatual2 = $$ta2->$ta2x;
+$ta3 = "linhatropC";
+$ta3x = "t".$povo."3";
+$tatual3 = $$ta3->$ta3x;
+$ta4 = "linhatropC";
+$ta4x = "t".$povo."4";
+$tatual4 = $$ta4->$ta4x;
+$ta5 = "linhatropC";
+$ta5x = "t".$povo."5";
+$tatual5 = $$ta5->$ta5x;
+$ta6 = "linhatropC";
+$ta6x = "t".$povo."6";
+$tatual6 = $$ta6->$ta6x;
+$ta7 = "linhatropC";
+$ta7x = "t".$povo."7";
+$tatual7 = $$ta7->$ta7x;
+$ta8 = "linhatropC";
+$ta8x = "t".$povo."8";
+$tatual8 = $$ta8->$ta8x;
+$ta9 = "linhatropC";
+$ta9x = "t".$povo."9";
+$tatual9 = $$ta9->$ta9x;
+$newt1 = $tatual1 - $t1;
+$newt2 = $tatual2 - $t2;
+$newt3 = $tatual3 - $t3;
+$newt4 = $tatual4 - $t4;
+$newt5 = $tatual5 - $t5;
+$newt6 = $tatual6 - $t6;
+$newt7 = $tatual7 - $t7;
+$newt8 = $tatual8 - $t8;
+$newt9 = $tatual9 - $t9;
+$t1s = "t".$povo."1";
+$t2s = "t".$povo."2";
+$t3s = "t".$povo."3";
+$t4s = "t".$povo."4";
+$t5s = "t".$povo."5";
+$t6s = "t".$povo."6";
+$t7s = "t".$povo."7";
+$t8s = "t".$povo."8";
+$t9s = "t".$povo."9";
+}
+discounttroops();
+$sqlsend2 = "update tropas set $t1s='$newt1', $t2s='$newt2', $t3s='$newt3', $t4s='$newt4', $t5s='$newt5', $t6s='$newt6', $t7s='$newt7', $t8s='$newt8', $t9s='$newt9' where IDaldeia = '$idmy'";
+$consultasend2 = mysql_query($sqlsend2);
+If($consultasend2) { } else { echo "Error 901: Troop Send* DB Error!";}
 //End Send.
 
 

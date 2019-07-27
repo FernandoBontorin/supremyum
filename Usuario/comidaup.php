@@ -39,7 +39,7 @@ If ($checklinkvalid == 0) {
 $comidatrabalhadores = $linha25544->comidatrabalhadores;
 $updatepopdisponivel = mysql_query("update aldeias set popdisponivel = $popdisponivel + $comidatrabalhadores   where dono = '$login_usuario'");
 $updatecomidatrabalhadores = mysql_query("update aldeias set comidatrabalhadores = 0 where dono = '$login_usuario'");
-echo "Aumentar para o nível " .$comidaup;
+echo "Increase to level " .$comidaup;
 } else {
 echo '';
 }
@@ -108,7 +108,7 @@ echo '<img src="../img/time.bmp">'; echo ' ';  echo $upcomidatempo;
 $aaaabbbb = $nivelcomida + 1;
 $producaonext =  2 * pow($aaaabbbb,2);
 $producaonext2 = (int)($producaonext) * $server_speed ;
-echo "<font color=blue><b>Produção de comida no nível ";  echo $nivelcomida + 1;   echo ': ' .$producaonext2.  "</font></b>";
+echo "<font color=blue><b>Food production in level ";  echo $nivelcomida + 1;   echo ': ' .$producaonext2.  "</font></b>";
 $madeiradb = $linha5980->madeira;
 $ourodb = $linha5980->ouro;
 $ferrodb = $linha5980->ferro;
@@ -132,19 +132,19 @@ $tempodestinoup = $linha2554->comidatempodestino;
 
 If ($tempodestinoup == 0) {
 If ($popdisponivel < $nivelcomidaa + 1) {
-echo "<font color=red><b>Trabalhadores Insuficientes!</font></b>";
+echo "<font color=red><b>Insufficient workers!</font></b>";
 } else {
 If ($upcomidamadeira > $madeiradb) {
-echo "<font color=red><b>Madeira Insuficiente!</font></b>";
+echo "<font color=red><b>Insufficient wood!</font></b>";
 } else {
 If ($upcomidaouro > $ourodb) {
-echo "<font color=red><b>Ouro Insuficiente!</font></b>";
+echo "<font color=red><b>Insufficient gold!</font></b>";
 } else {
 If ($upcomidaferro > $ferrodb) {
-echo "<font color=red><b>Ferro Insuficiente!</font></b>";
+echo "<font color=red><b>Insufficient iron!</font></b>";
 } else {
 If ($upcomidacomida > $comidadb) {
-echo "<font color=red><b>Comida Insuficiente!</font></b>";
+echo "<font color=red><b>Insufficient food!</font></b>";
 } else {
 
 }}}}}

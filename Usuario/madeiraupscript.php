@@ -16,7 +16,7 @@ include_once "../Config/formulas.php";
  while ($linha5980 = mysql_fetch_object($consulta3080)) { 
 
 If ($linha5980->madeiratrabalhadores != 0) {
-echo "<font color=red><b>Este edifício já está sendo evoluído</font></b>";
+echo "<font color=red><b>This building is already being built!</font></b>";
 } else {
 
 

@@ -49,13 +49,13 @@ $consulta3050 = mysql_query("select * from aldeias where dono = '$login_usuario'
 <center>
 <div name="criarcolo" id="criarcolo">
 <form id="criarcoloform" name="criarcoloform" action="novacoloniascript.php" method="post">
-<b>Nome de sua colônia</b><br>
+<b>Village name</b><br>
 <input type="text" name="nomecolo" id="nomecolo" maxlength="40" size="40">
 <br>
 <br>
 <input type="hidden" name="pop" id="pop" value="5">
 <input type="hidden" name="ed1" id="ed1" value="ed1">
-<b>Localização</b><br>
+<b>Region</b><br>
 Noroeste<input type="radio" name="loca" id="loca" value="-x+y" checked="true">
 Nordeste<input type="radio" name="loca" id="loca" value="+x+y">
 <br>
@@ -63,7 +63,7 @@ Sudoeste<input type="radio" name="loca" id="loca" value="-x-y">
 Sudeste<input type="radio" name="loca" id="loca" value="+x-y">
 <br>
 <br>
-<input type="submit" id="enviarnewcolo" nome="enviarnewcolo" value="Enviar">
+<input type="submit" id="enviarnewcolo" nome="enviarnewcolo" value="Create!">
 
 
 

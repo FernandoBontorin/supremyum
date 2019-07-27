@@ -94,9 +94,7 @@ echo "<center><b>Population: $linha7->popdisponivel  / ".$linha7->pop."</b></cen
 
 
 	} else {
-		echo "<br>Você ainda não tem uma colônia<br>
-			  Para criar uma, clique em<br>
-			Dados do usuário e crie uma";
+		echo "<br>You don't have a village!<br>";
 	}
 
 
@@ -147,7 +145,9 @@ echo '
 <a href="rank.php"><img src="../img/flamulaest.png"></a>
 </div>
 
-
+<div id="linkmov" name="linkmov">
+<a href="tmov.php"><img src="../img/flamulamov.png"></a>
+</div>
 
 
 
@@ -193,9 +193,9 @@ echo '
 <center>
 <div style="display:'.$display1.';" id="t1" name="t1"  >
 <table border="1" style="background-color: #DCDCDC;">
-<td align="center"><b>Tropas</b></td><td align="center">'.$t11nome.'</td><td align="center">'.$t12nome.'</td><td align="center">'.$t13nome.'</td><td align="center">'.$t14nome.'</td><td align="center">'.$t15nome.'</td><td align="center">'.$t16nome.'</td><td align="center">'.$t17nome.'</td><td align="center">'.$t18nome.'</td><td align="center">'.$t19nome.'</td>
+<td align="center"><b>Troops</b></td><td align="center">'.$t11nome.'</td><td align="center">'.$t12nome.'</td><td align="center">'.$t13nome.'</td><td align="center">'.$t14nome.'</td><td align="center">'.$t15nome.'</td><td align="center">'.$t16nome.'</td><td align="center">'.$t17nome.'</td><td align="center">'.$t18nome.'</td><td align="center">'.$t19nome.'</td>
 <tr>
-<td align="center"><b>Quantidade</b></td><td align="center">'.$linha5w->t11.'</td><td align="center">'.$linha5w->t12.'</td><td align="center">'.$linha5w->t13.'</td><td align="center">'.$linha5w->t14.'</td><td align="center">'.$linha5w->t15.'</td><td align="center">'.$linha5w->t16.'</td><td align="center">'.$linha5w->t17.'</td><td align="center">'.$linha5w->t18.'</td><td align="center">'.$linha5w->t19.'</td>
+<td align="center"><b>Amount</b></td><td align="center">'.$linha5w->t11.'</td><td align="center">'.$linha5w->t12.'</td><td align="center">'.$linha5w->t13.'</td><td align="center">'.$linha5w->t14.'</td><td align="center">'.$linha5w->t15.'</td><td align="center">'.$linha5w->t16.'</td><td align="center">'.$linha5w->t17.'</td><td align="center">'.$linha5w->t18.'</td><td align="center">'.$linha5w->t19.'</td>
 </table>
 </div>
 
@@ -222,8 +222,8 @@ echo '
 } else {
 
 echo '
-<center>
-<b>Clique <a href="dados_usuario.php">aqui</a> para criar uma colônia</b>
+<center><div style="background-color: white; border-style: solid; border-width: 1; width: 30%;">
+<b>Click <a href="dados_usuario.php">HERE</a> to create a village!</b></div>
 </center>';
 
 }}

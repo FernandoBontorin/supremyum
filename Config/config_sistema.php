@@ -41,8 +41,5 @@ include_once "../Config/verify.php";
 } else {}
 
 
-if(file_exists("../idioma/idioma_string.php")) {
-include_once "../idioma/idioma_string.php";
-} else {}
 
 ?>

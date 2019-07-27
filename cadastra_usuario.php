@@ -43,7 +43,7 @@ $online = ("0");
 
 // verifica se o usuario digitou o login
 if($login == "") {
-	echo "Digite seu login!";
+	echo "Write your login!";
 	exit;
 } else {
 	// se o usuario digitou o login ele verifica
@@ -51,40 +51,40 @@ if($login == "") {
 	$consulta = mysql_query("select * from dados_usuarios where Login = '$login'");
 	$linha = mysql_num_rows($consulta);
 	if($linha != 0) {
-		echo "O nome de usuario que você<br>
-			  Digitou já existe tente outro!";
+		echo "That name already exists!<br>
+			 Choose another!";
 		exit;
 	}
 }
 
 // verifica se o usuario digitou a senha
 if($senha == "") {
-	echo "Digite sua senha!";
+	echo "Write your password!";
 	exit;
 } else {
 	// se o usuario digitou a senha
 	// vamos comparar com a contra senha
 	if($senha != $rep_senha) {
-		echo "Senha invalida!";
+		echo "Invalid password!";
 		exit;
 	}
 }
 
 // verifica o email
 if($email == "") {
-	echo "Digite o seu e-mail!";
+	echo "Write your e-mail!";
 	exit;
 }
 
 // verifica a pergunta secreta
 if($pergunta == "") {
-	echo "Digite sua pergunta secreta!";
+	echo "Write your secret ask!";
 	exit;
 }
 
 // verifica a resposta secreta
 if($resposta == "") {
-	echo "Digite sua resposta secreta!";
+	echo "Write your secret answer!";
 	exit;
 }
 
@@ -95,14 +95,14 @@ $consulta = mysql_query($sql);
 // verifica se o usuario foi cadastrado
 if($consulta) {
 	echo "<font color=green><b>
-		  Você foi cadastrado com sucesso!<br>
-		  Click <a href=login.php>aqui</a> para efetuar o login.
+		  Successfully registered!<br>
+		  Click <a href=login.php>here</a> to login!
 		  </font></b>";
 	exit;
 } else {
-	echo "Não foi possivel efetuar o seu cadastro<br>
-		  tente mais tarde pode ser um problema no servido!<br>
-		  Click <a href=index.php>aqui</a> para ir ate a home page do sistema.";
+	echo "Error!<br>
+		  Report a bug!<br>
+		  Click <a href=index.php>aqui</a> to back to index!";
 	exit;
 }
 ?>
