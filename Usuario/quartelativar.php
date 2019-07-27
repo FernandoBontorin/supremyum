@@ -28,12 +28,12 @@ $attquartelvalid = mysql_query("UPDATE aldeias SET quartelvalid = 1 WHERE dono =
 // verifica se o usuario foi cadastrado
 if($consulta785) {
 	echo "<font color=green><b>
-		  Quartel ativado com sucesso!<br>
+		  Aldeia ativada com sucesso! <b><a href='home.php'>Voltar</a></b><br>
 		  
 		  </font></b>";
 	exit;
 } else {
-	echo "Quartel não ativado!<br>
+	echo "Aldeia não ativada!<br>
 		 Reporte esse bug!<br>";
 	exit;
 }}}

@@ -33,11 +33,11 @@ $ferroestoque = $linhaA->ferro;
 $comidaestoque = $linhaA->comida;
 
 
-$pedido = $_POST['text12'];
+$pedido = $_POST['text13'];
 
 echo $pedido;
 
-If ($t12filaatual != 0) {
+If ($t13filaatual != 0) {
 echo "Este quartel já possui<br>tropas deste tipo em produção!";
 } else {
 
@@ -45,11 +45,11 @@ If ($pedido <= 0) {
 echo "Pedido não suportado! Tente novamente!";
 } else {
 
-$gastomadeira = $t12m * $pedido;
-$gastoouro = $t12o * $pedido;
-$gastoferro = $t12f * $pedido;
-$gastocomida = $t12c * $pedido;
-$gastotempo = HtoS($t12t) * $pedido;
+$gastomadeira = $t13m * $pedido;
+$gastoouro = $t13o * $pedido;
+$gastoferro = $t13f * $pedido;
+$gastocomida = $t13c * $pedido;
+$gastotempo = HtoS($t13t) * $pedido;
 
 
 $error = 0;
@@ -81,9 +81,9 @@ $tirarouro = mysql_query("update aldeias set ouro = $ouroestoque - $gastoouro wh
 $tirarferro = mysql_query("update aldeias set ferro = $ferroestoque - $gastoferro where dono = '$login_usuario'");
 $tirarcomida = mysql_query("update aldeias set comida = $comidaestoque - $gastocomida where dono = '$login_usuario'");
 
-$addpedido = mysql_query("update fila set t12 = t12 + '$pedido' where dono = '$login_usuario'");
-$addpedido2 = mysql_query("update fila set t12timecmc = $timeagora where dono = '$login_usuario'");
-$addpedido3 = mysql_query("update fila set t12timefim = $tempoup where dono = '$login_usuario'");
+$addpedido = mysql_query("update fila set t13 = t13 + '$pedido' where dono = '$login_usuario'");
+$addpedido2 = mysql_query("update fila set t13timecmc = $timeagora where dono = '$login_usuario'");
+$addpedido3 = mysql_query("update fila set t13timefim = $tempoup where dono = '$login_usuario'");
 
 
 

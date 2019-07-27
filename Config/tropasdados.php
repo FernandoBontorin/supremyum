@@ -1,5 +1,12 @@
 <?php
-include "formulas.php";
+include "config_sistema.php";
+include "../engine/recursos.php";
+include"../Config/formulas.php";
+
+
+$consultaconfigCS = mysql_query("select * from aldeias where dono = '$login_usuario'");
+	$linhaconfigCS = mysql_num_rows($consultaconfigCS);
+while($linhaconfigCS = mysql_fetch_object($consultaconfigCS)) {
 
 
 $p1nome = "Alemães";
@@ -30,7 +37,8 @@ $t11o = "35";
 $t11f = "70";
 $t11c = "20";
 $t11TEMPO = "00:04:30";
-$t11t = $t11TEMPO ;
+$t11tD = HtoS($t11TEMPO) / 100 * ($linhaconfigCS->quartelnv) * 2;
+$t11t = StoH(HtoS($t11TEMPO) - $t11tD) ;
 $t11con = "0.5";
 $t11v = "2";
 $t11p = "50";
@@ -44,7 +52,9 @@ $t12m = "110";
 $t12o = "40";
 $t12f = "50";
 $t12c = "30";
-$t12t = "00:06:00";
+$t12TEMPO = "00:06:00";
+$t12tD = HtoS ($t12TEMPO) / 100 * ($linhaconfigCS->quartelnv) * 2;
+$t12t = StoH(HtoS($t12TEMPO) - $t12tD) ;
 $t12con = "0.6";
 $t12v = "1.6";
 $t12p = "20";
@@ -60,11 +70,15 @@ $t13m = "110";
 $t13o = "60";
 $t13f = "120";
 $t13c = "50";
-$t13t = "00:08:30";
+$t13TEMPO = "00:08:30";
+$t13tD = HtoS ($t13TEMPO) / 100 * ($linhaconfigCS->quartelnv) * 2;
+$t13t = StoH(HtoS($t13TEMPO) - $t13tD) ;
 $t13con = "0.9";
 $t13v = "2.2";
 $t13p = "65";
 $t13nome ="Tropidado";
+$t13Rq = "5";
+$t13Rcpm = "3";
 
 $t14atk = "1";
 $t14defi = "1";
@@ -74,11 +88,15 @@ $t14m = "120";
 $t14o = "100";
 $t14f = "30";
 $t14c = "70";
-$t14t = "00:12:30";
+$t14TEMPO = "00:12:30";
+$t14tD = HtoS ($t14TEMPO) / 100 * ($linhaconfigCS->quartelnv) * 2;
+$t14t = StoH(HtoS($t14TEMPO) - $t14tD) ;
 $t14con = "1.8";
 $t14v = "5";
 $t14p = "0";
 $t14nome ="Spitzel";
+$t14Rq = "5";
+$t14Rcpm = "3";
 
 $t15atk = "80";
 $t15defi = "40";
@@ -279,4 +297,10 @@ $t29con = "0";
 $t29v = "2.7";
 $t29p = "0";
 $t29nome ="Catapulta portátil";
+
+
+
+
+
+}
 ?>

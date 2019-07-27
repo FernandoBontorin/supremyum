@@ -1,5 +1,6 @@
 <?php include"padraoframe.php" ?>
-<?php include"../Config/tropasdados.php" ?>
+
+
 <center>
 
 <?php
@@ -9,7 +10,9 @@ include "../engine/recursos.php";
 
 include "../Config/config_sistema.php";
 
-include "../Config/formulas.php";
+include"../Config/tropasdados.php";
+
+
 ?>
 
 <?php

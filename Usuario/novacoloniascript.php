@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<a href="home.php">Voltar</a>
+
 
 
 	<?php
@@ -109,14 +109,15 @@ $consulta78 = mysql_query($sql);
 
 // faz consulta no banco para inserir os dados do usuario
 $sql = "insert into aldeias (ID,dono,nome,povo,pontosdeprevisao,madeira,ouro,ferro,comida,capacidade,lealdade,x,y,xy,madeirahora,ourohora,ferrohora,comidahora) values ('','$dono','$nome','$civilizacao','$pontosdeprevisao','$madeira','$ouro','$ferro','$comida','$capacidade','$lealdade','$x','$y','$xy','$madeiradb','$ourodb','$ferrodb','$comidadb')";
+$sqlM = "insert into mapaview (id,dono,x,y) values ('','$dono','$x','$y')";
 $consulta78 = mysql_query($sql);
-
+$consulta79 = mysql_query($sqlM);
 
 
 // verifica se o usuario foi cadastrado
 if($consulta78) {
 	echo "<font color=green><b>
-		  Você criou sua colônia com sucesso!<br>
+		  Você criou sua colônia com sucesso!  <b><a href='quartelativar.php'>Prosseguir</a></b><br>
 		  
 		  </font></b>";
 	exit;

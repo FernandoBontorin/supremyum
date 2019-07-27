@@ -1,6 +1,6 @@
 <?php
 include "padrao.php";
-include "../Config/formulas.php";
+
 
 ?>
 
@@ -74,26 +74,17 @@ If ($temposobrandot14 < 0) { $tst14 = 0; } else { $tst14 = StoH($temposobrandot1
 
 <div id="tabelaP" name="tabelaP">
 <b>Faça suas tropas com sabedoria!</b><br>
-Ao colocar tropas na fila de produção, você somente poderá produzir mais da unidade desejada, quando não houver nenhuma unidade dessa em produção!
+Ao colocar tropas na fila de produção, você somente poderá produzir mais da unidade desejada, quando não houver nenhuma unidade dessa em produção!<br>
+<b>Bônus no tempo de produção oferecido pelo nível do seu quartel: <?php echo $linhaaaacc->quartelnv * 2; ?>%</b>
 
-<div id="tabela1" name="tabela1" style="display:<?php echo $display1; ?>;"><h3>Alemães</h3>
-
+<div id="tabela1" name="tabela1" style="display:<?php echo $display1; ?>; background-color: #DCDCDC;"><h3>Alemães</h3>
 <b>Tropas em produção</b>
-<table border="1">
+<table border="1"><td align="center"><?php echo $t11nome; ?></td><td align="center"><?php echo $t12nome; ?></td><td align="center"><?php echo $t13nome; ?></td><td align="center"><?php echo $t14nome; ?></td>
+<tr><td align="center"><?php echo $linhaD->t11; ?></td><td align="center"><?php echo $linhaD->t12; ?></td><td align="center"><?php echo $linhaD->t13; ?></td><td align="center"><?php echo $linhaD->t14; ?></td>
+</table><b>Tempo restante: </b><table border="1">
 <td align="center"><?php echo $t11nome; ?></td><td align="center"><?php echo $t12nome; ?></td><td align="center"><?php echo $t13nome; ?></td><td align="center"><?php echo $t14nome; ?></td>
-<tr>
-<td align="center"><?php echo $linhaD->t11; ?></td><td align="center"><?php echo $linhaD->t12; ?></td><td align="center"><?php echo $linhaD->t13; ?></td><td align="center"><?php echo $linhaD->t14; ?></td>
-</table>
-<b>Tempo restante: </b>
-<table border="1">
-<td align="center"><?php echo $t11nome; ?></td><td align="center"><?php echo $t12nome; ?></td><td align="center"><?php echo $t13nome; ?></td><td align="center"><?php echo $t14nome; ?></td>
-<tr>
-<td align="center"><?php echo $tst11; ?></td><td align="center"><?php echo $tst12; ?></td><td align="center"><?php echo $tst13; ?></td><td align="center"><?php echo $tst14; ?></td>
-</table>
-<br>
-<b>Produzir</b>
-<table border="0"><td>
-<table border="1"><td align="center"><b>
+<tr><td align="center"><?php echo $tst11; ?></td><td align="center"><?php echo $tst12; ?></td><td align="center"><?php echo $tst13; ?></td><td align="center"><?php echo $tst14; ?></td>
+</table><br><b>Produzir</b><table border="0"><td><table border="1"><td align="center"><b>
 <?php If ($temposobrandot11 <= 0) { 
  $limpatc11 = mysql_query("update fila set t11timecmc = 0 where aldeiaid = '$iddavila'");
  $limpatf11 = mysql_query("update fila set t11timefim = 0 where aldeiaid = '$iddavila'");
@@ -133,7 +124,7 @@ echo "Este quartel já possui<br>tropas deste tipo em produção!";
 <?php $t12possiveiso = (int)$ouro / $t12o; $t12possiveisoo = (int)$t12possiveiso; ?>
 <?php $t12possiveisf = (int)$ferro / $t12f; $t12possiveisff = (int)$t12possiveisf; ?>
 <?php $t12possiveisc = (int)$comida / $t12c; $t12possiveiscc = (int)$t12possiveisc; ?>
-<?php If ($t12possiveismm < $t12possiveisoo) { $possiveisgeralt12a = $t11possiveismm; } else { $possiveisgeralt12a = $t12possiveisoo; } ?>
+<?php If ($t12possiveismm < $t12possiveisoo) { $possiveisgeralt12a = $t12possiveismm; } else { $possiveisgeralt12a = $t12possiveisoo; } ?>
 <?php If ($t12possiveisff < $t12possiveiscc) { $possiveisgeralt12b = $t12possiveisff; } else { $possiveisgeralt12b = $t12possiveiscc; } ?>
 <?php If ($possiveisgeralt12a < $possiveisgeralt12b) { $possiveisgeralt12c = $possiveisgeralt12a; } else { $possiveisgeralt12c = $possiveisgeralt12b; } ?>
 <b>(Max: <?php echo $possiveisgeralt12c ?>)</b>
@@ -148,11 +139,69 @@ echo "Este quartel já possui<br>tropas deste tipo em produção!";
 <input type="submit" name="sub12" id="sub12" value="Produzir tropas">';}}} ?>
 </form>
 </td></table>
+</td><td>
+
+<table border="1"><td align="center"><b>
+<?php 
+ If ($temposobrandot13 <= 0) { 
+ $limpatc13 = mysql_query("update fila set t13timecmc = 0 where aldeiaid = '$iddavila'");
+ $limpatf13 = mysql_query("update fila set t13timefim = 0 where aldeiaid = '$iddavila'");
+ $attt13 = mysql_query("update tropas set t13 = $linhaD->t13 + $t13atual where IDaldeia = '$iddavila'");
+ $limpa13 = mysql_query("update fila set t13 = 0 where aldeiaid = '$iddavila'"); } else {}; ?>
+<?php echo $t13nome.' ('.$t13atual.')'; ?></b><br><br><img src="../img/madeira.bmp"><?php echo $t13m." ";?><img src="../img/ouro.bmp"><?php echo $t13o." ";?><img src="../img/ferro.bmp"><?php echo $t13f." ";?><img src="../img/comida.bmp"><?php echo $t13c." ";?><img src="../img/time.bmp"><?php echo $t13t." ";?>
+<form action="quarteledmake13.php" target="iframequartel" name="quartel13" id="quartel13"  method="post" enctype="multipart/form-data">
+<?php $t13possiveism = (int)$madeira / $t13m; $t13possiveismm = (int)$t13possiveism; ?>
+<?php $t13possiveiso = (int)$ouro / $t13o; $t13possiveisoo = (int)$t13possiveiso; ?>
+<?php $t13possiveisf = (int)$ferro / $t13f; $t13possiveisff = (int)$t13possiveisf; ?>
+<?php $t13possiveisc = (int)$comida / $t13c; $t13possiveiscc = (int)$t13possiveisc; ?>
+<?php If ($t13possiveismm < $t13possiveisoo) { $possiveisgeralt13a = $t13possiveismm; } else { $possiveisgeralt13a = $t13possiveisoo; } ?>
+<?php If ($t13possiveisff < $t13possiveiscc) { $possiveisgeralt13b = $t13possiveisff; } else { $possiveisgeralt13b = $t13possiveiscc; } ?>
+<?php If ($possiveisgeralt13a < $possiveisgeralt13b) { $possiveisgeralt13c = $possiveisgeralt13a; } else { $possiveisgeralt13c = $possiveisgeralt13b; } ?>
+<b>(Max: <?php echo $possiveisgeralt13c ?>)</b>
+<?php If ($linhaaaacc->quartelnv < $t13Rq) {
+echo"Nível do quartel ainda<br>não alcançado(".$t13Rq.")<br>";} else {
+If ($linhaaaacc->cpmnv < $t13Rcpm) {
+echo"Nível do centro de pesquisas militares<br>ainda não alcançado(".$t13Rcpm.")"; } else {
+ If ($linhaD->t13 != 0) {
+echo "Este quartel já possui<br>tropas deste tipo em produção!";
+} else { echo '
+<input type="number" name="text13" id="text13" value=""><br>
+<input type="submit" name="sub13" id="sub13" value="Produzir tropas">';}}} ?>
+</form>
+</td></table>
+</td><td>
 
 
 
-
-
+<table border="1"><td align="center"><b>
+<?php 
+ If ($temposobrandot14 <= 0) { 
+ $limpatc14 = mysql_query("update fila set t14timecmc = 0 where aldeiaid = '$iddavila'");
+ $limpatf14 = mysql_query("update fila set t14timefim = 0 where aldeiaid = '$iddavila'");
+ $attt14 = mysql_query("update tropas set t14 = $linhaD->t14 + $t14atual where IDaldeia = '$iddavila'");
+ $limpa14 = mysql_query("update fila set t14 = 0 where aldeiaid = '$iddavila'"); } else {}; ?>
+<?php echo $t14nome.' ('.$t14atual.')'; ?></b><br><br><img src="../img/madeira.bmp"><?php echo $t14m." ";?><img src="../img/ouro.bmp"><?php echo $t14o." ";?><img src="../img/ferro.bmp"><?php echo $t14f." ";?><img src="../img/comida.bmp"><?php echo $t14c." ";?><img src="../img/time.bmp"><?php echo $t14t." ";?>
+<form action="quarteledmake14.php" target="iframequartel" name="quartel14" id="quartel14"  method="post" enctype="multipart/form-data">
+<?php $t14possiveism = (int)$madeira / $t14m; $t14possiveismm = (int)$t14possiveism; ?>
+<?php $t14possiveiso = (int)$ouro / $t14o; $t14possiveisoo = (int)$t14possiveiso; ?>
+<?php $t14possiveisf = (int)$ferro / $t14f; $t14possiveisff = (int)$t14possiveisf; ?>
+<?php $t14possiveisc = (int)$comida / $t14c; $t14possiveiscc = (int)$t14possiveisc; ?>
+<?php If ($t14possiveismm < $t14possiveisoo) { $possiveisgeralt14a = $t14possiveismm; } else { $possiveisgeralt14a = $t14possiveisoo; } ?>
+<?php If ($t14possiveisff < $t14possiveiscc) { $possiveisgeralt14b = $t14possiveisff; } else { $possiveisgeralt14b = $t14possiveiscc; } ?>
+<?php If ($possiveisgeralt14a < $possiveisgeralt14b) { $possiveisgeralt14c = $possiveisgeralt14a; } else { $possiveisgeralt14c = $possiveisgeralt14b; } ?>
+<b>(Max: <?php echo $possiveisgeralt14c ?>)</b>
+<?php If ($linhaaaacc->quartelnv < $t14Rq) {
+echo"Nível do quartel ainda<br>não alcançado(".$t14Rq.")<br>";} else {
+If ($linhaaaacc->cpmnv < $t14Rcpm) {
+echo"Nível do centro de pesquisas militares<br>ainda não alcançado(".$t14Rcpm.")"; } else {
+ If ($linhaD->t14 != 0) {
+echo "Este quartel já possui<br>tropas deste tipo em produção!";
+} else { echo '
+<input type="number" name="text14" id="text14" value=""><br>
+<input type="submit" name="sub14" id="sub14" value="Produzir tropas">';}}} ?>
+</form>
+</td></table>
+</td><td>
 
 
 

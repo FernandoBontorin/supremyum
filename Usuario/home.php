@@ -193,9 +193,21 @@ echo '
 <tr>
 <td align="center"><b>Quantidade</b></td><td align="center">'.$linha5w->t11.'</td><td align="center">'.$linha5w->t12.'</td><td align="center">'.$linha5w->t13.'</td><td align="center">'.$linha5w->t14.'</td><td align="center">'.$linha5w->t15.'</td><td align="center">'.$linha5w->t16.'</td><td align="center">'.$linha5w->t17.'</td><td align="center">'.$linha5w->t18.'</td><td align="center">'.$linha5w->t19.'</td>
 </table>
-
-
 </div>
+
+<div style="display:'.$display2.';" id="t2" name="t2"  >
+<table border="1" style="background-color: #DCDCDC;">
+<td align="center"><b>Tropas</b></td><td align="center">'.$t21nome.'</td><td align="center">'.$t22nome.'</td><td align="center">'.$t23nome.'</td><td align="center">'.$t24nome.'</td><td align="center">'.$t25nome.'</td><td align="center">'.$t26nome.'</td><td align="center">'.$t27nome.'</td><td align="center">'.$t28nome.'</td><td align="center">'.$t29nome.'</td>
+<tr>
+<td align="center"><b>Quantidade</b></td><td align="center">'.$linha5w->t21.'</td><td align="center">'.$linha5w->t22.'</td><td align="center">'.$linha5w->t23.'</td><td align="center">'.$linha5w->t24.'</td><td align="center">'.$linha5w->t25.'</td><td align="center">'.$linha5w->t26.'</td><td align="center">'.$linha5w->t27.'</td><td align="center">'.$linha5w->t28.'</td><td align="center">'.$linha5w->t29.'</td>
+</table>
+</div>
+
+
+
+
+
+
 
 
 </center>

@@ -132,7 +132,7 @@ echo '<img src="../img/time.bmp">'; echo ' ';  echo $upquarteltempo;
 $aaaabbbb = $nivelquartel + 1;
 $producaonext =  2 * $aaaabbbb;
 $producaonext2 = (int)($producaonext);
-echo "<font color=blue><b>Bônus no tempo de treinamento da infantaria no nível ";  echo $niveledcentral + 1;   echo ': ' .$producaonext2.   '%';  
+echo "<font color=blue><b>Bônus no tempo de treinamento da infantaria no nível ";  echo $aaaabbbb;   echo ': ' .$producaonext2.   '%';  
 ?>
 </font></b>
 <?php
