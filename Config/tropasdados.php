@@ -200,6 +200,8 @@ $t22con = "0.7";
 $t22v = 2*$troop_speed;
 $t22p = "15";
 $t22nome ="Defensor";
+$t22Rq = "3";
+$t22Rcpm = "1";
 
 $t23atk = "45";
 $t23defi = "25";
@@ -214,6 +216,8 @@ $t23con = "0.9";
 $t23v = 2.2*$troop_speed;
 $t23p = "65";
 $t23nome ="Guerreiro apache";
+$t23Rq = "5";
+$t23Rcpm = "3";
 
 $t24atk = "1";
 $t24defi = "1";
@@ -228,6 +232,8 @@ $t24con = "1.8";
 $t24v = 5*$troop_speed;
 $t24p = "0";
 $t24nome ="Explorador apache";
+$t24Rq = "5";
+$t24Rcpm = "3";
 
 $t25atk = "80";
 $t25defi = "40";

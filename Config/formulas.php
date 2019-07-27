@@ -21,6 +21,8 @@ $consultaconfig = mysql_query("select * from aldeias where dono = '$login_usuari
 	$linhaconfig = mysql_num_rows($consultaconfig);
 while($linhaconfig = mysql_fetch_object($consultaconfig)) {
 
+$povolocal = $linhaconfig->povo;
+
 $consultaTIME = mysql_query("select * from config where time");
 	$linhaTIME = mysql_num_rows($consultaTIME);
 while($linhaTIME = mysql_fetch_object($consultaTIME)) {
@@ -34,14 +36,24 @@ $consultaFILA = mysql_query("select * from fila where aldeiaid = '$linhaconfig->
 while($linhaFILA = mysql_fetch_object($consultaFILA)) {
 
 $tempoatual = $linhaTIME->time;
-$t11atual = $linhaTROPAS->t11;
-$t11filaatual = $linhaFILA->t11;
-$t12atual = $linhaTROPAS->t12;
-$t12filaatual = $linhaFILA->t12;
-$t13atual = $linhaTROPAS->t13;
-$t13filaatual = $linhaFILA->t13;
-$t14atual = $linhaTROPAS->t14;
-$t14filaatual = $linhaFILA->t14;
+$t1a = "t".$povolocal."1";
+$t2a = "t".$povolocal."2";
+$t3a = "t".$povolocal."3";
+$t4a = "t".$povolocal."4";
+$t5a = "t".$povolocal."5";
+$t6a = "t".$povolocal."6";
+$t7a = "t".$povolocal."7";
+$t8a = "t".$povolocal."8";
+$t9a = "t".$povolocal."9";
+
+$t1atual = $linhaTROPAS->t1;
+$t1filaatual = $linhaFILA->t1;
+$t2atual = $linhaTROPAS->t2;
+$t2filaatual = $linhaFILA->t2;
+$t3atual = $linhaTROPAS->t3;
+$t3filaatual = $linhaFILA->t3;
+$t4atual = $linhaTROPAS->t4;
+$t4filaatual = $linhaFILA->t4;
 
 $niveldoedcentral = $linhaconfig->edcentralnv;
 $abcde1 = $linhaconfig->edcentralnv;

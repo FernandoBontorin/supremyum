@@ -52,7 +52,7 @@
 
 </div>
 
-<iframe name="iframe" id="iframe" src="login.php" scrolling="no">
+<iframe name="iframe" id="iframe" src="login.php" scrolling="yes">
 
 </iframe>
 

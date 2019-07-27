@@ -33,7 +33,7 @@ function getunit($num){
 global $login_usuario,$povo,$linhatropC;
 
 $tt1 = "linhatropC";
-$t1 = "t$povo$num";
+$t1 = "t$num";
 echo $$tt1->$t1;
 
 

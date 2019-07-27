@@ -189,23 +189,27 @@ If ($povo != 13) { $display13='none'; } else { $display13='block'; }
 If ($povo != 14) { $display14='none'; } else { $display14='block'; }
 If ($povo != 15) { $display15='none'; } else { $display15='block'; }
 
+
+$nome1 = "t".$povolocal."1nome";
+$nome2 = "t".$povolocal."2nome";
+$nome3 = "t".$povolocal."3nome";
+$nome4 = "t".$povolocal."4nome";
+$nome5 = "t".$povolocal."5nome";
+$nome6 = "t".$povolocal."6nome";
+$nome7 = "t".$povolocal."7nome";
+$nome8 = "t".$povolocal."8nome";
+$nome9 = "t".$povolocal."9nome";
 echo '
 <center>
-<div style="display:'.$display1.';" id="t1" name="t1"  >
+<div  >
 <table border="1" style="background-color: #DCDCDC;">
-<td align="center"><b>Troops</b></td><td align="center">'.$t11nome.'</td><td align="center">'.$t12nome.'</td><td align="center">'.$t13nome.'</td><td align="center">'.$t14nome.'</td><td align="center">'.$t15nome.'</td><td align="center">'.$t16nome.'</td><td align="center">'.$t17nome.'</td><td align="center">'.$t18nome.'</td><td align="center">'.$t19nome.'</td>
+
+<td align="center"><b>Troops</b></td><td align="center">'.$$nome1.'</td><td align="center">'.$$nome2.'</td><td align="center">'.$$nome3.'</td><td align="center">'.$$nome4.'</td><td align="center">'.$$nome5.'</td><td align="center">'.$$nome6.'</td><td align="center">'.$$nome7.'</td><td align="center">'.$$nome8.'</td><td align="center">'.$$nome9.'</td>
 <tr>
-<td align="center"><b>Amount</b></td><td align="center">'.$linha5w->t11.'</td><td align="center">'.$linha5w->t12.'</td><td align="center">'.$linha5w->t13.'</td><td align="center">'.$linha5w->t14.'</td><td align="center">'.$linha5w->t15.'</td><td align="center">'.$linha5w->t16.'</td><td align="center">'.$linha5w->t17.'</td><td align="center">'.$linha5w->t18.'</td><td align="center">'.$linha5w->t19.'</td>
+<td align="center"><b>Amount</b></td><td align="center">'.$linha5w->t1.'</td><td align="center">'.$linha5w->t2.'</td><td align="center">'.$linha5w->t3.'</td><td align="center">'.$linha5w->t4.'</td><td align="center">'.$linha5w->t5.'</td><td align="center">'.$linha5w->t6.'</td><td align="center">'.$linha5w->t7.'</td><td align="center">'.$linha5w->t8.'</td><td align="center">'.$linha5w->t9.'</td>
 </table>
 </div>
 
-<div style="display:'.$display2.';" id="t2" name="t2"  >
-<table border="1" style="background-color: #DCDCDC;">
-<td align="center"><b>Tropas</b></td><td align="center">'.$t21nome.'</td><td align="center">'.$t22nome.'</td><td align="center">'.$t23nome.'</td><td align="center">'.$t24nome.'</td><td align="center">'.$t25nome.'</td><td align="center">'.$t26nome.'</td><td align="center">'.$t27nome.'</td><td align="center">'.$t28nome.'</td><td align="center">'.$t29nome.'</td>
-<tr>
-<td align="center"><b>Quantidade</b></td><td align="center">'.$linha5w->t21.'</td><td align="center">'.$linha5w->t22.'</td><td align="center">'.$linha5w->t23.'</td><td align="center">'.$linha5w->t24.'</td><td align="center">'.$linha5w->t25.'</td><td align="center">'.$linha5w->t26.'</td><td align="center">'.$linha5w->t27.'</td><td align="center">'.$linha5w->t28.'</td><td align="center">'.$linha5w->t29.'</td>
-</table>
-</div>
 
 
 

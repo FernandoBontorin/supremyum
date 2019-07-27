@@ -21,28 +21,20 @@ $linhat = mysql_num_rows($consultat);
 while($linhat = mysql_fetch_object($consultat)) {
 
 //Soma as tropas.
-$b1 = "t".$povo."1";
-$b2 = "t".$povo."2";
-$b3 = "t".$povo."3";
-$b4 = "t".$povo."4";
-$b5 = "t".$povo."5";
-$b6 = "t".$povo."6";
-$b7 = "t".$povo."7";
-$b8 = "t".$povo."8";
-$b9 = "t".$povo."9";
 
-$newt1 = $linhat2->t1 + $linhat->$b1;
-$newt2 = $linhat2->t2 + $linhat->$b2;
-$newt3 = $linhat2->t3 + $linhat->$b3;
-$newt4 = $linhat2->t4 + $linhat->$b4;
-$newt5 = $linhat2->t5 + $linhat->$b5;
-$newt6 = $linhat2->t6 + $linhat->$b6;
-$newt7 = $linhat2->t7 + $linhat->$b7;
-$newt8 = $linhat2->t8 + $linhat->$b8;
-$newt9 = $linhat2->t9 + $linhat->$b9;
 
-$updatet = mysql_query("update tropas set $b1 = $newt1, $b2 = $newt2, $b3 = $newt3, $b4 = $newt4, $b5 = $newt5, $b6 = $newt6, $b7 = $newt7, $b8 = $newt8, $b9 = $newt9   where IDaldeia = '$idvila'");
-If($updatet) { echo"Processing...<br>";} else { echo "Error 901: Troop Send* DB Error!";}
+$newt1 = $linhat2->t1 + $linhat->t1;
+$newt2 = $linhat2->t2 + $linhat->t2;
+$newt3 = $linhat2->t3 + $linhat->t3;
+$newt4 = $linhat2->t4 + $linhat->t4;
+$newt5 = $linhat2->t5 + $linhat->t5;
+$newt6 = $linhat2->t6 + $linhat->t6;
+$newt7 = $linhat2->t7 + $linhat->t7;
+$newt8 = $linhat2->t8 + $linhat->t8;
+$newt9 = $linhat2->t9 + $linhat->t9;
+
+$updatet = mysql_query("update tropas set t1 = $newt1, t2 = $newt2, t3 = $newt3, t4 = $newt4, t5 = $newt5, t6 = $newt6, t7 = $newt7, t8 = $newt8, t9 = $newt9   where IDaldeia = '$idvila'");
+If($updatet) { echo"Processing...<br>";} else { echo "Error 901: Troop Send* DB Error!"; exit();}
 
 
 

@@ -35,23 +35,23 @@ $consultae = mysql_query("select * from tropas where IDaldeia = '$IDdestino'");
 $linhae = mysql_num_rows($consultae);
 while($linhae = mysql_fetch_object($consultae)) {
 $xdb1 = "t".$povodest."1";
-$t1enemy = $linhae->$xdb1;
+$t1enemy = $linhae->t1;
 $xdb2 = "t".$povodest."2";
-$t2enemy = $linhae->$xdb2;
+$t2enemy = $linhae->t2;
 $xdb3 = "t".$povodest."3";
-$t3enemy = $linhae->$xdb3;
+$t3enemy = $linhae->t3;
 $xdb4 = "t".$povodest."4";
-$t4enemy = $linhae->$xdb4;
+$t4enemy = $linhae->t4;
 $xdb5 = "t".$povodest."5";
-$t5enemy = $linhae->$xdb5;
+$t5enemy = $linhae->t5;
 $xdb6 = "t".$povodest."6";
-$t6enemy = $linhae->$xdb6;
+$t6enemy = $linhae->t6;
 $xdb7 = "t".$povodest."7";
-$t7enemy = $linhae->$xdb7;
+$t7enemy = $linhae->t7;
 $xdb8 = "t".$povodest."8";
-$t8enemy = $linhae->$xdb8;
+$t8enemy = $linhae->t8;
 $xdb9 = "t".$povodest."9";
-$t9enemy = $linhae->$xdb9;
+$t9enemy = $linhae->t9;
 
 //Anti-Cheat.
 $consultati = mysql_query("select * from config where time");
@@ -325,15 +325,15 @@ $comidarob = 0;
 
 
 //Descontar tropas da def.
-$d1att = "t".$povodest."1";
-$d2att = "t".$povodest."2";
-$d3att = "t".$povodest."3";
-$d4att = "t".$povodest."4";
-$d5att = "t".$povodest."5";
-$d6att = "t".$povodest."6";
-$d7att = "t".$povodest."7";
-$d8att = "t".$povodest."8";
-$d9att = "t".$povodest."9";
+$d1att = "t1";
+$d2att = "t2";
+$d3att = "t3";
+$d4att = "t4";
+$d5att = "t5";
+$d6att = "t6";
+$d7att = "t7";
+$d8att = "t8";
+$d9att = "t9";
 $updatedef = mysql_query("update tropas set $d1att = $sd1, $d2att = $sd2, $d3att = $sd3, $d4att = $sd4, $d5att = $sd5, $d6att = $sd6, $d7att = $sd7, $d8att = $sd8, $d9att = $sd9   where IDaldeia = '$IDdestino'");
 If($updatedef) { } else { echo "Error 901: Troop Send* DB Error!";}
 
@@ -404,6 +404,90 @@ If($resultdelatk) { } else { echo "Error 902: Atk DB Error!";}
 }
 
 
+
+
+//Inicio do Sistema de Retorno.
+If ($action == "rtn") {
+$xa = $linhar2->x;
+$ya = $linhar2->y;
+$xb = $linhar->x;
+$yb = $linhar->y;
+$aa = pow(($xb-$xa),2) + pow(($yb-$ya),2);
+$dist = sqrt($aa);
+
+If ($t1 >= 1) {$ta1 = "t".$povorem."1v";} else { $ta1 = "lol";}
+If ($t2 >= 1) {$ta2 = "t".$povorem."2v";} else { $ta2 = "lol";}
+If ($t3 >= 1) {$ta3 = "t".$povorem."3v";} else { $ta3 = "lol";}
+If ($t4 >= 1) {$ta4 = "t".$povorem."4v";} else { $ta4 = "lol";}
+If ($t5 >= 1) {$ta5 = "t".$povorem."5v";} else { $ta5 = "lol";}
+If ($t6 >= 1) {$ta6 = "t".$povorem."6v";} else { $ta6 = "lol";}
+If ($t7 >= 1) {$ta7 = "t".$povorem."7v";} else { $ta7 = "lol";}
+If ($t8 >= 1) {$ta8 = "t".$povorem."8v";} else { $ta8 = "lol";}
+If ($t9 >= 1) {$ta9 = "t".$povorem."9v";} else { $ta9 = "lol";}
+$lol = "99999";
+$tropas = array($$ta1,$$ta2,$$ta3,$$ta4,$$ta5,$$ta6,$$ta7,$$ta8,$$ta9);
+sort($tropas);
+$vfin = $tropas[0];
+$var1a = $dist/$vfin;
+$var1b = $var1a*3600;
+$tempomovs = intval($var1b);
+$tempomov = StoH($var1b);
+$tempofinal = $timenow + $tempomovs;
+
+$tcr = $timenow;
+$insretornos = "insert into retornos (ID,idsaida,idchegada,tempofinal,povo,t1,t2,t3,t4,t5,t6,t7,t8,t9,madeira,ouro,ferro,comida) values ('','$IDdestino','$IDremetente','$tempofinal','$povorem','$t1','$t2','$t3','$t4','$t5','$t6','$t7','$t8','$t9','0','0','0','0')";
+$consultaret = mysql_query($insretornos);
+If($consultaret) {echo "<center><font color='green'><b>Troops Returning!</b></font></center>"; } else { echo "Error 900: Troop Send DB Error!";}
+
+
+//Deletando atk...
+$delatk = "DELETE FROM ataques WHERE ID='$IDatk'";
+$resultdelatk = mysql_query($delatk);
+If($resultdelatk) { } else { echo "Error 902: Atk DB Error!";}
+
+}
+//Fim do Sistema de Retorno.
+
+
+
+
+
+
+//Inicio do Sistema de Reforco.
+If ($action == "rfc") {
+$addt1 = "t1";
+$addt2 = "t2";
+$addt3 = "t3";
+$addt4 = "t4";
+$addt5 = "t5";
+$addt6 = "t6";
+$addt7 = "t7";
+$addt8 = "t8";
+$addt9 = "t9";
+
+
+$consultaref = mysql_query("select * from tropas where IDaldeia = '$IDdestino'");
+$linharef = mysql_num_rows($consultaref);
+while($linharef = mysql_fetch_object($consultaref)) {
+$t1local = $linharef->$addt1;
+$t2local = $linharef->$addt2;
+$t3local = $linharef->$addt3;
+$t4local = $linharef->$addt4;
+$t5local = $linharef->$addt5;
+$t6local = $linharef->$addt6;
+$t7local = $linharef->$addt7;
+$t8local = $linharef->$addt8;
+$t9local = $linharef->$addt9;
+
+$updateref = mysql_query("update tropas set $addt1 = $t1 + $t1local,  $addt2 = $t2 + $t2local, $addt3 = $t3 + $t3local, $addt4 = $t4 + $t4local, $addt5 = $t5 + $t5local, $addt6 = $t6 + $t6local, $addt7 = $t7 + $t7local, $addt8 = $t8 + $t8local, $addt9 = $t9 + $t9local, where ID = '$IDdestino'");
+If($updateref) { } else { echo "Error 901: Troop Send DB Error!!!";}
+
+}}
+//Fim do Sistema de Reforco.
+
+
+
+
 function getname($unit){
 global $povoname, $tropaname, $povorem, $p1nome, $p2nome, $p3nome, $p4nome, $p5nome, $p6nome, $p7nome, $p8nome, $p9nome, $p10nome, $p11nome, $p12nome, $p13nome, $p14nome, $p15nome, $p999nome, $t11nome, $t12nome, $t13nome, $t14nome, $t15nome, $t16nome, $t17nome, $t18nome, $t19nome, $t21nome, $t22nome, $t23nome, $t24nome, $t25nome, $t26nome, $t27nome, $t28nome, $t29nome;
 $p = "p".$povorem."nome";
@@ -449,7 +533,6 @@ If($action == "atk") {
 </center>
 <?php
 } else {}
-
 
 
 

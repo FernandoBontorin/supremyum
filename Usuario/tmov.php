@@ -1,11 +1,12 @@
 <?php
 include "padrao.php"; 
-include "../Config/tropasdados.php";
+
 ?>
 
 <html>
 <body>
 <?php
+include "../Config/tropasdados.php";
 $count = 0;
 $consultamov = mysql_query("select * from ataques where remetente = '$id'");
 $linhamov = mysql_num_rows($consultamov);
@@ -88,6 +89,17 @@ $result2 = $linhamovret->tempofinal - $linhat2->time;
 If ($result2 <= 0) { $result20 = 0;} else { $result20 = $result2;}
 }
 
+
+$povo = $linhamovret->povo;
+$nomet1 = "t".$povo."1nome";
+$nomet2 = "t".$povo."2nome";
+$nomet3 = "t".$povo."3nome";
+$nomet4 = "t".$povo."4nome";
+$nomet5 = "t".$povo."5nome";
+$nomet6 = "t".$povo."6nome";
+$nomet7 = "t".$povo."7nome";
+$nomet8 = "t".$povo."8nome";
+$nomet9 = "t".$povo."9nome";
 
 ?>
 <form action="tregroup.php" target="_self" method="post" enctype="multipart/form-data">
