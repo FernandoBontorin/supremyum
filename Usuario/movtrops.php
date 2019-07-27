@@ -12,7 +12,6 @@ $t8 = $_POST['t8'];
 $t9 = $_POST['t9'];
 $x = $_POST['x'];
 $y = $_POST['y'];
-$type = $_POST['type'];
 
 ?>
 <center>
@@ -36,13 +35,6 @@ while($linhatropC = mysql_fetch_object($consultatropE)) {
 
 
 //Anti-cheat abaixo.
-
-If ($type == "atk"){
-} else {
-If ($type == "ref"){
-} else {
-exit("Error. Invalid move type!");
-}}
 
 function nullcheck() {
 global $t1, $t2, $t3, $t4, $t5, $t6, $t7, $t8, $t9;
@@ -185,10 +177,10 @@ echo $lol;
 ?>
 <center>
 <table name="trop1" id="trop1" border="1" style=" background-color: white;" cellpadding="0" cellspacing="0">
-<td align="center" colspan="9"><b>Confirm <?php if ($type=="atk") {echo "attack";} If ($type=="ref"){echo"reinforcement";}?></b></td><tr>
+<td align="center" colspan="9"><b>Confirm</b></td><tr>
 <td align="center"><?php detect(1); ?></td><td align="center"><?php detect(2); ?></td><td align="center"><?php detect(3); ?></td><td align="center"><?php detect(4); ?></td><td align="center"><?php detect(5); ?></td><td align="center"><?php detect(6); ?></td><td align="center"><?php detect(7); ?></td><td align="center"><?php detect(8); ?></td><td align="center"><?php detect(9); ?></td></tr><tr>
 <td align="center"><?php mostrar($t1);?></td><td align="center"><?php mostrar($t2);?></td><td align="center"><?php mostrar($t3);?></td><td align="center"><?php mostrar($t4);?></td><td align="center"><?php mostrar($t5);?></td><td align="center"><?php mostrar($t6);?></td><td align="center"><?php mostrar($t7);?></td><td align="center"><?php mostrar($t8);?></td><td align="center"><?php mostrar($t9);?></td></tr><tr>
-<td align="center" colspan="9"><form action="movtropscript.php" target="_top" name="mt" id="mt"  method="post" enctype="multipart/form-data"><input type="hidden" name="t1" value="<?php echo $t1;?>"><input type="hidden" name="t2" value="<?php echo $t2;?>"><input type="hidden" name="t3" value="<?php echo $t3;?>"><input type="hidden" name="t4" value="<?php echo $t4;?>"><input type="hidden" name="t5" value="<?php echo $t5;?>"><input type="hidden" name="t6" value="<?php echo $t6;?>"><input type="hidden" name="t7" value="<?php echo $t7;?>"><input type="hidden" name="t8" value="<?php echo $t8;?>"><input type="hidden" name="t9" value="<?php echo $t9;?>"><input type="hidden" name="x" value="<?php echo $x;?>"><input type="hidden" name="y" value="<?php echo $y;?>"><input type="hidden" name="type" value="<?php echo $type;?>"></td></tr><tr>
+<td align="center" colspan="9"><form action="movtropscript.php" target="_top" name="mt" id="mt"  method="post" enctype="multipart/form-data"><input type="hidden" name="t1" value="<?php echo $t1;?>"><input type="hidden" name="t2" value="<?php echo $t2;?>"><input type="hidden" name="t3" value="<?php echo $t3;?>"><input type="hidden" name="t4" value="<?php echo $t4;?>"><input type="hidden" name="t5" value="<?php echo $t5;?>"><input type="hidden" name="t6" value="<?php echo $t6;?>"><input type="hidden" name="t7" value="<?php echo $t7;?>"><input type="hidden" name="t8" value="<?php echo $t8;?>"><input type="hidden" name="t9" value="<?php echo $t9;?>"><input type="hidden" name="x" value="<?php echo $x;?>"><input type="hidden" name="y" value="<?php echo $y;?>"></td></tr><tr>
 <td align="center" colspan="9"><br><br><b>Coordinates</b></td></tr><tr>
 <td align="center" colspan="9">X:<input type="number" value="<?php echo $x; ?>" id="x" name="x" disabled>Y:<input type="number" value="<?php echo $y; ?>" id="y" name="y" disabled></td></tr><tr>
 <td align="center" colspan="9"><b><?php coodcheck(1); ?><br><?php  echo "Time: "; calctime($povo);?></b></td></tr><tr>

@@ -49,7 +49,6 @@ a:active {
 </head>
 
 <body>
-<center>
 <form action="deletar_usuario.php" method="post" enctype="multipart/form-data">
 <table width="732" border="0" cellpadding="0" cellspacing="0">
   <!--DWLayoutTable-->
@@ -153,9 +152,5 @@ while($linhas = mysql_fetch_object($consulta)) {
   </tr>
 </table>
 </form>
-
-<center>
-Status do atualizador: <font color="red"><b>OFF</b></font>
-</center>
 </body>
 </html>

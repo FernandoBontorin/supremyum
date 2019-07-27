@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<meta http-equiv="refresh" content="1; url=quartelativar.php" />
 <title>Untitled Document</title>
 <link href="cadastro.css" rel="stylesheet" type="text/css" />
 
@@ -123,8 +122,8 @@ $consulta79 = mysql_query($sqlM);
 
 // verifica se o usuario foi cadastrado
 if($consulta78) {
-	echo "<font color=green><b><center>
-		  Village created!  </center><b><a href='quartelativar.php'></a></b><br>
+	echo "<font color=green><b>
+		  Village created!  <b><a href='quartelativar.php'>Continue</a></b><br>
 		  
 		  </font></b>";
 	exit;

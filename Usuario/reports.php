@@ -29,7 +29,7 @@ include "menu1.php";
 <center>
 <div id="msglinks" name="msglinks">
 <center>
-<a href="reports.php">Inbox</a>
+<a href="reports.php">Inbox</a> | <a href="deletereports.php">Delete Reports</a> 
 </center>
 </div>
 </center>
@@ -61,27 +61,10 @@ $consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'
 while($linha7 = mysql_fetch_object($consulta3000)) {
 $ID = $linha7->ID;
 }
-$consultarelat = mysql_query("select * from relatorios where visualisador='$ID' ORDER by ID Desc");
+$consultarelat = mysql_query("select * from relatorios where visualisador='$ID'");
 while($linharelat = mysql_fetch_object($consultarelat)) {
-
-
-$vilapesq1 = $linharelat->remetente;
-$vilapesq2 = $linharelat->destino;
-
-
-$consultavillageatk = mysql_query("select * from aldeias where ID='$vilapesq1'");
-while($linhavillageatk = mysql_fetch_object($consultavillageatk)) {
-$atkvillage = $linhavillageatk->nome;
-
-$consultavillagedef = mysql_query("select * from aldeias where ID='$vilapesq2'");
-while($linhavillagedef = mysql_fetch_object($consultavillagedef)) {
-$defvillage = $linhavillagedef->nome;
-
-
-
-echo "<td align='center' style='background: #FFFF66;' width='25%'>".$linharelat->data."  ".$linharelat->horario."</td><td width='50%' align='center' style='background:";If($linharelat->type=="ataquefeito"){echo"#99FF66";}else{echo"#F08080";}echo";'>";If($linharelat->visto=="nao"){echo"<img src='../img/new.png'>";}echo"<a href='lerreport.php?id=".$linharelat->ID."'>".$atkvillage." attacks ".$defvillage."</a></td><tr>";
-
-}}}
+echo "<td align='center' width='25%'>".$linharelat->data."  ".$linharelat->horario."</td><td width='50%' align='center'><a href='lerreport.php?".$linharelat->ID."'>".$linharelat->ID."</a></td><tr>";
+}
 ?>
 </table>
 

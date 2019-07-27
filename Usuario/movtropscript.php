@@ -14,7 +14,6 @@ $t8 = $_POST['t8'];
 $t9 = $_POST['t9'];
 $x = $_POST['x'];
 $y = $_POST['y'];
-$type = $_POST['type'];
 
 
 
@@ -38,13 +37,6 @@ $dist = sqrt($aa);
 
 
 // Anti-Cheat abaixo.
-
-If ($type == "atk"){
-} else {
-If ($type == "ref"){
-} else {
-exit("Error. Invalid move type!");
-}}
 
 function decquant($unit,$order) {
 global $linhatrop2, $linhatropC, $povo;
@@ -210,7 +202,7 @@ $timeagora = $timee;
 $timefinal = $timee + $moretime;
 
 
-$sqlsend = "insert into ataques (ID,type,remetente,destino,tempocmc,tempofinal,povorem,povodest,t1,t2,t3,t4,t5,t6,t7,t8,t9) values (' ','$type','$meuid','$destid','$timeagora','$timefinal','$povo','$povodest','$t1','$t2','$t3','$t4','$t5','$t6','$t7','$t8','$t9')";
+$sqlsend = "insert into ataques (ID,remetente,destino,tempocmc,tempofinal,povorem,povodest,t1,t2,t3,t4,t5,t6,t7,t8,t9) values (' ','$meuid','$destid','$timeagora','$timefinal','$povo','$povodest','$t1','$t2','$t3','$t4','$t5','$t6','$t7','$t8','$t9')";
 $consultasend = mysql_query($sqlsend);
 If($consultasend) { } else { echo "Error 900: Troop Send DB Error!";}
 

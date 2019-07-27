@@ -101,7 +101,7 @@ $comidaparaatt=($linha833->comidahora);
 
 
 
-
+$uptempo = mysql_query("UPDATE config SET tempo = UTC_TIMESTAMP()");
 
 
 
@@ -129,13 +129,18 @@ $capacidade = $linha8330->capacidade;
 $capacidadecomida = $linha8330->capacidadecomida;
 
 
+$uptime = mysql_query("UPDATE config SET time = $timesecond");
 
 
 
 
 
-
-
+$attmadeira = mysql_query("UPDATE aldeias SET madeira = ($madeiraaposconta / 3600) * $tempoparaup + madeira WHERE dono = '$login_usuario'");
+$attouro = mysql_query("UPDATE aldeias SET ouro = ($ouroaposconta / 3600) * $tempoparaup + ouro WHERE dono = '$login_usuario'");
+$attferro = mysql_query("UPDATE aldeias SET ferro = ($ferroaposconta / 3600) * $tempoparaup + ferro WHERE dono = '$login_usuario'");
+$attcomida = mysql_query("UPDATE aldeias SET comida = ($comidaaposconta / 3600) * $tempoparaup + comida WHERE dono = '$login_usuario'");
+$attpop = mysql_query("UPDATE aldeias SET pop = $population WHERE dono = '$login_usuario'");
+$attpop2 = mysql_query("UPDATE dados_usuarios SET pop = $population WHERE Login = '$login_usuario'");
 
 
 $consulta3000533 = mysql_query("select * from aldeias where dono = '$login_usuario'");
@@ -146,7 +151,7 @@ $novapop = $linha8333->pop;
 
 $attdisponivel = $linha8333->popdisponivel + ($novapop - $antigapop);
 
-
+$attpopdisponivel = mysql_query("UPDATE aldeias SET popdisponivel = $attdisponivel WHERE dono = '$login_usuario'");
 
 $madeiraatual = $linha8333->madeira;
 $ouroatual = $linha8333->ouro;
@@ -192,6 +197,7 @@ $comidareajuste = mysql_query("UPDATE aldeias SET comida = $capacidadecomida WHE
 
 </body>
 </html>
+
 
 
 

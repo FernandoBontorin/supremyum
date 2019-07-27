@@ -1,5 +1,6 @@
 <?php
 
+
 // faz conexão com o servidor MySQL
 $local_serve = "127.0.0.1"; 	 // local do servidor
 $usuario_serve = "root";		 // nome do usuario
@@ -19,7 +20,6 @@ $senha_admin = "123890q";						// senha administrador
 $email_admin = "marcotette@hotmail.com";  // email do administrador
 
 
-
 ?>
 
 <?php
@@ -33,24 +33,12 @@ $server_speed = "1";
 $troop_speed ="4";
 $maxnvedcentral = "20";
 $adfly = "0";
-$atualizador = 1;
-$verify = 0;
 
 
-If($verify==1){
+
 if(file_exists("../Config/verify.php")) {
 include_once "../Config/verify.php";
 } else {}
-}
-
-If($atualizador==1){
-if(file_exists("../Config/atualizador.php")) {
-include_once "../Config/atualizador.php";
-} else {}
-}
-
-
-
 
 
 
