@@ -167,7 +167,7 @@ $capacidade = $linha8330->capacidade;
 $capacidadecomida = $linha8330->capacidadecomida;
 
 
-$uptime = mysql_query("UPDATE config SET time = $timesecond");
+
 
 
 
@@ -1110,12 +1110,14 @@ $updateedcentraldestino1 = mysql_query("update aldeias set edcentraltempodestino
 }}}}}}}}
 
 
+//Desconta tropas se acabar cereal
 
+//Fim do desconto
 
 
 
 }}
-
+$uptime = mysql_query("UPDATE config SET time = $timesecond");
 include "../validar_session.php";
 
 ?>

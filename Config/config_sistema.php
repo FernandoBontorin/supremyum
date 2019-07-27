@@ -43,10 +43,11 @@ include_once "../Config/verify.php";
 } else {}
 }
 
-
+If($atualizador==1){
 if(file_exists("../Config/atualizador.php")) {
 include_once "../Config/atualizador.php";
 } else {}
+}
 
 
 
