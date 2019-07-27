@@ -304,5 +304,6 @@ Pontos fracos: Unidades de cerco fracas. Infantaria e cavalaria com ataque e def
 <b>V = </b>Velocidade<br>
 <b>C = </b>Consumo da unidade (o valor indica quantas unidades de comida por hora serão necessárias para sustentar a unidade. O valor interfete diretamente na produção de comida.)<br>
 <b>P = </b>Pilhagem de recursos por unidade (quantidade de recursos que cada unidade suporta carregar após um saque)<br>
+<b>Velocidade das tropas no servidor</b> = X<?php echo $troop_speed;?><br>
 </body>
 </html>

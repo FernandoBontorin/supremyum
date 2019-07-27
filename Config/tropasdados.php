@@ -1,7 +1,7 @@
 <?php
 include "config_sistema.php";
 include "../engine/recursos.php";
-include"../Config/formulas.php";
+include_once "../Config/formulas.php";
 
 
 $consultaconfigCS = mysql_query("select * from aldeias where dono = '$login_usuario'");
@@ -41,7 +41,7 @@ $t11TEMPO = "00:04:30";
 $t11tD = HtoS($t11TEMPO) / 100 * ($linhaconfigCS->quartelnv) * 2;
 $t11t = StoH(HtoS($t11TEMPO) - $t11tD) ;
 $t11con = "0.5";
-$t11v = "2";
+$t11v = 2*$troop_speed;
 $t11p = "50";
 $t11nome = "Kiles";
 
@@ -57,7 +57,7 @@ $t12TEMPO = "00:06:00";
 $t12tD = HtoS ($t12TEMPO) / 100 * ($linhaconfigCS->quartelnv) * 2;
 $t12t = StoH(HtoS($t12TEMPO) - $t12tD) ;
 $t12con = "0.6";
-$t12v = "1.6";
+$t12v = 1.6*$troop_speed;
 $t12p = "20";
 $t12nome = "Skihto";
 $t12Rq = "3";
@@ -75,7 +75,7 @@ $t13TEMPO = "00:08:30";
 $t13tD = HtoS ($t13TEMPO) / 100 * ($linhaconfigCS->quartelnv) * 2;
 $t13t = StoH(HtoS($t13TEMPO) - $t13tD) ;
 $t13con = "0.9";
-$t13v = "2.2";
+$t13v = 2.2*$troop_speed;
 $t13p = "65";
 $t13nome ="Tropidado";
 $t13Rq = "5";
@@ -93,7 +93,7 @@ $t14TEMPO = "00:12:30";
 $t14tD = HtoS ($t14TEMPO) / 100 * ($linhaconfigCS->quartelnv) * 2;
 $t14t = StoH(HtoS($t14TEMPO) - $t14tD) ;
 $t14con = "1.8";
-$t14v = "5";
+$t14v = 5*$troop_speed;
 $t14p = "0";
 $t14nome ="Spitzel";
 $t14Rq = "5";
@@ -109,7 +109,7 @@ $t15f = "120";
 $t15c = "70";
 $t15t = "00:22:30";
 $t15con = "2.0";
-$t15v = "4";
+$t15v = 4*$troop_speed;
 $t15p = "70";
 $t15nome ="Cavasack";
 
@@ -123,7 +123,7 @@ $t16f = "150";
 $t16c = "140";
 $t16t = "00:30:20";
 $t16con = "2.3";
-$t16v = "5";
+$t16v = 5*$troop_speed;
 $t16p = "90";
 $t16nome ="Cavaleiro relâmpago";
 
@@ -137,7 +137,7 @@ $t17f = "230";
 $t17c = "160";
 $t17t = "00:42:20";
 $t17con = "2.8";
-$t17v = "4.5";
+$t17v = 4.5*$troop_speed;
 $t17p = "60";
 $t17nome ="Cavaleiro mestre";
 
@@ -151,7 +151,7 @@ $t18f = "800";
 $t18c = "130";
 $t18t = "00:50:00";
 $t18con = "0";
-$t18v = "1.2";
+$t18v = 1.2*$troop_speed;
 $t18p = "0";
 $t18nome ="Aríete";
 
@@ -165,7 +165,7 @@ $t19f = "760";
 $t19c = "200";
 $t19t = "01:12:00";
 $t19con = "0";
-$t19v = "0.8";
+$t19v = 0.8*$troop_speed;
 $t19p = "0";
 $t19nome ="Catapulta";
 
@@ -183,7 +183,7 @@ $t21f = "50";
 $t21c = "30";
 $t21t = "00:04:50";
 $t21con = "0.7";
-$t21v = "2.2";
+$t21v = 2.2*$troop_speed;
 $t21p = "30";
 $t21nome ="Lutador apache";
 
@@ -197,7 +197,7 @@ $t22f = "50";
 $t22c = "40";
 $t22t = "00:05:40";
 $t22con = "0.7";
-$t22v = "2";
+$t22v = 2*$troop_speed;
 $t22p = "15";
 $t22nome ="Defensor";
 
@@ -211,7 +211,7 @@ $t23f = "110";
 $t23c = "60";
 $t23t = "00:07:50";
 $t23con = "0.9";
-$t23v = "2.2";
+$t23v = 2.2*$troop_speed;
 $t23p = "65";
 $t23nome ="Guerreiro apache";
 
@@ -225,7 +225,7 @@ $t24f = "30";
 $t24c = "70";
 $t24t = "00:12:30";
 $t24con = "1.8";
-$t24v = "5";
+$t24v = 5*$troop_speed;
 $t24p = "0";
 $t24nome ="Explorador apache";
 
@@ -239,7 +239,7 @@ $t25f = "120";
 $t25c = "70";
 $t25t = "00:22:30";
 $t25con = "2.0";
-$t25v = "4";
+$t25v = 4*$troop_speed;
 $t25p = "70";
 $t25nome ="Cavaleiro Inde";
 
@@ -253,7 +253,7 @@ $t26f = "150";
 $t26c = "140";
 $t26t = "00:30:20";
 $t26con = "2.3";
-$t26v = "5";
+$t26v = 5*$troop_speed;
 $t26p = "90";
 $t26nome ="Cavaleiro trovão";
 
@@ -267,7 +267,7 @@ $t27f = "230";
 $t27c = "160";
 $t27t = "00:42:20";
 $t27con = "2.8";
-$t27v = "4.5";
+$t27v = 4.5*$troop_speed;
 $t27p = "60";
 $t27nome ="Cavaleiro apache";
 
@@ -281,7 +281,7 @@ $t28f = "800";
 $t28c = "130";
 $t28t = "00:50:00";
 $t28con = "0";
-$t28v = "3";
+$t28v = 3*$troop_speed;
 $t28p = "0";
 $t28nome ="Aríete apache";
 
@@ -295,7 +295,7 @@ $t29f = "760";
 $t29c = "200";
 $t29t = "01:12:00";
 $t29con = "0";
-$t29v = "2.7";
+$t29v = 2.7*$troop_speed;
 $t29p = "0";
 $t29nome ="Catapulta portátil";
 

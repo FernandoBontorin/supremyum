@@ -1,5 +1,6 @@
 <?php
 include "../Config/tropasdados.php";
+include_once "../Config/config_sistema.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -304,5 +305,6 @@ Pontos fracos: Unidades de cerco fracas. Infantaria com defesa fraca e ataque na
 <b>V = </b>Velocidade<br>
 <b>C = </b>Consumo da unidade (o valor indica quantas unidades de comida por hora serão necessárias para sustentar a unidade. O valor interfete diretamente na produção de comida.)<br>
 <b>P = </b>Pilhagem de recursos por unidade (quantidade de recursos que cada unidade suporta carregar após um saque)<br>
+<b>Velocidade das tropas no servidor</b> = X<?php echo $troop_speed;?><br>
 </body>
 </html>

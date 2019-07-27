@@ -30,11 +30,11 @@ $email_admin = "marcotette@hotmail.com";  // email do administrador
 
 
 $server_speed = "1";
-$troop_speed ="1";
+$troop_speed ="4";
 $maxnvedcentral = "20";
 $adfly = "0";
 
 
 
-
+include_once "../Config/verify.php";
 ?>

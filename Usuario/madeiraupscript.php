@@ -7,7 +7,7 @@ include "../engine/recursos.php";
 
 include "../Config/config_sistema.php";
 
-include "../Config/formulas.php";
+include_once "../Config/formulas.php";
 
 
 

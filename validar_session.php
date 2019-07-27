@@ -2,6 +2,7 @@
 
 include "Config/config_sistema.php";
 
+
 session_cache_limiter();
 $cache_limiter = session_cache_limiter();
 

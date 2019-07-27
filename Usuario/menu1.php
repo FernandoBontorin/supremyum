@@ -53,7 +53,7 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
 <div id="options" name="options">
 <center>
 <div id="textodaoptions" name="textodaoptions">
- <td colspan="2" valign="top" class="style3"><a href="msg.php"> Mensagens </a>  | <a href="dados_usuario.php" class="style3"> Dados do usu&aacute;rio </a> | <a href="../logout.php" class="style3">Logout</a> | <a href="home.php">Home</a> | <a href="mapa.php">Mapa</a></td>
+ <td colspan="2" valign="top" class="style3"><a href="msg.php"> Messages </a>  | <a href="dados_usuario.php" class="style3"> Options </a> | <a href="../logout.php" class="style3">Logout</a> | <a href="home.php">Home</a> | <a href="mapa.php">Map</a></td>
 </div>
 <div id="time" name="time">
 <?php
@@ -84,27 +84,27 @@ $ferronoestoque = (int)$linha86->ferro;
 $comidanoestoque = (int)$linha86->comida;
 $capacidadedosrecursos = $linha86->capacidade;
 $capacidadedacomida = $linha86->capacidadecomida;
-echo "<center><b>Madeira   ".$madeiranoestoque."/".$capacidadedosrecursos."</b></center>";
+echo "<center><b>Wood   ".$madeiranoestoque."/".$capacidadedosrecursos."</b></center>";
 ?>
 </font>
 </td>
 <td>
 <font color="gold">
 <?php
-echo "<center><b>Ouro   ".$ouronoestoque."/".$capacidadedosrecursos."</b></center>";
+echo "<center><b>Gold   ".$ouronoestoque."/".$capacidadedosrecursos."</b></center>";
 ?>
 </font>
 </td>
 <td>
 <font color="lightgray">
 <?php
-echo "<center><b>Ferro   ".$ferronoestoque."/".$capacidadedosrecursos."</b></center>";
+echo "<center><b>Iron   ".$ferronoestoque."/".$capacidadedosrecursos."</b></center>";
 ?>
 </font>
 </td>
 <td>
 <?php
-echo "<center><b>Comida   ".$comidanoestoque."/".$capacidadedacomida."</b></center>";
+echo "<center><b>Food   ".$comidanoestoque."/".$capacidadedacomida."</b></center>";
 
 
 }

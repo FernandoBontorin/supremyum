@@ -1,9 +1,10 @@
 <?php
+
+include "../Config/config_sistema.php";
+
 include "../validar_session.php";
 
 include "../Config/tropasdados.php";
-
-include "../Config/config_sistema.php";
 
 include "../engine/recursos.php";
 
@@ -80,12 +81,12 @@ echo "<center><b>ID: ".$linha7->ID."</b></center>";
 </td>
 <td>
 <?php
-echo "<center><b>Aldeia: ".$linha7->nome."</b></center>";
+echo "<center><b>Village: ".$linha7->nome."</b></center>";
 ?>
 </td>
 <td>
 <?php
-echo "<center><b>População: $linha7->popdisponivel  / ".$linha7->pop."</b></center>";
+echo "<center><b>Population: $linha7->popdisponivel  / ".$linha7->pop."</b></center>";
 
 
 

@@ -8,8 +8,9 @@ date_default_timezone_set('America/Los_Angeles');
 function HtoS($h) {
 $z = strtotime("00:00:00");
 $h = strtotime($h);
-return ($h-$z);
-}
+return ($h-$z);}
+
+
 function StoH($s) {
 $z = strtotime("00:00:00");
 return Date("H:i:s", $s + $z);
