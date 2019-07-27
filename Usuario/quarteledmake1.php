@@ -54,7 +54,7 @@ $gastomadeira = $$t1m * $pedido;
 $gastoouro = $$t1o * $pedido;
 $gastoferro = $$t1f * $pedido;
 $gastocomida = $$t1c * $pedido;
-$gastotempo = HtoS($$t1t) * $pedido;
+$gastotempo = HtoS($$t1t) * $pedido / $server_speed;
 
 
 $error = 0;

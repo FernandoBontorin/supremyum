@@ -33,16 +33,16 @@ $idald = $linhasmap8->ID;
 <body margin="0" border="0">
 <center>
 <table border="1" cellpadding="0" cellspacing="0">
-<td colspan="2" width="100" align="center"><b>Coordenadas:</b></td>
+<td colspan="2" width="100" align="center"><b>Coordinates:</b></td>
 <td colspan="2" width="100" align="center"><?php echo"<b>X:</b>".$x."  <b>Y:</b>".$y;?></td>
 <tr>
-<td width="100" align="center"><b>Jogador:</b></td>
+<td width="100" align="center"><b>Player:</b></td>
 <td width="100" align="center"><?php echo"$player";?></td>
-<td width="100" align="center"><b>Aldeia:</b></td><td width="100" align="center"><?php echo"$aldeia";?></td>
+<td width="100" align="center"><b>Village:</b></td><td width="100" align="center"><?php echo"$aldeia";?></td>
 <tr>
-<td width="100" align="center"><b>População:</b></td>
+<td width="100" align="center"><b>Population:</b></td>
 <td width="100" align="center"><?php echo"$pop";?></td>
-<td width="100" align="center"><b>Clã:</b></td>
+<td width="100" align="center"><b>Clan:</b></td>
 <td width="100" align="center"><?php echo"$clan";?></td></tr>
 <tr>
 <td colspan="4" width="100" align="center">

@@ -235,6 +235,11 @@ $sd9 = $t9enemy - $perdad9;
 
 
 //Roubo.
+If ($sa1 + $sa2 + $sa3 + $sa4 + $sa5 + $sa6 + $sa7 + $sa8 + $sa9 > 0) {
+$rouborealizado = 1;
+} else {
+$rouborealizado = 0;
+}
 
 If ($sa1 + $sa2 + $sa3 + $sa4 + $sa5 + $sa6 + $sa7 + $sa8 + $sa9 > 0) {
 $r1f = "t".$povorem."1p";
@@ -353,7 +358,7 @@ If($updatedef) { } else { echo "Error 901: Troop Send* DB Error!";}
 
 
 
-
+If ($rouborealizado == 1) {
 //Descontar resources.
 $attm = $madeiradest - $madeirarob;
 $atto = $ourodest - $ourorob;
@@ -361,6 +366,7 @@ $attf = $ferrodest - $ferrorob;
 $attc = $comidadest - $comidarob;
 $updateres = mysql_query("update aldeias set madeira = $attm, ouro = $atto, ferro = $attf, comida = $attc   where ID = '$IDdestino'");
 If($updateres) { } else { echo "Error 901: Troop Send DB Error!";}
+}
 
 
 //Criar retorno.
@@ -408,6 +414,24 @@ $delatk = "DELETE FROM ataques WHERE ID='$IDatk'";
 $resultdelatk = mysql_query($delatk);
 If($resultdelatk) { } else { echo "Error 902: Atk DB Error!";}
 
+
+//Montar relatorio.
+
+$consultaabc = mysql_query("select * from config where tempo");
+while($linhaabc = mysql_fetch_object($consultaabc)) {
+$server_time = $linhaabc->tempo;
+$explodetime = explode(" ", $server_time);
+$horario = $explodetime[1];
+$data = $explodetime[0];
+}
+
+$createrel1 = "insert into relatorios (ID,visualisador,type,remetente,destino,horario,data,povorem,povodest,t1,t2,t3,t4,t5,t6,t7,t8,t9,t1p,t2p,t3p,t4p,t5p,t6p,t7p,t8p,t9p,t1r,t2r,t3r,t4r,t5r,t6r,t7r,t8r,t9r,t1e,t2e,t3e,t4e,t5e,t6e,t7e,t8e,t9e,t1ep,t2ep,t3ep,t4ep,t5ep,t6ep,t7ep,t8ep,t9ep,t1er,t2er,t3er,t4er,t5er,t6er,t7er,t8er,t9er,madeirarob,ourorob,ferrorob,comidarob,roubototal,roubomax) values (' ','$IDremetente','ataquefeito','$IDremetente','$IDdestino','$horario','$data','$povorem','$povodest','$t1','$t2','$t3','$t4','$t5','$t6','$t7','$t8','$t9','$perdaa1','$perdaa2','$perdaa3','$perdaa4','$perdaa5','$perdaa6','$perdaa7','$perdaa8','$perdaa9','$sa1','$sa2','$sa3','$sa4','$sa5','$sa6','$sa7','$sa8','$sa9','$t1enemy','$t2enemy','$t3enemy','$t4enemy','$t5enemy','$t6enemy','$t7enemy','$t8enemy','$t9enemy','$perdad1','$perdad2','$perdad3','$perdad4','$perdad5','$perdad6','$perdad7','$perdad8','$perdad9','$sd1','$sd2','$sd3','$sd4','$sd5','$sd6','$sd7','$sd8','$sd9','$madeirarob','$ourorob','$ferrorob','$comidarob','$roubados','$roubo')";
+$createrel2 = "insert into relatorios (ID,visualisador,type,remetente,destino,horario,data,povorem,povodest,t1,t2,t3,t4,t5,t6,t7,t8,t9,t1p,t2p,t3p,t4p,t5p,t6p,t7p,t8p,t9p,t1r,t2r,t3r,t4r,t5r,t6r,t7r,t8r,t9r,t1e,t2e,t3e,t4e,t5e,t6e,t7e,t8e,t9e,t1ep,t2ep,t3ep,t4ep,t5ep,t6ep,t7ep,t8ep,t9ep,t1er,t2er,t3er,t4er,t5er,t6er,t7er,t8er,t9er,madeirarob,ourorob,ferrorob,comidarob,roubototal,roubomax) values (' ','$IDdestino','ataquesofrido','$IDremetente','$IDdestino','$horario','$data','$povorem','$povodest','$t1','$t2','$t3','$t4','$t5','$t6','$t7','$t8','$t9','$perdaa1','$perdaa2','$perdaa3','$perdaa4','$perdaa5','$perdaa6','$perdaa7','$perdaa8','$perdaa9','$sa1','$sa2','$sa3','$sa4','$sa5','$sa6','$sa7','$sa8','$sa9','$t1enemy','$t2enemy','$t3enemy','$t4enemy','$t5enemy','$t6enemy','$t7enemy','$t8enemy','$t9enemy','$perdad1','$perdad2','$perdad3','$perdad4','$perdad5','$perdad6','$perdad7','$perdad8','$perdad9','$sd1','$sd2','$sd3','$sd4','$sd5','$sd6','$sd7','$sd8','$sd9','$madeirarob','$ourorob','$ferrorob','$comidarob','$roubados','$roubo')";
+$consultarelat1 = mysql_query($createrel1);
+If($consultarelat1) { } else { echo "Error 900: Troop Send DB Error!";}
+$consultarelat2 = mysql_query($createrel2);
+If($consultarelat2) { } else { echo "Error 900: Troop Send DB Error!";}
+//Fim do relatorio
 
 //Fim do Sistema de ATK.
 }
@@ -520,7 +544,27 @@ If($action == "atk") {
 <td align="center" colspan="9" bgcolor="#BEBEBE" style=" text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;"><font color="white">Resources:</font>&nbsp&nbsp&nbsp<font color="#F5DEB3"><?php echo $madeirarob."&nbsp";?><img src="../img/madeira.bmp"></font>&nbsp&nbsp&nbsp<font color="#FFD700"><?php echo $ourorob."&nbsp";?><img src="../img/ouro.bmp"></font>&nbsp&nbsp&nbsp<font color="#D3D3D3"><?php echo $ferrorob."&nbsp";?><img src="../img/ferro.bmp"></font>&nbsp&nbsp&nbsp<font color="#B22222"><?php echo $comidarob."&nbsp";?><img src="../img/comida.bmp"></font><font color="white"> <?php echo $roubados."/".$roubo;?></font></td></tr>
 </table>
 
+
 <br><br>
+
+<?php
+$consultare = mysql_query("select * from reforcos where ID = '$IDdestino'");
+$linhare = mysql_num_rows($consultare);
+while($linhare = mysql_fetch_object($consultare)) {
+echo'
+<table border="1" cellspacing="0" bgcolor="white" style="font-weight:bold;">
+<td colspan="9" align="center" bgcolor="#FA8072"><font color="#FF0000"><b>Reinforcements</b></font><br><b><?php echo $deftotali."&nbsp"; ?><img src="../img/infant.png"><?php echo"&nbsp&nbsp&nbsp&nbsp&nbsp".$deftotalc."&nbsp"; ?><img src="../img/cav.png"><?php echo"&nbsp&nbsp&nbsp&nbsp&nbsp".$deftotalcerco."&nbsp"; ?><img src="../img/cerco.png">
+<br><?php echo $defbtl;?></b></td><tr>
+<td align="center"><?php getname2(1); echo $tropaname2;?></td><td align="center"><?php getname2(2); echo $tropaname2;?></td><td align="center"><?php getname2(3); echo $tropaname2;?></td><td align="center"><?php getname2(4); echo $tropaname2;?></td><td align="center"><?php getname2(5); echo $tropaname2;?></td><td align="center"><?php getname2(6); echo $tropaname2;?></td><td align="center"><?php getname2(7); echo $tropaname2;?></td><td align="center"><?php getname2(8); echo $tropaname2;?></td><td align="center"><?php getname2(9); echo $tropaname2;?></td></tr><tr>
+<td align="center"><font color="#696969"><?php echo $t1enemy; ?></font></td><td align="center"><font color="#696969"><?php echo $t2enemy; ?></font></td><td align="center"><font color="#696969"><?php echo $t3enemy; ?></font></td><td align="center"><font color="#696969"><?php echo $t4enemy; ?></font></td><td align="center"><font color="#696969"><?php echo $t5enemy; ?></font></td><td align="center"><font color="#696969"><?php echo $t6enemy; ?></font></td><td align="center"><font color="#696969"><?php echo $t7enemy; ?></font></td><td align="center"><font color="#696969"><?php echo $t8enemy; ?></font></td><td align="center"><font color="#696969"><?php echo $t9enemy; ?></font></td></tr><tr>
+<td align="center"><font color="#FF0000"><?php echo $perdad1; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad2; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad3; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad4; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad5; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad6; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad7; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad8; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad9; ?></font></td></tr><tr>
+<td align="center"><?php echo $sd1; ?></td><td align="center"><?php echo $sd2; ?></td><td align="center"><?php echo $sd3; ?></td><td align="center"><?php echo $sd4; ?></td><td align="center"><?php echo $sd5; ?></td><td align="center"><?php echo $sd6; ?></td><td align="center"><?php echo $sd7; ?></td><td align="center"><?php echo $sd8; ?></td><td align="center"><?php echo $sd9; ?></td></tr>
+</table>
+<br><br>';
+}
+?>
+
+
 
 <table border='1' cellspacing='0' bgcolor='white' style="font-weight:bold;">
 <td colspan='9' align="center" bgcolor="#FA8072"><font color='#FF0000'><b>Enemy Troops</b></font><br><b><?php echo $deftotali."&nbsp"; ?><img src="../img/infant.png"><?php echo"&nbsp&nbsp&nbsp&nbsp&nbsp".$deftotalc."&nbsp"; ?><img src="../img/cav.png"><?php echo"&nbsp&nbsp&nbsp&nbsp&nbsp".$deftotalcerco."&nbsp"; ?><img src="../img/cerco.png">
@@ -530,6 +574,8 @@ If($action == "atk") {
 <td align="center"><font color="#FF0000"><?php echo $perdad1; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad2; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad3; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad4; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad5; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad6; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad7; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad8; ?></font></td><td align="center"><font color="#FF0000"><?php echo $perdad9; ?></font></td></tr><tr>
 <td align="center"><?php echo $sd1; ?></td><td align="center"><?php echo $sd2; ?></td><td align="center"><?php echo $sd3; ?></td><td align="center"><?php echo $sd4; ?></td><td align="center"><?php echo $sd5; ?></td><td align="center"><?php echo $sd6; ?></td><td align="center"><?php echo $sd7; ?></td><td align="center"><?php echo $sd8; ?></td><td align="center"><?php echo $sd9; ?></td></tr>
 </table>
+
+
 
 
 </center>

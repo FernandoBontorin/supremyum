@@ -1,6 +1,5 @@
 <?php
 
-
 // faz conexão com o servidor MySQL
 $local_serve = "127.0.0.1"; 	 // local do servidor
 $usuario_serve = "root";		 // nome do usuario
@@ -18,6 +17,7 @@ $db = @mysql_select_db($banco_de_dados,$conn)
 $login_admin = "admin";  			// nome do administrador
 $senha_admin = "123890q";						// senha administrador
 $email_admin = "marcotette@hotmail.com";  // email do administrador
+
 
 
 ?>

@@ -66,6 +66,7 @@ echo $$tt1->$t1;
 <td align="center"><form action="movtrops.php" target="_top" name="mt" id="mt"  method="post" enctype="multipart/form-data"><input type="number" max="<?php getunit(1);?>" id="t1" name="t1" min="0"></td><td align="center"><input type="number" max="<?php getunit(2);?>" id="t2" name="t2" min="0"></td><td align="center"><input type="number" max="<?php getunit(3);?>" id="t3" name="t3" min="0"></td><td align="center"><input type="number" max="<?php getunit(4);?>" id="t4" name="t4" min="0"></td><td align="center"><input type="number" max="<?php getunit(5);?>" id="t5" name="t5" min="0"></td><td align="center"><input type="number" max="<?php getunit(6);?>" id="t6" name="t6" min="0"></td><td align="center"><input type="number" max="<?php getunit(7);?>" id="t7" name="t7" min="0"></td><td align="center"><input type="number" max="<?php getunit(8);?>" id="t8" name="t8" min="0"></td><td align="center"><input type="number" max="<?php getunit(9);?>" id="t9" name="t9" min="0"></td></tr><tr>
 <td align="center" colspan="9"><br><br><b>Coordenadas do destino</b></td></tr><tr>
 <td align="center" colspan="9">X:<input type="number" value="<?php echo $xb; ?>" id="x" name="x">Y:<input type="number" value="<?php echo $yb; ?>" id="y" name="y"></td></tr><tr>
+<td align="center" colspan="9"><b>Type</b><br><input type="radio" name="type" value="atk" checked="true">Attack / <input type="radio" name="type" value="ref">Reinforcement</td><tr>
 <td align="center" colspan="9"><input type="submit" value="Enviar Tropas!"></tr>
 </table>
 

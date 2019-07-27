@@ -55,6 +55,11 @@ include "menu1.php";
 
 
 <center>
+<?php
+$consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+	$linha5 = mysql_num_rows($consulta3000);
+	if($linha5 != 0) {
+	?>
 <table id="move" name="move" border="1" cellspacing="0">
 
 
@@ -95,6 +100,7 @@ Echo "0";
 }?></b></center></text></font></td>
 
 </table>
+<?php } ?>
 
 
 
@@ -148,9 +154,8 @@ echo "<center><b>Consumption: ".$linha7->consumo."/Hour</b></center>";
 
 
 	} else {
-		echo "<br>Você ainda não tem uma colônia<br>
-			  Para criar uma, clique em<br>
-			Dados do usuário e crie uma";
+		echo "<br>You haven't a village!<br>
+			  ";
 	}
 
 
@@ -330,7 +335,7 @@ while($linha5wab2 = mysql_fetch_object($consulta3000wab2)) {
 
 echo '
 <center><div style="background-color: white; border-style: solid; border-width: 1; width: 30%;">
-<b>Click <a href="dados_usuario.php">HERE</a> to create a village!</b></div>
+<b>Click <a href="novacolonia.php">HERE</a> to create a village!</b></div>
 </center>';
 
 }}
