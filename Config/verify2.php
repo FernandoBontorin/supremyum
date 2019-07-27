@@ -6,9 +6,7 @@ include_once "formulas.php";
 include "../engine/recursos.php";
 include "tropasdados.php";
 
-If ($atualizador==1){
-include "atualizador.php";
-}
+
 
 
 If($login_usuario =="admin"){
