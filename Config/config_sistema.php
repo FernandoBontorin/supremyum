@@ -2,10 +2,10 @@
 
 
 // faz conexão com o servidor MySQL
-$local_serve = "dbmy0061.whservidor.com"; 	 // local do servidor
-$usuario_serve = "koyotegame";		 // nome do usuario
-$senha_serve = "koyote157";			 	 // senha
-$banco_de_dados = "koyotegame"; 	 // nome do banco de dados
+$local_serve = "127.0.0.1"; 	 // local do servidor
+$usuario_serve = "root";		 // nome do usuario
+$senha_serve = "123890q";			 	 // senha
+$banco_de_dados = "cadastro"; 	 // nome do banco de dados
 
 $conn = @mysql_connect($local_serve,$usuario_serve,$senha_serve) or die ("O servidor não responde!");
 
