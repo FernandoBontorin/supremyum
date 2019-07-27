@@ -12,19 +12,16 @@ body {
 	height: 100%;
 	border: 0;
 	margin: 0;
+	background:url(../img/bg.jpg);
 }
 
 #options {
-	margin: 0% 0% 0% 60%;
-	width: 30%;
-	border-style: solid;
-	border-color: brown;
-	background-color: lightgreen;
+	margin: 0% 0% 0% 0%;
+	width: 100%;
+	position: relative;
 }
 
-#textodaoptions {
 
-}
 
 
 #msglinks {
@@ -135,5 +132,157 @@ hr {
 
 
 
-
+#recursostop {
+		
+	height: 5%;
+}
 	
+
+
+
+a:link {
+	color: gold;
+	display: ;
+	text-decoration: none;
+	font-weight:bold;
+	font-size:100%;
+}
+
+a:visited {
+	color: gold;
+	display: ;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+a:hover {
+	color: brown;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+
+
+a:active {
+	color: blue;
+}
+
+#mapa {
+	height: 70%;
+
+}
+
+#barramenu {
+	height:1%;
+	width: 100%;
+	background:url(../img/bloco.png);
+}
+
+#top {
+	background:url(../img/menufundo.bmp);
+	background-size: 100% 100%;
+}
+
+#tableniveis1 {
+}
+
+#tableniveis1 table {
+}
+
+#aldeiapop table {
+	background:url(../img/bg1.jpg);
+}
+
+
+#recursosframe {
+	position: relative;	
+
+}
+
+#iframerecursos {
+	position:relative;
+	
+}
+
+#imgcont {
+	position: absolute;
+	margin-left: 5px;
+}
+
+
+
+#vila {
+	float:center;
+	position: relative;
+	width: 40%;
+}
+
+#edificiosvila {
+	
+}
+
+
+
+#tabelaproducao table {
+	background:url(../img/bg1.jpg);
+}
+
+
+
+#imgrecursosjs {
+	position: relative;
+	margin-right: 5px;
+}
+
+
+
+#construirjs {
+	margin-left: 5px;
+	margin-top: 20px;
+	position: relative;
+}
+
+#colunaesquerda {
+	position: relative;
+}
+
+
+#linkr {
+margin-left: 5px;
+position: absolute;
+}
+
+#linkespadas {
+	float: right;
+	position: absolute;
+	right: 0;
+	margin-right: 5px;
+}
+
+#linkmartelo {
+	position: absolute;
+	left: 0;
+	margin-left: 5px;
+	margin-top: 80px;
+}
+
+#linkmartelo img {
+	width: 100%;
+}
+
+
+
+#manuallink {
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	background-color: white;
+	width: 20%;
+}
+
+
+
+
+
+
+

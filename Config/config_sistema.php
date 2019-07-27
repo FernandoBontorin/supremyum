@@ -1,13 +1,8 @@
 <?php
-//////////////////////////////////////////////
-// Sistema de cadastro						//
-// Autor: Diego Gomes Araujo				//
-// E-mail: diegogomesaraujo@hotmail.com		//
-// Versão: 1.0								//
-//////////////////////////////////////////////
+
 
 // faz conexão com o servidor MySQL
-$local_serve = "localhost"; 	 // local do servidor
+$local_serve = "127.0.0.1"; 	 // local do servidor
 $usuario_serve = "root";		 // nome do usuario
 $senha_serve = "123890q";			 	 // senha
 $banco_de_dados = "cadastro"; 	 // nome do banco de dados
@@ -24,8 +19,23 @@ $login_admin = "admin";  			// nome do administrador
 $senha_admin = "123890q";						// senha administrador
 $email_admin = "marcotette@hotmail.com";  // email do administrador
 
-// dados para contato com o autor
-// Por favor manter os direitos autorais
-$nome_autor = "Diego Gomes Araujo";
-$email_autor = "diegogomesaraujo@hotmail.com";
+
+?>
+
+<?php
+
+
+
+
+
+
+$server_speed = "1";
+$troop_speed ="1";
+$maxnvedcentral = "20";
+
+
+
+
+
+
 ?>

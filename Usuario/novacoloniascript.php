@@ -15,7 +15,7 @@
 // inclui o arquivo de configuração do sistema
 include "../validar_session.php";
 
-include "config_sistema.php";
+include "../Config/config_sistema.php";
 
 
 
@@ -44,8 +44,17 @@ $ferro = ('500');
 $comida = ('700');
 $capacidade = ('1000');
 $lealdade = ('100');
+$madeiraproducao  =('50');
+$ouroproducao  =('50');
+$ferroproducao  =('50');
+$comidaproducao  =('70');
 
 
+
+$madeiradb = $madeiraproducao * $server_speed;
+$ourodb = $ouroproducao * $server_speed;
+$ferrodb = $ferroproducao * $server_speed;
+$comidadb = $comidaproducao * $server_speed;
 
 
 
@@ -103,7 +112,7 @@ $consulta78 = mysql_query($sql);
 
 
 // faz consulta no banco para inserir os dados do usuario
-$sql = "insert into aldeias (ID,dono,nome,povo,pontosdeprevisao,madeira,ouro,ferro,comida,capacidade,lealdade,x,y,xy) values ('','$dono','$nome','$civilizacao','$pontosdeprevisao','$madeira','$ouro','$ferro','$comida','$capacidade','$lealdade','$x','$y','$xy')";
+$sql = "insert into aldeias (ID,dono,nome,povo,pontosdeprevisao,madeira,ouro,ferro,comida,capacidade,lealdade,x,y,xy,madeirahora,ourohora,ferrohora,comidahora) values ('','$dono','$nome','$civilizacao','$pontosdeprevisao','$madeira','$ouro','$ferro','$comida','$capacidade','$lealdade','$x','$y','$xy','$madeiradb','$ourodb','$ferrodb','$comidadb')";
 $consulta78 = mysql_query($sql);
 
 // verifica se o usuario foi cadastrado

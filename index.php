@@ -10,7 +10,7 @@
 </div>
 <div id="menu" name="menu">
 <center>
-<h1><b>GuitarFlashSpace</b></h1>
+<h1><b>American War</b></h1>
 </center>
 </div>
 <div id="divisao" name="divisao">

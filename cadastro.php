@@ -31,6 +31,13 @@ Civilização:
 <input type="radio" name="criarciv" id="criarciv" value="6">Portugueses
 <input type="radio" name="criarciv" id="criarciv" value="7">Franceses
 <input type="radio" name="criarciv" id="criarciv" value="8">Alemães
+<input type="radio" name="criarciv" id="criarciv" value="9">Italianos
+<input type="radio" name="criarciv" id="criarciv" value="10">Suíços
+<input type="radio" name="criarciv" id="criarciv" value="11">Apaches
+<input type="radio" name="criarciv" id="criarciv" value="12">Cherokees
+<input type="radio" name="criarciv" id="criarciv" value="13">Incas
+<input type="radio" name="criarciv" id="criarciv" value="14">Astecas
+<input type="radio" name="criarciv" id="criarciv" value="15">Bizantinos
 <center>
 <br>
       <input type="submit" name="cadastrar" value="Cadastrar" id="cadastrar" />
