@@ -64,7 +64,7 @@ echo'
 <a href="movtrop.php?xb='.$xb.'&yb='.$yb.'">Enviar Tropas!</a>
 ';
 } else {
-echo' Quartel ainda não construído!';
+echo" You can't attack without 'Barracks'";
 }}}
 ?>
 

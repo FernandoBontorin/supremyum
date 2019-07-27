@@ -2,10 +2,10 @@
 
 
 // faz conexão com o servidor MySQL
-$local_serve = "127.0.0.1"; 	 // local do servidor
-$usuario_serve = "root";		 // nome do usuario
-$senha_serve = "123890q";			 	 // senha
-$banco_de_dados = "cadastro"; 	 // nome do banco de dados
+$local_serve = "dbmy0105.whservidor.com"; 	 // local do servidor
+$usuario_serve = "supremyum";		 // nome do usuario
+$senha_serve = "koyote157";			 	 // senha
+$banco_de_dados = "supremyum"; 	 // nome do banco de dados
 
 $conn = @mysql_connect($local_serve,$usuario_serve,$senha_serve) or die ("O servidor não responde!");
 
@@ -29,8 +29,8 @@ $email_admin = "marcotette@hotmail.com";  // email do administrador
 
 
 
-$server_speed = "1";
-$troop_speed ="4";
+$server_speed = "1000";
+$troop_speed ="4000";
 $maxnvedcentral = "20";
 $adfly = "0";
 

@@ -38,8 +38,6 @@ body {
 
 
 
-//Gráfico.
-include("geragraph.php");
 
 
 

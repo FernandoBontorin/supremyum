@@ -83,6 +83,11 @@ echo "<center><b>Village: ".$linha7->nome."</b></center>";
 <?php
 echo "<center><b>Population: $linha7->popdisponivel  / ".$linha7->pop."</b></center>";
 
+?>
+</td>
+<td>
+<?php
+echo "<center><b>Consumption: ".$linha7->consumo."/Hour</b></center>";
 
 
 }

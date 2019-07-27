@@ -56,7 +56,7 @@ $nivelmadeira = $linha833->nivelmadeira;
 $nivelouro = $linha833->nivelouro;
 $nivelferro = $linha833->nivelferro;
 $nivelcomida = $linha833->nivelcomida;
-
+$consumo = $linha833->consumo;
 
 
 
@@ -70,7 +70,8 @@ $ccc = 2 * pow($nivelferro,2);
 $ferroaposconta = $ccc * $server_speed;
 
 $ddd = 2 * pow($nivelcomida,2);
-$comidaaposconta = $ddd * $server_speed;
+$comidaaposconta2 = $ddd * $server_speed;
+$comidaaposconta = $comidaaposconta2 - $consumo;
 
 
 

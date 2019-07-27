@@ -7,6 +7,8 @@ include "../Config/config_sistema.php";
 ?>
 
 <?php
+echo'<html><head><meta http-equiv="refresh" content="1; url=home.php" /></head></html>';
+
 $consulta3000s = mysql_query("select * from aldeias where dono = '$login_usuario'");
 	$linha5s = mysql_num_rows($consulta3000s);
 while($linha5s = mysql_fetch_object($consulta3000s)) {

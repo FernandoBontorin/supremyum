@@ -3,11 +3,54 @@ include "../validar_session.php";
 include "config_sistema.php";
 include_once "formulas.php";
 include "../engine/recursos.php";
+include_once "tropasdados.php";
 
 
 
 
-
+//Consumo.
+ $consulta30809 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+ $linha59809 = mysql_num_rows($consulta30809); 
+ while ($linha59809 = mysql_fetch_object($consulta30809)) { 
+		$id1 = $linha59809->ID;
+		$povo = $linha59809->povo;
+  $consulta308092 = mysql_query("select * from tropas where IDaldeia = '$id1'");
+ $linha598092 = mysql_num_rows($consulta308092); 
+ while ($linha598092 = mysql_fetch_object($consulta308092)) { 
+		$t1 = $linha598092 -> t1;
+		$t2 = $linha598092 -> t2;
+		$t3 = $linha598092 -> t3;
+		$t4 = $linha598092 -> t4;
+		$t5 = $linha598092 -> t5;
+		$t6 = $linha598092 -> t6;
+		$t7 = $linha598092 -> t7;
+		$t8 = $linha598092 -> t8;
+		$t9 = $linha598092 -> t9;
+		
+		$cons1x = "t".$povo."1con";
+		$cons2x = "t".$povo."2con";
+		$cons3x = "t".$povo."3con";
+		$cons4x = "t".$povo."4con";
+		$cons5x = "t".$povo."5con";
+		$cons6x = "t".$povo."6con";
+		$cons7x = "t".$povo."7con";
+		$cons8x = "t".$povo."8con";
+		$cons9x = "t".$povo."9con";
+		
+		@$cons1 = $$cons1x * $t1;
+		@$cons2 = $$cons2x * $t2;
+		@$cons3 = $$cons3x * $t3;
+		@$cons4 = $$cons4x * $t4;
+		@$cons5 = $$cons5x * $t5;
+		@$cons6 = $$cons6x * $t6;
+		@$cons7 = $$cons7x * $t7;
+		@$cons8 = $$cons8x * $t8;
+		@$cons9 = $$cons9x * $t9;
+		
+		$constotal2 = $cons1 + $cons2 + $cons3 + $cons4 + $cons5 + $cons6 + $cons7 + $cons8 + $cons9;
+		$constotal = $constotal2;
+		$updateconsumo = mysql_query("update aldeias set consumo = $constotal where dono = '$login_usuario'");
+ }}
 
 
 

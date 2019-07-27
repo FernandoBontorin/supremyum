@@ -49,7 +49,7 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
 
 
 
-<div id="top" name="top" style="background-image: URL(../img/bgt2.png); background-height: 100%; background-repeat: x-repeat">
+<div id="top" name="top" style="background-image: URL(../img/menubg.png); background-height: 100%; background-repeat: x-repeat">
 <div id="options" name="options">
 <center>
 <div id="time" name="time">
@@ -113,7 +113,7 @@ echo "<text style='text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px bla
 </table>
 </div>
 <div id="textodaoptions" name="textodaoptions"><table border="0">
-<td><a href="../Usuario/home.php"><img src="../img/home.png"></a></td><td><a href="../Usuario/mapa.php"><img src="../img/map.png"></a></td><td><a href="../Usuario/msg.php"><img src="../img/messages.png"></a></td><td><a href="../Usuario/dados_usuario.php"><img src="../img/options.png"></a></td><td><a href="../logout.php"><img src="../img/logout.png"></a></td>
+<td><a href="../Usuario/home.php"><img src="../img/home.png"></a></td><td><a href="../Usuario/mapa.php"><img src="../img/map.png"></a></td><td><a href="../Usuario/msg.php"><img src="../img/messages.png"></a></td><td><a href="../Usuario/dados_usuario.php"><img src="../img/options.png"></a></td><td><a href="../logout.php"><img src="../img/logout.png"></a></td><td><a href="../Usuario/reports.php"><img src="../img/reports.png"></a></td>
 </table></div>
 </center>
 </div>

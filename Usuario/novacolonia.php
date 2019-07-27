@@ -56,11 +56,11 @@ $consulta3050 = mysql_query("select * from aldeias where dono = '$login_usuario'
 <input type="hidden" name="pop" id="pop" value="5">
 <input type="hidden" name="ed1" id="ed1" value="ed1">
 <b>Region</b><br>
-Noroeste<input type="radio" name="loca" id="loca" value="-x+y" checked="true">
-Nordeste<input type="radio" name="loca" id="loca" value="+x+y">
+Northwest<input type="radio" name="loca" id="loca" value="-x+y" checked="true">
+Northeast<input type="radio" name="loca" id="loca" value="+x+y">
 <br>
-Sudoeste<input type="radio" name="loca" id="loca" value="-x-y">
-Sudeste<input type="radio" name="loca" id="loca" value="+x-y">
+Southwest<input type="radio" name="loca" id="loca" value="-x-y">
+Southeast<input type="radio" name="loca" id="loca" value="+x-y">
 <br>
 <br>
 <input type="submit" id="enviarnewcolo" nome="enviarnewcolo" value="Create!">

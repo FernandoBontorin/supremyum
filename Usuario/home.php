@@ -54,8 +54,59 @@ include "menu1.php";
 
 
 
-
 <center>
+<?php
+$consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+	$linha5 = mysql_num_rows($consulta3000);
+	if($linha5 != 0) {
+	?>
+<table id="move" name="move" border="1" cellspacing="0">
+
+
+<td style=" background-color: #00FF00;"><font color="#FFFFFF"><text style='text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;'><center><b>Your Movements</b></center></text></font></td>
+<td style=" background-color: #FF0000;"><font color="#FFFFFF"><text style='text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;'><center><b>Foreign Movements</b></center></text></font></td>
+
+<tr>
+<td style=" background-color: #00FF00;"><font color="#FFFFFF"><text style='text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;'><center><b>
+<?php
+$consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+	$linha5 = mysql_num_rows($consulta3000);
+	if($linha5 != 0) {
+
+while($linha7 = mysql_fetch_object($consulta3000)) {
+$ID = $linha7->ID;}}
+$consulta3000x = mysql_query("select * from ataques where remetente = '$ID'");
+	$linha5x = mysql_num_rows($consulta3000x);
+	if($linha5x != 0) {
+Echo $linha5x."&nbsp &nbsp &nbsp <img src='../img/atk.gif' width='30px' height='30px'>";
+} ELSE {
+Echo "0";
+}?></b></center></text></font></td>
+
+<td style=" background-color: #FF0000;"><font color="#FFFFFF"><text style='text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;'><center><b>
+<?php
+$consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+	$linha5 = mysql_num_rows($consulta3000);
+	if($linha5 != 0) {
+
+while($linha7 = mysql_fetch_object($consulta3000)) {
+$ID = $linha7->ID;}}
+$consulta3000x = mysql_query("select * from ataques where destino = '$ID'");
+	$linha5x = mysql_num_rows($consulta3000x);
+	if($linha5x != 0) {
+Echo $linha5x."<img src='../img/def.gif' width='30px' height='30px'> &nbsp &nbsp &nbsp ";
+} ELSE {
+Echo "0";
+}?></b></center></text></font></td>
+
+</table>
+<?php } ?>
+
+
+
+
+
+
 <div id="aldeiapop" name="aldeiapop">
 <table border="1">
 <tr>
@@ -75,7 +126,7 @@ $consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'
 	if($linha5 != 0) {
 
 while($linha7 = mysql_fetch_object($consulta3000)) {
-
+$ID = $linha7->ID;
 
 echo "<center><b>ID: ".$linha7->ID."</b></center>";
 ?>
@@ -91,13 +142,21 @@ echo "<center><b>Population: $linha7->popdisponivel  / ".$linha7->pop."</b></cen
 
 
 
+
+?>
+</td>
+<td>
+<?php
+echo "<center><b>Consumption: ".$linha7->consumo."/Hour</b></center>";
+
+
 }
 
 
 	} else {
-		echo "<br>You don't have a village!<br>";
+		echo "<br>You haven't a village!<br>
+			  ";
 	}
-
 
 
 
@@ -126,6 +185,8 @@ echo "<center><b>Population: $linha7->popdisponivel  / ".$linha7->pop."</b></cen
 </center>
 
 <?php
+$consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+	$linha5 = mysql_num_rows($consulta3000);
 	if($linha5 != 0) {
 
 echo '
@@ -215,8 +276,10 @@ $nome9 = "t".$povolocal."9nome";
 ?>
 <center>
 <div>
-<center>
-<table border="1" style="background-image: URL(../img/bgt3.png); background-size: 100% 100%;">
+<center><br>
+<table border="1" style="background-image: URL(../img/bgt3.png); background-size: 100% 100%;" cellspacing="0">
+
+<td colspan="10" align="center"><b>Your troops in this village</b></td><tr>
 
 <td align="center"><b>Troops</b></td><td align="center"><?php echo $$nome1; ?></td><td align="center"><?php echo $$nome2; ?></td><td align="center"><?php echo $$nome3; ?></td><td align="center"><?php echo $$nome4; ?></td><td align="center"><?php echo $$nome5; ?></td><td align="center"><?php echo $$nome6; ?></td><td align="center"><?php echo $$nome7; ?></td><td align="center"><?php echo $$nome8; ?></td><td align="center"><?php echo $$nome9; ?></td>
 <tr>
@@ -226,21 +289,53 @@ $nome9 = "t".$povolocal."9nome";
 </div>
 
 
-
-
-
-
-
-
-
-</center>
 <?php
+$consulta3000wa = mysql_query("select * from reforcos where destino = '$ID'");	
+$linha5wa = mysql_num_rows($consulta3000wa); 
+If($linha5wa) {
+echo"<h3>Troops reinforcing your village!</h3>";}
+while($linha5wa = mysql_fetch_object($consulta3000wa)) {
+$povore = $linha5wa->povorem;
+$nome1 = "t".$povore."1nome";
+$nome2 = "t".$povore."2nome";
+$nome3 = "t".$povore."3nome";
+$nome4 = "t".$povore."4nome";
+$nome5 = "t".$povore."5nome";
+$nome6 = "t".$povore."6nome";
+$nome7 = "t".$povore."7nome";
+$nome8 = "t".$povore."8nome";
+$nome9 = "t".$povore."9nome";
 
+
+$consulta3000wab = mysql_query("select * from aldeias where ID = '$linha5wa->remetente'");	
+$linha5wab = mysql_num_rows($consulta3000wab); 
+while($linha5wab = mysql_fetch_object($consulta3000wab)) {
+
+$consulta3000wab2 = mysql_query("select * from dados_usuarios where Login = '$linha5wab->dono'");	
+$linha5wab2 = mysql_num_rows($consulta3000wab2); 
+while($linha5wab2 = mysql_fetch_object($consulta3000wab2)) {
+
+
+?>
+<table border="1" style="background-image: URL(../img/bgt3.png); background-size: 100% 100%;">
+
+<td colspan="10" align="center"><a href="playerprof.php?id=<?php echo $linha5wab2->ID;?> "><?php echo $linha5wab->dono." ";?></a>- <a href="aldprof.php?idpver=<?php echo $linha5wa->remetente;?>"><?php echo $linha5wab->nome;?></td><tr>
+<td align="center"><b>Troops</b></td><td align="center"><?php echo $$nome1; ?></td><td align="center"><?php echo $$nome2; ?></td><td align="center"><?php echo $$nome3; ?></td><td align="center"><?php echo $$nome4; ?></td><td align="center"><?php echo $$nome5; ?></td><td align="center"><?php echo $$nome6; ?></td><td align="center"><?php echo $$nome7; ?></td><td align="center"><?php echo $$nome8; ?></td><td align="center"><?php echo $$nome9; ?></td>
+<tr>
+<td align="center"><b>Amount</b></td><td align="center"><?php echo $linha5wa->t1; ?></td><td align="center"><?php echo $linha5wa->t2; ?></td><td align="center"><?php echo $linha5wa->t3; ?></td><td align="center"><?php echo $linha5wa->t4; ?></td><td align="center"><?php echo $linha5wa->t5; ?></td><td align="center"><?php echo $linha5wa->t6; ?></td><td align="center"><?php echo $linha5wa->t7; ?></td><td align="center"><?php echo $linha5wa->t8; ?></td><td align="center"><?php echo $linha5wa->t9; ?></td>
+<tr>
+<td align="center" colspan="10"><a href="devolverref.php?id=<?php echo $linha5wa->ID;?>">Order the return of troops</a></td>
+</table>
+<br>
+
+
+<?php
+}}}
 }} else {
 
 echo '
 <center><div style="background-color: white; border-style: solid; border-width: 1; width: 30%;">
-<b>Click <a href="dados_usuario.php">HERE</a> to create a village!</b></div>
+<b>Click <a href="novacolonia.php">HERE</a> to create a village!</b></div>
 </center>';
 
 }}
@@ -250,6 +345,6 @@ echo '
 
 
 
-
+</center>
 </body>
 </html>

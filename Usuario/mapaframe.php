@@ -27,8 +27,8 @@ $xmod = 0;
 $ymod = 0;
 $x = $linhamapa2 -> x;
 $y = $linhamapa2 ->y;
-$var1 = $_GET['var1'];
-$motion = $_GET['motion'];
+@$var1 = $_GET['var1'];
+@$motion = $_GET['motion'];
 $irx = $_GET['irx'];
 $iry = $_GET['iry'];
 

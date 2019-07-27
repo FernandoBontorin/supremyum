@@ -80,6 +80,13 @@ echo "<center><b>Population: $linha7->popdisponivel  / ".$linha7->pop."</b></cen
 
 
 
+?>
+</td>
+<td>
+<?php
+echo "<center><b>Consumption: ".$linha7->consumo."/Hour</b></center>";
+
+
 }
 
 
