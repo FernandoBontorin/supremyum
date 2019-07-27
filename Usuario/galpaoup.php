@@ -28,6 +28,7 @@ include_once "../Config/formulas.php";
 
 
 
+
  $consulta3080 = mysql_query("select * from aldeias where dono = '$login_usuario'");
  $linha5980 = mysql_num_rows($consulta3080); 
  while ($linha5980 = mysql_fetch_object($consulta3080)) { 

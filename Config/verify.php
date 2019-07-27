@@ -179,6 +179,120 @@ $updatecomidadestino1 = mysql_query("update aldeias set comidatempodestino = 0 w
 
 
 
+//Galpao
+           $consulta30809 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+ $linha59809 = mysql_num_rows($consulta30809); 
+ while ($linha59809 = mysql_fetch_object($consulta30809)) { 
+$checklinkvalid = $linha59809->galpaotempodestino;
+$consulta25544 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+ $linha25544 = mysql_num_rows($consulta25544); 
+ while ($linha25544 = mysql_fetch_object($consulta25544)) { 
+$nivelgalpaoo = $linha25544->galpaonv;
+$popdisponivel = $linha25544->popdisponivel;
+$galpaoup = $nivelgalpaoo + 1;
+If ($checklinkvalid == 0) {
+$galpaotrabalhadores = $linha25544->galpaotrabalhadores;
+$updatepopdisponivel = mysql_query("update aldeias set popdisponivel = $popdisponivel + $galpaotrabalhadores   where dono = '$login_usuario'");
+$updategalpaotrabalhadores = mysql_query("update aldeias set galpaotrabalhadores = 0 where dono = '$login_usuario'");
+}
+$consulta554 = mysql_query("select * from config where time");
+ $linha554 = mysql_num_rows($consulta554); 
+ while ($linha554 = mysql_fetch_object($consulta554)) { 
+$timedb = $linha554->time;
+$consulta2554 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+ $linha2554 = mysql_num_rows($consulta2554); 
+ while ($linha2554 = mysql_fetch_object($consulta2554)) { 
+$tempodestinoup = $linha2554->galpaotempodestino;
+If ($tempodestinoup == 0) {
+} else {
+If ($timedb <= $tempodestinoup) {
+$temporestante = $tempodestinoup - $timedb;
+$tempoparamostrar = StoH($temporestante);
+} else {
+If ($timedb >= $tempodestinoup) {
+$updategalpaonivel = mysql_query("update aldeias set galpaonv = $galpaoup where dono = '$login_usuario'");
+$updategalpaodestino1 = mysql_query("update aldeias set galpaotempodestino = 0 where dono = '$login_usuario'");
+} else {
+}}}}}}}
+
+
+
+
+//Armazem.
+           $consulta30809 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+ $linha59809 = mysql_num_rows($consulta30809); 
+ while ($linha59809 = mysql_fetch_object($consulta30809)) { 
+$checklinkvalid = $linha59809->armazemtempodestino;
+$consulta25544 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+ $linha25544 = mysql_num_rows($consulta25544); 
+ while ($linha25544 = mysql_fetch_object($consulta25544)) { 
+$nivelarmazemm = $linha25544->armazemnv;
+$popdisponivel = $linha25544->popdisponivel;
+$armazemup = $nivelarmazemm + 1;
+If ($checklinkvalid == 0) {
+$armazemtrabalhadores = $linha25544->armazemtrabalhadores;
+$updatepopdisponivel = mysql_query("update aldeias set popdisponivel = $popdisponivel + $armazemtrabalhadores   where dono = '$login_usuario'");
+$updatearmazemtrabalhadores = mysql_query("update aldeias set armazemtrabalhadores = 0 where dono = '$login_usuario'");
+}
+$consulta554 = mysql_query("select * from config where time");
+ $linha554 = mysql_num_rows($consulta554); 
+ while ($linha554 = mysql_fetch_object($consulta554)) { 
+$timedb = $linha554->time;
+$consulta2554 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+ $linha2554 = mysql_num_rows($consulta2554); 
+ while ($linha2554 = mysql_fetch_object($consulta2554)) { 
+$tempodestinoup = $linha2554->armazemtempodestino;
+If ($tempodestinoup == 0) {
+} else {
+If ($timedb <= $tempodestinoup) {
+$temporestante = $tempodestinoup - $timedb;
+$tempoparamostrar = StoH($temporestante);
+} else {
+If ($timedb >= $tempodestinoup) {
+$updatearmazemnivel = mysql_query("update aldeias set armazemnv = $armazemup where dono = '$login_usuario'");
+$updatearmazemdestino1 = mysql_query("update aldeias set armazemtempodestino = 0 where dono = '$login_usuario'");
+} else {
+}}}}}}}
+
+
+
+
+
+//Ed Central.
+           $consulta30809 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+ $linha59809 = mysql_num_rows($consulta30809); 
+ while ($linha59809 = mysql_fetch_object($consulta30809)) { 
+$checklinkvalid = $linha59809->edcentraltempodestino;
+$consulta25544 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+ $linha25544 = mysql_num_rows($consulta25544); 
+ while ($linha25544 = mysql_fetch_object($consulta25544)) { 
+$niveledcentrall = $linha25544->edcentralnv;
+$popdisponivel = $linha25544->popdisponivel;
+$edcentralup = $niveledcentrall + 1;
+If ($checklinkvalid == 0) {
+$edcentraltrabalhadores = $linha25544->edcentraltrabalhadores;
+$updatepopdisponivel = mysql_query("update aldeias set popdisponivel = $popdisponivel + $edcentraltrabalhadores   where dono = '$login_usuario'");
+$updateedcentraltrabalhadores = mysql_query("update aldeias set edcentraltrabalhadores = 0 where dono = '$login_usuario'");
+}
+$consulta554 = mysql_query("select * from config where time");
+ $linha554 = mysql_num_rows($consulta554); 
+ while ($linha554 = mysql_fetch_object($consulta554)) { 
+$timedb = $linha554->time;
+$consulta2554 = mysql_query("select * from aldeias where dono = '$login_usuario'");
+ $linha2554 = mysql_num_rows($consulta2554); 
+ while ($linha2554 = mysql_fetch_object($consulta2554)) { 
+$tempodestinoup = $linha2554->edcentraltempodestino;
+If ($tempodestinoup == 0) {
+} else {
+If ($timedb <= $tempodestinoup) {
+$temporestante = $tempodestinoup - $timedb;
+$tempoparamostrar = StoH($temporestante);
+} else {
+If ($timedb >= $tempodestinoup) {
+$updateedcentralnivel = mysql_query("update aldeias set edcentralnv = $edcentralup where dono = '$login_usuario'");
+$updateedcentraldestino1 = mysql_query("update aldeias set edcentraltempodestino = 0 where dono = '$login_usuario'");
+} else {
+}}}}}}}
 ?>
 
 

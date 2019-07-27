@@ -27,7 +27,7 @@ include "checkedificios.php";
 <table border="0"  cellPadding="0" cellSpacing="0">
 <td><?php echo '<img src="../img/'.$slot1.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot2.'.bmp" >' ; ?></td><td><?php echo '<img src="../img/'.$slot3.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot4.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot5.'.bmp ">' ; ?></td>
 <tr>
-<td><?php echo '<img src="../img/'.$slot6.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot7.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot8.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot9.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot10.'.bmp ">' ; ?></td>
+<td><?php echo '<img src="../img/'.$slot6.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot7.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot8.'.png ">' ; ?></td><td><?php echo '<img src="../img/'.$slot9.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot10.'.bmp ">' ; ?></td>
 <tr>
 <td><?php echo '<img src="../img/'.$slot11.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot12.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot13.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot14.'.bmp ">' ; ?></td><td><?php echo '<img src="../img/'.$slot15.'.bmp ">' ; ?></td>
 <tr>
