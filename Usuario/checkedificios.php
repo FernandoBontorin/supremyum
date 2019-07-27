@@ -68,5 +68,35 @@ $updategalb = mysql_query("update aldeias set edd = 'gal' where dono = '$login_u
 }
 
 
+
+If ($linhaid->quartelnv == 0) 
+{
+$updategal = mysql_query("update aldeias set edl = $zero where dono = '$login_usuario'");
+} else {
+$updategalb = mysql_query("update aldeias set edl = 'quartel' where dono = '$login_usuario'");
+
+}
+
+
+
+If ($linhaid->estabulonv == 0) 
+{
+$updateest = mysql_query("update aldeias set eds = $zero where dono = '$login_usuario'");
+} else {
+$updateestb = mysql_query("update aldeias set eds = 'est' where dono = '$login_usuario'");
+
+}
+
+
+
+
+If ($linhaid->cpmnv == 0) 
+{
+$updatecpm = mysql_query("update aldeias set edo = $zero where dono = '$login_usuario'");
+} else {
+$updatecpm = mysql_query("update aldeias set edo = 'cpm' where dono = '$login_usuario'");
+
+}
+
 }
 ?>

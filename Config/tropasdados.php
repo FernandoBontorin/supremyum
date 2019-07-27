@@ -1,4 +1,7 @@
 <?php
+include "formulas.php";
+
+
 $p1nome = "Alemães";
 $p2nome = "Apaches";
 $p3nome = "Astecas";
@@ -26,7 +29,8 @@ $t11m = "70";
 $t11o = "35";
 $t11f = "70";
 $t11c = "20";
-$t11t = "00:04:30";
+$t11TEMPO = "00:04:30";
+$t11t = $t11TEMPO ;
 $t11con = "0.5";
 $t11v = "2";
 $t11p = "50";
@@ -45,6 +49,8 @@ $t12con = "0.6";
 $t12v = "1.6";
 $t12p = "20";
 $t12nome = "Skihto";
+$t12Rq = "3";
+$t12Rcpm = "1";
 
 $t13atk = "50";
 $t13defi = "25";

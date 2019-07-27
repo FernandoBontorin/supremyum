@@ -77,6 +77,7 @@ If ($temposobrandot14 < 0) { $tst14 = 0; } else { $tst14 = StoH($temposobrandot1
 Ao colocar tropas na fila de produção, você somente poderá produzir mais da unidade desejada, quando não houver nenhuma unidade dessa em produção!
 
 <div id="tabela1" name="tabela1" style="display:<?php echo $display1; ?>;"><h3>Alemães</h3>
+
 <b>Tropas em produção</b>
 <table border="1">
 <td align="center"><?php echo $t11nome; ?></td><td align="center"><?php echo $t12nome; ?></td><td align="center"><?php echo $t13nome; ?></td><td align="center"><?php echo $t14nome; ?></td>
@@ -91,6 +92,7 @@ Ao colocar tropas na fila de produção, você somente poderá produzir mais da unid
 </table>
 <br>
 <b>Produzir</b>
+<table border="0"><td>
 <table border="1"><td align="center"><b>
 <?php If ($temposobrandot11 <= 0) { 
  $limpatc11 = mysql_query("update fila set t11timecmc = 0 where aldeiaid = '$iddavila'");
@@ -113,7 +115,54 @@ echo "Este quartel já possui<br>tropas deste tipo em produção!";
 <input type="number" name="text11" id="text11" value=""><br>
 <input type="submit" name="sub11" id="sub11" value="Produzir tropas">';} ?>
 </form>
-</td></table></div>
+</td></table>
+</td><td>
+
+
+
+<table border="1"><td align="center"><b>
+<?php 
+ If ($temposobrandot12 <= 0) { 
+ $limpatc12 = mysql_query("update fila set t12timecmc = 0 where aldeiaid = '$iddavila'");
+ $limpatf12 = mysql_query("update fila set t12timefim = 0 where aldeiaid = '$iddavila'");
+ $attt12 = mysql_query("update tropas set t12 = $linhaD->t12 + $t12atual where IDaldeia = '$iddavila'");
+ $limpa12 = mysql_query("update fila set t12 = 0 where aldeiaid = '$iddavila'"); } else {}; ?>
+<?php echo $t12nome.' ('.$t12atual.')'; ?></b><br><br><img src="../img/madeira.bmp"><?php echo $t12m." ";?><img src="../img/ouro.bmp"><?php echo $t12o." ";?><img src="../img/ferro.bmp"><?php echo $t12f." ";?><img src="../img/comida.bmp"><?php echo $t12c." ";?><img src="../img/time.bmp"><?php echo $t12t." ";?>
+<form action="quarteledmake12.php" target="iframequartel" name="quartel12" id="quartel12"  method="post" enctype="multipart/form-data">
+<?php $t12possiveism = (int)$madeira / $t12m; $t12possiveismm = (int)$t12possiveism; ?>
+<?php $t12possiveiso = (int)$ouro / $t12o; $t12possiveisoo = (int)$t12possiveiso; ?>
+<?php $t12possiveisf = (int)$ferro / $t12f; $t12possiveisff = (int)$t12possiveisf; ?>
+<?php $t12possiveisc = (int)$comida / $t12c; $t12possiveiscc = (int)$t12possiveisc; ?>
+<?php If ($t12possiveismm < $t12possiveisoo) { $possiveisgeralt12a = $t11possiveismm; } else { $possiveisgeralt12a = $t12possiveisoo; } ?>
+<?php If ($t12possiveisff < $t12possiveiscc) { $possiveisgeralt12b = $t12possiveisff; } else { $possiveisgeralt12b = $t12possiveiscc; } ?>
+<?php If ($possiveisgeralt12a < $possiveisgeralt12b) { $possiveisgeralt12c = $possiveisgeralt12a; } else { $possiveisgeralt12c = $possiveisgeralt12b; } ?>
+<b>(Max: <?php echo $possiveisgeralt12c ?>)</b>
+<?php If ($linhaaaacc->quartelnv < $t12Rq) {
+echo"Nível do quartel ainda<br>não alcançado(".$t12Rq.")<br>";} else {
+If ($linhaaaacc->cpmnv < $t12Rcpm) {
+echo"Nível do centro de pesquisas militares<br>ainda não alcançado(".$t12Rcpm.")"; } else {
+ If ($linhaD->t12 != 0) {
+echo "Este quartel já possui<br>tropas deste tipo em produção!";
+} else { echo '
+<input type="number" name="text12" id="text12" value=""><br>
+<input type="submit" name="sub12" id="sub12" value="Produzir tropas">';}}} ?>
+</form>
+</td></table>
+
+
+
+
+
+
+
+
+
+
+</td></table>
+
+
+
+</div>
 
 <div id="tabela2" name="tabela2">
 </div>

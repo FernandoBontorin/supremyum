@@ -7,6 +7,7 @@ include "../Config/config_sistema.php";
 
 include "../engine/recursos.php";
 
+include "adfly.php";
 
 
 

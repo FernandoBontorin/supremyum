@@ -85,6 +85,26 @@ Próximo Nível
 </td>
 <tr>
 <td>
+Laboratório Ofensivo
+</td>
+<td>
+Nivel
+</td>
+<td>
+Próximo Nível
+</td>
+<tr>
+<td>
+Laboratório Defensivo
+</td>
+<td>
+Nivel
+</td>
+<td>
+Próximo Nível
+</td>
+<tr>
+<td>
 Centro de Estratégias
 </td>
 <td>

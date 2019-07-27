@@ -83,7 +83,7 @@ $attdbcomida = mysql_query("update aldeias set comidahora = $comidaaposconta whe
 
 
 
-$population = $linha833->nivelmadeira + $linha833->nivelouro + $linha833->nivelferro + $linha833->nivelcomida + $linha833->edanv + $linha833->edbnv + $linha833->edcnv + $linha833->galpaonv + $linha833->edenv + $linha833->edfnv + $linha833->edgnv + $linha833->edcentralnv + $linha833->armazemnv + $linha833->edjnv + $linha833->edknv + $linha833->quartelnv + $linha833->edmnv + $linha833->ednnv + $linha833->edonv + $linha833->edpnv + $linha833->edqnv + $linha833->edrnv + $linha833->edsnv + $linha833->edtnv;
+$population = $linha833->nivelmadeira + $linha833->nivelouro + $linha833->nivelferro + $linha833->nivelcomida + $linha833->edanv + $linha833->edbnv + $linha833->edcnv + $linha833->galpaonv + $linha833->edenv + $linha833->edfnv + $linha833->edgnv + $linha833->edcentralnv + $linha833->armazemnv + $linha833->edjnv + $linha833->edknv + $linha833->quartelnv + $linha833->edmnv + $linha833->ednnv + $linha833->cpmnv + $linha833->edpnv + $linha833->edqnv + $linha833->edrnv + $linha833->estabulonv + $linha833->edtnv;
 
 
 
