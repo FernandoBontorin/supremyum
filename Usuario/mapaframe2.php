@@ -29,6 +29,7 @@ $idald = $linhasmap8->ID;
 ?>
 
 <html>
+<link rel="StyleSheet" href="frame.css">
 <body margin="0" border="0">
 <center>
 <table border="1" cellpadding="0" cellspacing="0">

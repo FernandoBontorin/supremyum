@@ -1,6 +1,6 @@
 <?php
 include "../validar_session.php";
-
+include "padrao.php";
 include "../Config/config_sistema.php";
 
 // faz consulta no banco
@@ -22,13 +22,7 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
 </head>
 <body>
 
-<div id="options" name="options">
-<center>
-<div id="textodaoptions" name="textodaoptions">
- <td colspan="2" valign="top" class="style3"><a href="msg.php"> Mensagens </a>  | <a href="dados_usuario.php" class="style3"> Dados do usu&aacute;rio </a> | <a href="../logout.php" class="style3">Logout</a> | <a href="home.php">Home</a></td>
-</div>
-</center>
-</div>
+
 
 <center>
 <div id="msglinks" name="msglinks">
@@ -38,10 +32,10 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
 </div>
 </center>
 <center>
-<div id="enviarbox" name="enviarbox">
+<div id="enviarbox" name="enviarbox" style="background-color: #CDC9C9;">
 
 
-<form action="enviarmensagemscript.php" target="_blank" method="post" enctype="multipart/form-data" name="formmensagem">
+<form action="enviarmensagemscript.php" target="_self" method="post" enctype="multipart/form-data" name="formmensagem">
 
 <br>Destinatário:<center><input name="destinatario" type="text" id="destinatario" size="40" maxlength="200"/> </center><br>
 Assunto:<center><input name="assunto" type="text" id="assunto" size="40" maxlength="20"/> </center><br>

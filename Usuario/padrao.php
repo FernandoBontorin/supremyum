@@ -39,7 +39,7 @@ $updates = mysql_query("update dados_usuarios set online = '$online' where Login
 
 </head>
 
-
+<body>
 
 
 <?php
@@ -116,3 +116,6 @@ echo "<center><b>Population: $linha7->popdisponivel  / ".$linha7->pop."</b></cen
 }
 include "../engine/recursos.php";
 ?>
+
+</body>
+</html>

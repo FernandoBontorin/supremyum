@@ -38,13 +38,14 @@ include "menu1.php";
 <div id="caixadeentrada" name="caixadeentrada">
 <div id="caracteristicas" name="caracteristicas">
 <div id="remetente" name="remetente">
-<b>Remetente</b>
+<center>
+<table width="100%" border="1">
+<td align="center" colspan="1" width="50%"><b>Remetente</b></td>
+<td align="center" colspan="1" width="50%"><b>Assunto</b></td>
+</table>
+</center>
 </div>
-
-<div id="assunto2" name="assunto2">
-<b>Assunto</b>
-</div>
-
+<center>
 
 <hr width="100%">
 
@@ -52,14 +53,14 @@ include "menu1.php";
 </div>
 
 <table name="remassu" id="remassu">
-<td width="49%" align="left">
+<td width="50%" align="left">
 <div id="remetentelist" name="remetentelist" align="left">
 <form action="lermsg.php" name="lermsg" id="lermsg"  method="post" enctype="multipart/form-data">
 <?php
 $consulta2 = mysql_query("select * from mensagens where destino = '$login_usuario'");
 
 while($linha = mysql_fetch_object($consulta2)) {
-	echo "".$linha->remetente."";
+	echo "<center>".$linha->remetente."</center>";
 ?>
 <hr width="100%">
 	    <?php
@@ -81,26 +82,17 @@ while($linha = mysql_fetch_object($consulta2)) {
 $consulta2 = mysql_query("select * from mensagens where destino = '$login_usuario'");
 
 while($linha = mysql_fetch_object($consulta2)) {
-	echo "".$linha->assunto."";
-
-
-
-
-
+	echo "<center>".$linha->assunto."<input type='submit' name='IDmsg' id='IDmsg' value=".$linha->ID." style='position: relative;'></center>";
 ?>
 
 
-
-
-
-<input type="submit" name="IDmsg" id="IDmsg" value=<?php echo " ".$linha->ID.""; ?>>
-
+<hr width="100%">
 
 <div id="leia" name="leia">
 
 </div>
 
-<hr width="100%">
+
 
 	    <?php
 }
@@ -130,8 +122,7 @@ while($linha = mysql_fetch_object($consulta2)) {
 
 
 </div>
-<hr>
-<hr>
+
 
 
 </div>

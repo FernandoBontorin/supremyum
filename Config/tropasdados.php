@@ -792,7 +792,7 @@ $t58t = StoH(HtoS($t18TEMPO) - $t18tD) ;
 $t58con = "0";
 $t58v = 1.3*$troop_speed;
 $t58p = "0";
-$t58nome ="Widder";
+$t58nome ="British Widder";
 
 $t59atk = "75";
 $t59defi = "50";
@@ -808,7 +808,7 @@ $t59t = StoH(HtoS($t19TEMPO) - $t19tD) ;
 $t59con = "0";
 $t59v = 0.9*$troop_speed;
 $t59p = "0";
-$t59nome ="Katapult";
+$t59nome ="British Katapult";
 
 
 

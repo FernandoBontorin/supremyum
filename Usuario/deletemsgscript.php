@@ -40,7 +40,7 @@ $deleteID = $_POST['deleteID'];
 
 $consulta980 = "DELETE FROM mensagens WHERE ID=$deleteID";
  $result = mysql_query($consulta980);
-    echo "Mensagem Apagada!";
+    echo "<center><br><table width='50%' border='1' cellspacing='0' style='background-color: #CDC9C9;'><td align='center'><b>Message Deleted!</b></td></table></center>";
 
 
 

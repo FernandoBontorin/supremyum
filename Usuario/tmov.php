@@ -6,6 +6,8 @@ include "padrao.php";
 <html>
 <body>
 <?php
+$inposition = "../img/v.png";
+$acaminho = "../img/atk.gif";
 include "../Config/tropasdados.php";
 $count = 0;
 $consultamov = mysql_query("select * from ataques where remetente = '$id'");
@@ -43,8 +45,7 @@ $linhad = mysql_num_rows($consultad);
 while($linhad = mysql_fetch_object($consultad)) {
 $viladest = $linhad->nome;
 $donodest = $linhad->dono;
-$inposition = "../img/v.png";
-$acaminho = "../img/atk.gif";
+
  ?>
 
 <form action="taction.php" target="_self" method="post" enctype="multipart/form-data">
@@ -107,7 +108,7 @@ $style = "-webkit-transform: rotate(180deg);";
 <form action="tregroup.php" target="_self" method="post" enctype="multipart/form-data">
 <input type="hidden" name="idret" value="<?php echo $idret; ?>">
 <center><table border='1' <?php if($result20 > 0){ echo"bgcolor='#FFD700'";} else { echo"bgcolor='#98FB98'";} ?> cellspacing="0">
-<td align='center' colspan="1"><img src="<?php If($result20 > 0){ echo $acaminho; } else { echo $inposition;}?>" width="40" height="40" style="<?php If($result20 > 0){echo $style;}?>"></td><td align='center' colspan="8"><b>(<?php echo $countret; ?>)<?php If($result20 > 0){ echo"<font color='black'>Troops Returning</font>";} else { echo" <font color='green'>Troops Returned!</font>";}?></b></td></tr><tr>
+<td align='center' colspan="1"><img src="<?php If($result20 > 0){ echo $acaminho; } else { echo $inposition;} ?>" width="40" height="40" style="<?php If($result20 > 0){echo $style;}?>"></td><td align='center' colspan="8"><b>(<?php echo $countret; ?>)<?php If($result20 > 0){ echo"<font color='black'>Troops Returning</font>";} else { echo" <font color='green'>Troops Returned!</font>";}?></b></td></tr><tr>
 <td align='center' colspan="9"><b>Returning From:</b><?php echo "<a href='aldprof.php?idpver=".$idsaida."'>".$nomesaida."</a>";?></td></tr><tr>
 <td align='center' colspan="9"><b><?php If($result20 > 0){ echo"Time Remaining:".StoH($result20); } else {echo "<input type='submit' value='Regroup Troops!'>";} ?></b></td></tr><tr>
 <td align='center'><?php echo $$nomet1; ?></td><td align='center'><?php echo $$nomet2; ?></td><td align='center'><?php echo $$nomet3; ?></td><td align='center'><?php echo $$nomet4; ?></td><td align='center'><?php echo $$nomet5; ?></td><td align='center'><?php echo $$nomet6; ?></td><td align='center'><?php echo $$nomet7; ?></td><td align='center'><?php echo $$nomet8; ?></td><td align='center'><?php echo $$nomet9; ?></td></tr><tr>

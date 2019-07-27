@@ -228,15 +228,15 @@ $sd9 = $t9enemy - $perdad9;
 //Roubo.
 
 If ($sa1 + $sa2 + $sa3 + $sa4 + $sa5 + $sa6 + $sa7 + $sa8 + $sa9 > 0) {
-$r1f = "t".$povorem."1c";
-$r2f = "t".$povorem."2c";
-$r3f = "t".$povorem."3c";
-$r4f = "t".$povorem."4c";
-$r5f = "t".$povorem."5c";
-$r6f = "t".$povorem."6c";
-$r7f = "t".$povorem."7c";
-$r8f = "t".$povorem."8c";
-$r9f = "t".$povorem."9c";
+$r1f = "t".$povorem."1p";
+$r2f = "t".$povorem."2p";
+$r3f = "t".$povorem."3p";
+$r4f = "t".$povorem."4p";
+$r5f = "t".$povorem."5p";
+$r6f = "t".$povorem."6p";
+$r7f = "t".$povorem."7p";
+$r8f = "t".$povorem."8p";
+$r9f = "t".$povorem."9p";
 
 $r1 = $sa1 * $$r1f;
 $r2 = $sa2 * $$r2f;

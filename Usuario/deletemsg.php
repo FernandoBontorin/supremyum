@@ -1,7 +1,5 @@
 <?php
-include "../validar_session.php";
-
-include "../Config/config_sistema.php";
+include "padrao.php";
 
 
 
@@ -28,13 +26,7 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
 </head>
 <body>
 
-<div id="options" name="options">
-<center>
-<div id="textodaoptions" name="textodaoptions">
- <td colspan="2" valign="top" class="style3"><a href="msg.php"> Mensagens </a>  | <a href="dados_usuario.php" class="style3"> Dados do usu&aacute;rio </a> | <a href="../logout.php" class="style3">Logout</a> | <a href="home.php">Home</a></td>
-</div>
-</center>
-</div>
+
 
 <center>
 <div id="msglinks" name="msglinks">
@@ -47,13 +39,10 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
 <center>
 <div id="caixadeentrada" name="caixadeentrada">
 <div id="caracteristicas" name="caracteristicas">
-<div id="remetente" name="remetente">
-<b>Remetente</b>
-</div>
-
-<div id="assunto2" name="assunto2">
-<b>Assunto</b>
-</div>
+<table width="100%" border="1">
+<td align="center" colspan="1" width="50%"><b>Remetente</b></td>
+<td align="center" colspan="1" width="50%"><b>Assunto</b></td>
+</table>
 
 
 <hr width="100%">
@@ -69,7 +58,7 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
 $consulta2 = mysql_query("select * from mensagens where destino = '$login_usuario'");
 
 while($linha = mysql_fetch_object($consulta2)) {
-	echo "".$linha->remetente."";
+	echo "<center>".$linha->remetente."</center>";
 ?>
 <hr width="100%">
 	    <?php
@@ -91,7 +80,7 @@ while($linha = mysql_fetch_object($consulta2)) {
 $consulta2 = mysql_query("select * from mensagens where destino = '$login_usuario'");
 
 while($linha = mysql_fetch_object($consulta2)) {
-	echo "".$linha->assunto."";
+	echo "<center>".$linha->assunto."";
 
 
 
@@ -104,7 +93,7 @@ while($linha = mysql_fetch_object($consulta2)) {
 
 
 <input type="submit" name="deleteID" id="deleteID" value=<?php echo " ".$linha->ID.""; ?>>
-
+</center>
 
 
 
@@ -138,8 +127,7 @@ while($linha = mysql_fetch_object($consulta2)) {
 
 
 </div>
-<hr>
-<hr>
+
 
 
 </div>

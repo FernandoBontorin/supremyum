@@ -230,7 +230,7 @@ Food level: <?php               $consulta30805 = mysql_query("select * from alde
 </b>
 <div id="recursosframe" name="recursosframe">
 <td>
-<iframe name="iframerecursos" id="iframerecursos" style="background-image:url('../img/bg1.jpg')" scrolling="no" allowtransparency="true"></iframe>
+<iframe name="iframerecursos" id="iframerecursos" style="background-image:url('../img/bg1.jpg'); background-repeat: no-repeat; background-size: 100% 100%;" scrolling="no" allowtransparency="true"></iframe>
 </td>
 </div>
 </div>

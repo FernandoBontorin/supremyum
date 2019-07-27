@@ -28,32 +28,20 @@ $IDmsg = ('');
 
 
 
-<div id="lermensagem" name="lermensagem">
+<table border="1" cellspacing="0" style="background-color: #CDC9C9;" width="100%">
+<td>
 Mensagem:
 <?php
 $consulta3 = mysql_query("select * from mensagens where destino = '$login_usuario'");
-
-
 $IDmsg = $_POST['IDmsg'];
-
-
-
-
 $consulta5000 = mysql_query("select * from mensagens where ID = '$IDmsg'");
-
-
 while($linha = mysql_fetch_object($consulta5000)) {
 echo " ".$linha->mensagem."";
-
-}
-
-
-
-
-?>
+}?>
+</td>
+</table>
 
 
-</div>
 
 
 

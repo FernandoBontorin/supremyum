@@ -49,22 +49,21 @@ $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usua
 
 
 
-<div id="top" name="top">
+<div id="top" name="top" style="background-image: URL(../img/bgt2.png); background-height: 100%; background-repeat: x-repeat">
 <div id="options" name="options">
 <center>
-<div id="textodaoptions" name="textodaoptions">
- <td colspan="2" valign="top" class="style3"><a href="msg.php"> Messages </a>  | <a href="dados_usuario.php" class="style3"> Options </a> | <a href="../logout.php" class="style3">Logout</a> | <a href="home.php">Home</a> | <a href="mapa.php">Map</a></td>
-</div>
 <div id="time" name="time">
 <?php
 include "../engine/time.php";
 ?>
 </div>
+
+
 </div>
 </center>
 <center>
 <div id="recursostop" name="recursostop">
-<table border="1">
+<table border="1" cellspacing="0" style="background-image: url('../img/empty.png');background-repeat: no-repeat; background-size: 100% 100%; border-color: #FFFFFF;">
 <td>
 <font color="#F5DEB3">
 <?php
@@ -84,51 +83,41 @@ $ferronoestoque = (int)$linha86->ferro;
 $comidanoestoque = (int)$linha86->comida;
 $capacidadedosrecursos = $linha86->capacidade;
 $capacidadedacomida = $linha86->capacidadecomida;
-echo "<center><b>Wood   ".$madeiranoestoque."/".$capacidadedosrecursos."</b></center>";
+echo "<text style='text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;'><center><b>Wood   ".$madeiranoestoque."/".$capacidadedosrecursos."</b></center></text>";
 ?>
 </font>
 </td>
 <td>
 <font color="gold">
 <?php
-echo "<center><b>Gold   ".$ouronoestoque."/".$capacidadedosrecursos."</b></center>";
+echo "<text style='text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;'><center><b>Gold   ".$ouronoestoque."/".$capacidadedosrecursos."</b></center></text>";
 ?>
 </font>
 </td>
 <td>
 <font color="lightgray">
 <?php
-echo "<center><b>Iron   ".$ferronoestoque."/".$capacidadedosrecursos."</b></center>";
+echo "<text style='text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;'><center><b>Iron   ".$ferronoestoque."/".$capacidadedosrecursos."</b></center></text>";
 ?>
 </font>
 </td>
 <td>
-<font color="#B22222">
+<font color="#FFA07A">
 <?php
-echo "<center><b>Food   ".$comidanoestoque."/".$capacidadedacomida."</b></center>";
-
-
-}
-
-
-
+echo "<text style='text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;'><center><b>Food   ".$comidanoestoque."/".$capacidadedacomida."</b></center></text>";
 ?>
+</font>
+<?php
+}?>
 </td>
 </table>
 </div>
+<div id="textodaoptions" name="textodaoptions"><table border="0">
+<td><a href="../Usuario/home.php"><img src="../img/home.png"></a></td><td><a href="../Usuario/mapa.php"><img src="../img/map.png"></a></td><td><a href="../Usuario/msg.php"><img src="../img/messages.png"></a></td><td><a href="../Usuario/dados_usuario.php"><img src="../img/options.png"></a></td><td><a href="../logout.php"><img src="../img/logout.png"></a></td>
+</table></div>
 </center>
-<div id="barramenu" name="barramenu">
-_
 </div>
-
-
-
-
-</div>
-
-
-
-
-
+<table style="height:20px; width:100%; background-image: URL(../img/block.png);">
+</table><br>
 </body>
 </html>

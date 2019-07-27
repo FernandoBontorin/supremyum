@@ -20,22 +20,22 @@ while($linha72 = mysql_fetch_object($consulta38975)) {
 <table border="1" bgcolor="white" style=" text-align: center;">
 <td>
 <b>
-Construção
+Building
 </b>
 </td>
 <td>
 <b>
-Nivel
+Level
 </b>
 </td>
 <td>
 <b>
-Próximo Nível
+Next Level
 </b>
 </td>
 <tr>
 <td>
-<a href="edcentral.php" target="iframeeds">Edifício Principal</a>
+<a href="edcentral.php" target="iframeeds">Main Building</a>
 </td>
 <td>
 <?php echo' '.$linha72->edcentralnv;?>
@@ -45,7 +45,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-<a href="armazem.php" target="iframeeds">Armazém</a>
+<a href="armazem.php" target="iframeeds">Warehouse</a>
 </td>
 <td>
 <?php echo' '.$linha72->armazemnv;?>
@@ -55,7 +55,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-<a href="galpao.php" target="iframeeds">Galpão de Comida</a>
+<a href="galpao.php" target="iframeeds">Food Warehouse</a>
 </td>
 <td>
 <?php echo' '.$linha72->galpaonv;?>
@@ -65,7 +65,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-<a href="quartel.php" target="iframeeds">Quartel</a>
+<a href="quartel.php" target="iframeeds">Barracks</a>
 </td>
 <td>
 <?php echo' '.$linha72->quartelnv;?>
@@ -75,7 +75,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-Estábulo
+Stable
 </td>
 <td>
 Nivel
@@ -85,7 +85,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-Laboratório Ofensivo
+Offensive Arsenal
 </td>
 <td>
 Nivel
@@ -95,7 +95,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-Laboratório Defensivo
+Defensive Arsenal
 </td>
 <td>
 Nivel
@@ -105,7 +105,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-Centro de Estratégias
+Market
 </td>
 <td>
 Nivel
@@ -115,7 +115,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-Mercado
+Academy
 </td>
 <td>
 Nivel
@@ -125,7 +125,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-Centro de Pesquisas Militares
+Geographical Research Center
 </td>
 <td>
 Nivel
@@ -135,7 +135,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-Centro de Pesquisas Geográficas
+Economic Research Center
 </td>
 <td>
 Nivel
@@ -145,7 +145,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-Centro de Pesquisas Econômicas
+Embassy
 </td>
 <td>
 Nivel
@@ -155,17 +155,7 @@ Próximo Nível
 </td>
 <tr>
 <td>
-Embaixada
-</td>
-<td>
-Nivel
-</td>
-<td>
-Próximo Nível
-</td>
-<tr>
-<td>
-Muralha
+Wall
 </td>
 <td>
 Nivel

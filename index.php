@@ -4,7 +4,26 @@
 
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!--[if IE 5]>
+<script type="text/javascript">window.location.href = "atualize-navegador.html";</script>
+<![endif]-->
+
+<!--[if IE 6]>
+<script type="text/javascript">window.location.href = "atualize-navegador.html";</script>
+<![endif]-->
+
+<!--[if IE 7]>
+<script type="text/javascript">window.location.href = "atualize-navegador.html";</script>
+<![endif]-->
+
+<!--[if IE 8]>
+<script type="text/javascript">window.location.href = "atualize-navegador.html";</script>
+<![endif]-->
+
+<!--[if IE 9]>
+<script type="text/javascript">window.location.href = "atualize-navegador.html";</script>
+<![endif]-->
+
 
 <title>Supremyum | War Game Browser</title>
 
