@@ -63,8 +63,7 @@ while($linha = mysql_fetch_object($consulta)) {
 
 <?php
 
-$x = "<script>document.write(x)</script>";  
-echo $x;
+
 
 $consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'");
 	$linha5 = mysql_num_rows($consulta3000);
@@ -73,6 +72,11 @@ $consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'
 while($linha7 = mysql_fetch_object($consulta3000)) {
 
 
+echo "<center><b>ID: ".$linha7->ID."</b></center>";
+?>
+</td>
+<td>
+<?php
 echo "<center><b>Aldeia: ".$linha7->nome."</b></center>";
 ?>
 </td>

@@ -65,13 +65,13 @@ Próximo Nível
 </td>
 <tr>
 <td>
-Quartel
+<a href="quartel.php" target="iframeeds">Quartel</a>
 </td>
 <td>
-Nivel
+<?php echo' '.$linha72->quartelnv;?>
 </td>
 <td>
-Próximo Nível
+<?php echo' '.$linha72->quartelnv + 1;?>
 </td>
 <tr>
 <td>

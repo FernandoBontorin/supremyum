@@ -20,6 +20,28 @@ $consultaconfig = mysql_query("select * from aldeias where dono = '$login_usuari
 	$linhaconfig = mysql_num_rows($consultaconfig);
 while($linhaconfig = mysql_fetch_object($consultaconfig)) {
 
+$consultaTIME = mysql_query("select * from config where time");
+	$linhaTIME = mysql_num_rows($consultaTIME);
+while($linhaTIME = mysql_fetch_object($consultaTIME)) {
+
+$consultaTROPAS = mysql_query("select * from tropas where IDaldeia = '$linhaconfig->ID'");
+	$linhaTROPAS = mysql_num_rows($consultaTROPAS);
+while($linhaTROPAS = mysql_fetch_object($consultaTROPAS)) {
+
+$consultaFILA = mysql_query("select * from fila where aldeiaid = '$linhaconfig->ID'");
+	$linhaFILA = mysql_num_rows($consultaFILA);
+while($linhaFILA = mysql_fetch_object($consultaFILA)) {
+
+$tempoatual = $linhaTIME->time;
+$t11atual = $linhaTROPAS->t11;
+$t11filaatual = $linhaFILA->t11;
+$t12atual = $linhaTROPAS->t12;
+$t12filaatual = $linhaFILA->t12;
+$t13atual = $linhaTROPAS->t13;
+$t13filaatual = $linhaFILA->t13;
+$t14atual = $linhaTROPAS->t14;
+$t14filaatual = $linhaFILA->t14;
+
 $niveldoedcentral = $linhaconfig->edcentralnv;
 $abcde1 = $linhaconfig->edcentralnv;
 $abcde = $abcde1 * 2;
@@ -145,8 +167,8 @@ $formulacomidagalpao = pow($linhaconfig->galpaonv,2) * 3 + 25;
 $upgalpaotempodb = "00:07:00";
 $descontotempogalpao = HtoS($upgalpaotempodb) / 100 * $abcde;
 $formulatempogalpao = StoH(HtoS($upgalpaotempodb)  / $server_speed * $nivelgalpao  - $descontotempogalpao)."\n";
-$desbug6 = HtoS($upgalpaotempodb)  / $server_speed * $nivelgalpao  - $descontotempogalpao;
-If ($desbug6 < 0) {
+$desbug7 = HtoS($upgalpaotempodb)  / $server_speed * $nivelgalpao  - $descontotempogalpao;
+If ($desbug7 < 0) {
 $formulatempogalpao = StoH(0);
 } else {
 }
@@ -157,10 +179,33 @@ $estocagemgalpao = pow($nivelgalpao,2) * 50 +1100;
 
 
 
-
-
-
-
+$nivelquartel = $linhaconfig->quartelnv;
+If ($nivelquartel == 0) {
+$nivelquartel = 0.5;
+} else {
 }
+$formulamadeiraquartel = pow($linhaconfig->quartelnv,2) * 40 + 250;
+$formulaouroquartel = pow($linhaconfig->quartelnv,2) * 40 + 200;
+$formulaferroquartel = pow($linhaconfig->quartelnv,2) * 40 + 280;
+$formulacomidaquartel = pow($linhaconfig->quartelnv,2) * 15 + 110;
+$upquarteltempodb = "00:56:40";
+$descontotempoquartel = HtoS($upquarteltempodb) / 100 * $abcde;
+$formulatempoquartel = StoH(HtoS($upquarteltempodb)  / $server_speed * $nivelquartel  - $descontotempoquartel)."\n";
+$desbug8 = HtoS($upquarteltempodb)  / $server_speed * $nivelquartel  - $descontotempoquartel;
+If ($desbug8 < 0) {
+$formulatempoquartel = StoH(0);
+} else {
+}
+
+
+
+
+
+
+
+
+
+
+}}}}
 
 ?>

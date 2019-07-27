@@ -107,13 +107,11 @@ $consulta78 = mysql_query($sql);
 
 
 
-
-
-
-
 // faz consulta no banco para inserir os dados do usuario
 $sql = "insert into aldeias (ID,dono,nome,povo,pontosdeprevisao,madeira,ouro,ferro,comida,capacidade,lealdade,x,y,xy,madeirahora,ourohora,ferrohora,comidahora) values ('','$dono','$nome','$civilizacao','$pontosdeprevisao','$madeira','$ouro','$ferro','$comida','$capacidade','$lealdade','$x','$y','$xy','$madeiradb','$ourodb','$ferrodb','$comidadb')";
 $consulta78 = mysql_query($sql);
+
+
 
 // verifica se o usuario foi cadastrado
 if($consulta78) {

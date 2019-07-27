@@ -281,8 +281,32 @@ position: absolute;
 }
 
 
+#tabelaP {
+	border-style: solid;
+	border-color: #FF8C00;
+	border-width: 2px;
+	background-color: #DEB887;
+	width: 90%;
+}
 
+#tabela1 {
+	border-style: solid;
+	border-color: #FF8C00;
+	border-width: 2px;
+	background-color: #DEB887;
+	width: 90%;
+}
 
+#tabela1 table {
+	
+}
 
+#iframedoquartel {
+	width: 60%;
+	height: 25%;
+}
 
-
+#iframedoquartel iframe {
+	width: 100%;
+	height: 30%;
+}
