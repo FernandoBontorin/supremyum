@@ -61,7 +61,7 @@ $consulta3000 = mysql_query("select * from aldeias where dono = '$login_usuario'
 while($linha7 = mysql_fetch_object($consulta3000)) {
 $ID = $linha7->ID;
 }
-$consultarelat = mysql_query("select * from relatorios where visualisador='$ID'");
+$consultarelat = mysql_query("select * from relatorios where visualisador='$ID' ORDER by ID Desc");
 while($linharelat = mysql_fetch_object($consultarelat)) {
 
 

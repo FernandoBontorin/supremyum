@@ -1,9 +1,14 @@
 <?php
+error_reporting(0);
 include "../validar_session.php";
 include "config_sistema.php";
 include_once "formulas.php";
 include "../engine/recursos.php";
 include "tropasdados.php";
+
+If ($atualizador==1){
+include "atualizador.php";
+}
 
 
 If($login_usuario =="admin"){
@@ -494,7 +499,7 @@ $newt8 = $linhat2->t8 + $linhat->t8;
 $newt9 = $linhat2->t9 + $linhat->t9;
 
 $updatet = mysql_query("update tropas set t1 = $newt1, t2 = $newt2, t3 = $newt3, t4 = $newt4, t5 = $newt5, t6 = $newt6, t7 = $newt7, t8 = $newt8, t9 = $newt9   where IDaldeia = '$idvila'");
-If($updatet) { echo"Processing...<br>";} else { echo "Error 901: Troop Send* DB Error!"; exit();}
+If($updatet) { } else { echo "Error 901: Troop Send* DB Error!"; exit();}
 
 
 
@@ -527,7 +532,7 @@ If($updater) {echo"Processing...<br>"; } else { echo "Error 904: Resources Updat
 //Deleta o retorno.
 $delret = "DELETE FROM retornos WHERE ID='$idret'";
 $resultdelret = mysql_query($delret);
-If($resultdelret) { echo"Done!<br>"; echo "<meta http-equiv='refresh' content='2; url=home.php'> ";} else { echo "Error 903: ret DB Error!";}
+If($resultdelret) {  } else { echo "Error 903: ret DB Error!";}
 
 
 

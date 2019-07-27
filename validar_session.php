@@ -45,6 +45,7 @@ if(isset($_SESSION['login_usuario']) and isset($_SESSION['senha_usuario'])) {
 // verifica se as variaveis estão atribuidas
 if(!(empty($login_usuario) or empty($senha_usuario))) {
 	// se estiverem atribuidos vamos ver se exist o login
+	include "Config/config_sistema.php";
 	$consulta = mysql_query("select * from dados_usuarios where Login = '$login_usuario'");
 	if(mysql_num_rows($consulta) == 1) {
 		// se o usuario exostir vamos verificar a senha
