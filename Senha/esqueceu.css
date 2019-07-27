@@ -1,0 +1,46 @@
+body {
+	background: #DCDCDC;
+	margin: 0px;
+	border: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+#voltarlogin {
+	width: 100%;
+	height: 3%;
+	background: url(voltarlogin.png);
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+}
+
+a img {
+border-width:0;
+}
+
+a:link, a:visited {
+
+	text-decoration: none
+;
+ 
+	color: white
+;
+	}
+
+
+a:hover {
+
+	text-decoration: none;
+ 
+	color: white
+;
+}
+
+
+a:active {
+
+	text-decoration: none;
+ 
+	color: white
+;
+}

@@ -1,0 +1,131 @@
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	border: 0px;
+}
+
+a img {
+border-width:0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	border: 0px;
+	background: url(img/fundo.bmp);
+	background-repeat: repeat-x;
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+}
+
+#barracima {
+	width: 100%;
+	position: relative;
+	margin: 0;
+	margin-top: 0%;
+	background: url(img/bloco.gif);
+	background-repeat: repeat-x;
+	height: 2%;
+	background-size: 1% 100%;
+	border: 0;
+	-moz-background-size: 1% 100%;
+}
+
+#divisao {
+	width: 100%;
+	position: relative;
+	margin: 0;
+	margin-top: 0%;
+	background: url(img/bloco.gif);
+	background-repeat: repeat-x;
+	height: 2%;
+	background-size: 1% 100%;
+	border: 0;
+	-moz-background-size: 1% 100%;
+}
+
+#barralado1 {
+	position: absolute;
+	margin-top: 0%;
+	margin-left: 22.5%;
+	margin-bottom: 0px;
+	width: 5%;
+	height: 86%;
+	float: left;
+	background: url(img/barralado1.bmp);
+	background-repeat: repeat-y;
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+}
+
+#barralado2 {
+	position: relative;
+	margin-top: 0%;
+	margin-left: 0%;
+	margin-right: 22.5%;
+	margin-bottom: 0px;
+	width: 5%;
+	height: 86%;
+	float: right;
+	background: url(img/barralado2.bmp);
+	background-repeat: repeat-y;
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+}
+
+#centro {
+	position: absolute;
+	height: 86%;
+	width: 50%;
+	margin-top: 0%;
+	margin-left: 27.5%;
+	margin-bottom: 0%;
+	background: white;
+	background-size: 100% 100%;
+	border: 0px;
+	-moz-background-size: 100% 100%;
+}
+
+
+
+.style2 {
+	color: white;
+	float: center;
+}
+
+.style1 {
+	position: absolute;
+	float: center;
+	color: blue;
+	text-align: center;
+	margin-left: 17%;
+}
+
+body iframe {
+	width: 45%;
+	height: 80%;
+	position: absolute;
+	margin-left: 27.5%;
+	border: 0px;
+}
+
+#menu {
+	position: relative;
+	width: 100%;
+	height: 10%;
+	background: url(img/blocovermelho.png);
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	margin: 0%;
+	border: 0%;
+	font-size: larger;
+	color: #FFD700;
+	font-family: Belwe Cn Bt;
+}
+
+body h1 {
+	border: 0px;
+	margin: 0px;
+}
