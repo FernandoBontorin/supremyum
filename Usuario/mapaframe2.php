@@ -9,8 +9,8 @@ $player=" ";
 $aldeia=" ";
 $pop=" ";
 $clan=" ";
-$valuesub=" ";
-$cood = $_GET['cood'];
+$idald=" ";
+@$cood = $_GET['cood'];
 
 $consultasmap8 = mysql_query("select * from aldeias where xy = '$cood'");
 	$linhasmap9 = mysql_num_rows($consultasmap8);
@@ -23,7 +23,7 @@ $pop = $linhasmap8->pop;
 $clan = $linhasmap8->clan;
 $x = $linhasmap8->x;
 $y = $linhasmap8->y;
-$valuesub = $linhasmap8->ID;
+$idald = $linhasmap8->ID;
 }
 }
 ?>
@@ -32,9 +32,38 @@ $valuesub = $linhasmap8->ID;
 <body margin="0" border="0">
 <center>
 <table border="1" cellpadding="0" cellspacing="0">
-<td colspan="2" width="100" align="center"><b>Coordenadas:</b></td><td colspan="2" width="100" align="center"><?php echo"<b>X:</b>".$x."  <b>Y:</b>".$y;?></td><tr><td width="100" align="center"><b>Jogador:</b></td><td width="100" align="center"><?php echo"$player";?></td><td width="100" align="center"><b>Aldeia:</b></td><td width="100" align="center"><?php echo"$aldeia";?></td><tr><td width="100" align="center"><b>População:</b></td><td width="100" align="center"><?php echo"$pop";?></td><td width="100" align="center"><b>Clã:</b></td><td width="100" align="center"><?php echo"$clan";?></td></tr><tr><td colspan="4" width="100" align="center"><input type="submit" value="<?php echo $valuesub;?>"></td></tr>
+<td colspan="2" width="100" align="center"><b>Coordenadas:</b></td>
+<td colspan="2" width="100" align="center"><?php echo"<b>X:</b>".$x."  <b>Y:</b>".$y;?></td>
+<tr>
+<td width="100" align="center"><b>Jogador:</b></td>
+<td width="100" align="center"><?php echo"$player";?></td>
+<td width="100" align="center"><b>Aldeia:</b></td><td width="100" align="center"><?php echo"$aldeia";?></td>
+<tr>
+<td width="100" align="center"><b>População:</b></td>
+<td width="100" align="center"><?php echo"$pop";?></td>
+<td width="100" align="center"><b>Clã:</b></td>
+<td width="100" align="center"><?php echo"$clan";?></td></tr>
+<tr>
+<td colspan="4" width="100" align="center">
+	<form action="aldprof.php" name="fald" id="fald"  method="get" enctype="multipart/form-data" target="_blank">
+		<input type="hidden" value="<?php echo $aldeia;?>" name="aldeiapver" id="aldeiapver">
+		<input type="hidden" value="<?php echo $idald;?>" name="idpver" id="idpver">
+		<?php 
+		If($linhasmap9 != 0){
+		$mostrar = "Ver página da aldeia: ".$aldeia; 
+		$akkk = 1;
+		} else {
+		$mostrar = "";
+		$akkk = 0;
+		}?>
+		<?php If($akkk != 0){
+		echo'
+		<input type="submit" value="Ver página da aldeia: '.$aldeia.'">';}?>
+	</form>
+</td></tr>
 </table>
 </center>
+<?php ?>
 </body>
 </html>
 

@@ -6,11 +6,11 @@
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="barracima" name="barracima">
+<div id="barracima">
 </div>
 <div id="menu" name="menu">
 <center>
-<h1><b>American War</b></h1>
+<h1><b>Supremyum</b></h1>
 </center>
 </div>
 <div id="divisao" name="divisao">

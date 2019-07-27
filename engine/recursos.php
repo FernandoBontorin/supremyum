@@ -139,7 +139,7 @@ $attouro = mysql_query("UPDATE aldeias SET ouro = ($ouroaposconta / 3600) * $tem
 $attferro = mysql_query("UPDATE aldeias SET ferro = ($ferroaposconta / 3600) * $tempoparaup + ferro WHERE dono = '$login_usuario'");
 $attcomida = mysql_query("UPDATE aldeias SET comida = ($comidaaposconta / 3600) * $tempoparaup + comida WHERE dono = '$login_usuario'");
 $attpop = mysql_query("UPDATE aldeias SET pop = $population WHERE dono = '$login_usuario'");
-
+$attpop2 = mysql_query("UPDATE dados_usuarios SET pop = $population WHERE Login = '$login_usuario'");
 
 
 $consulta3000533 = mysql_query("select * from aldeias where dono = '$login_usuario'");

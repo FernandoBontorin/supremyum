@@ -77,21 +77,25 @@ if($nome == "") {
 }
 
 If($localizacao=="-x+y") {
+$reg = "2";
 $x = rand(-5,0);
 $y = rand(0,5);
 }
 
 If($localizacao=="-x-y") {
+$reg = "3";
 $x = rand(-5,0);
 $y = rand(-5,0);
 }
 
 If($localizacao=="+x+y") {
+$reg = "1";
 $x = rand(0,5);
 $y = rand(0,5);
 }
 
 If($localizacao=="+x-y") {
+$reg = "4";
 $x = rand(0,5);
 $y = rand(-5,0);
 }
@@ -102,13 +106,15 @@ echo$dono;
 
 // faz consulta no banco para inserir os dados do usuario
 $sql = ("UPDATE dados_usuarios SET vilas = 1 WHERE Login = '$dono' ");
+
+
 $consulta78 = mysql_query($sql);
 
 
 
 
 // faz consulta no banco para inserir os dados do usuario
-$sql = "insert into aldeias (ID,dono,nome,povo,pontosdeprevisao,madeira,ouro,ferro,comida,capacidade,lealdade,x,y,xy,madeirahora,ourohora,ferrohora,comidahora) values ('','$dono','$nome','$civilizacao','$pontosdeprevisao','$madeira','$ouro','$ferro','$comida','$capacidade','$lealdade','$x','$y','$xy','$madeiradb','$ourodb','$ferrodb','$comidadb')";
+$sql = "insert into aldeias (ID,dono,nome,povo,pontosdeprevisao,madeira,ouro,ferro,comida,capacidade,lealdade,x,y,xy,reg,madeirahora,ourohora,ferrohora,comidahora) values ('','$dono','$nome','$civilizacao','$pontosdeprevisao','$madeira','$ouro','$ferro','$comida','$capacidade','$lealdade','$x','$y','$xy','$reg','$madeiradb','$ourodb','$ferrodb','$comidadb')";
 $sqlM = "insert into mapaview (id,dono,x,y) values ('','$dono','$x','$y')";
 $consulta78 = mysql_query($sql);
 $consulta79 = mysql_query($sqlM);

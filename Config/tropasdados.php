@@ -23,6 +23,7 @@ $p11nome = "Italianos";
 $p12nome = "Portugueses";
 $p13nome = "Russos";
 $p14nome = "Suíços";
+$p999nome = "ESPARTANO!";
 $p15nome = "Turcos";
 
 

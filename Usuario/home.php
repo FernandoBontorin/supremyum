@@ -142,6 +142,9 @@ echo '
 </div>
 
 
+<div id="linkest" name="linkest">
+<a href="rank.php"><img src="../img/flamulaest.png"></a>
+</div>
 
 
 

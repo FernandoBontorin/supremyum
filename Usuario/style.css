@@ -266,6 +266,14 @@ position: absolute;
 	margin-top: 80px;
 }
 
+#linkest {
+	float: right;
+	position: absolute;
+	right: 0;
+	margin-right: 5px;
+	margin-top: 80px;
+}
+
 #linkmartelo img {
 	width: 100%;
 }

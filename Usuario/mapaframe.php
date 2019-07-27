@@ -29,6 +29,21 @@ $x = $linhamapa2 -> x;
 $y = $linhamapa2 ->y;
 $var1 = $_GET['var1'];
 $motion = $_GET['motion'];
+$irx = $_GET['irx'];
+$iry = $_GET['iry'];
+
+
+
+If($irx != 0) {
+$affewx = $irx;
+$xmod = $affewx - $x;}
+
+If($iry != 0) {
+$affewy = $iry;
+$ymod = $affewy - $y;}
+
+
+
 If($motion == 01) {
 $xmod = 0;
 $ymod = 1; }
@@ -45,6 +60,8 @@ If($motion == -01) {
 $xmod = 0;
 $ymod = -1; }
 
+
+
 $updx = mysql_query("update mapaview set x = $x + $xmod where dono = '$login_usuario'");
 $updy = mysql_query("update mapaview set y = $y + $ymod where dono = '$login_usuario'");
 
@@ -52,6 +69,11 @@ $x = $linhamapa2 -> x;
 $y = $linhamapa2 ->y;
 $xlol = $x;
 $ylol = $y;
+
+
+
+
+
 
 $x1 = ($x - 4) + $xmod;
 $y1 = ($y + 4) + $ymod;
@@ -219,7 +241,7 @@ $y81 = ($y - 4) + $ymod;
 If ($var1 != 0) {
 $updcood1 = mysql_query("update mapaview set x = $linhaald2->x where dono = '$login_usuario'");
 $updcood2 = mysql_query("update mapaview set y = $linhaald2->y where dono = '$login_usuario'");
-echo'<meta http-equiv="refresh" content="0;URL=mapaframe.php?var1=0&motion=0">';
+echo'<meta http-equiv="refresh" content="0;URL=mapaframe.php?var1=0&motion=0&irx=&iry=">';
 }
 $var1 = 0;
 $identx = "0";
@@ -258,18 +280,18 @@ echo '
 
 
 <center>
-<iframe src="mapaframe2.php?cood=" id="mf2" name="mf2" frameborder="0" scrolling="no" margin="0" height="110"></iframe>
-
+<iframe src="mapaframe2.php?cood=" id="mf2" name="mf2" frameborder="0" scrolling="no" margin="0" height="140" width="100%"></iframe>
+<br>
 
 <b>
 <div id="tmap" name="tmap">
-<table id="map" name="map" border="1" cellpading="0" cellspacing="0"  height="260" >
-<div><td align="center"></td><td align="center"><font color="blue"><?php echo $x1;?></font></td><td align="center"><font color="blue"><?php echo $x2;?></font></td><td align="center"><font color="blue"><?php echo $x3;?></font></td><td align="center"><font color="blue"><?php echo $x4;?></font></td><td align="center"><font color="blue"><?php echo $x5;?></font></td><td align="center"><font color="blue"><?php echo $x6;?></font></td><td align="center"><font color="blue"><?php echo $x7;?></font></td><td align="center"><font color="blue"><?php echo $x8;?></font></td><td align="center"><font color="blue"><?php echo $x9;?></font></td>   <tr>
+<table id="map" name="map" border="1" cellpadding="0" cellspacing="0"  height="260" >
+<div><td align="center"></td><td align="center"><font color="blue"><?php echo $x1;?></font></td><td align="center"><font color="blue"><?php echo $x2;?></font></td><td align="center"><font color="blue"><?php echo $x3;?></font></td><td align="center"><font color="blue"><?php echo $x4;?></font></td><td align="center"><font color="black"><?php echo $x5;?></font></td><td align="center"><font color="blue"><?php echo $x6;?></font></td><td align="center"><font color="blue"><?php echo $x7;?></font></td><td align="center"><font color="blue"><?php echo $x8;?></font></td><td align="center"><font color="blue"><?php echo $x9;?></font></td>   <tr>
 <td align="center"><font color="red"><?php echo $y1;?></font></td><td align="center"><a href="#"><?php smap($identx = "x1",$identy = "y1",$imagem = "0");?></a></td><td align="center"><?php smap($identx = "x2",$identy = "y2",$imagem = "0");?></td><td align="center"><a href="#"><?php smap($identx = "x3",$identy = "y3",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x4",$identy = "y4",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x5",$identy = "y5",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x6",$identy = "y6",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x7",$identy = "y7",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x8",$identy = "y8",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x9",$identy = "y9",$imagem = "0");?></a></td>   </tr><tr>
 <td align="center"><font color="red"><?php echo $y10;?></font></td><td align="center"><a href="#"><?php smap($identx = "x10",$identy = "y10",$imagem = "0");?></a></td><td align="center"><?php smap($identx = "x11",$identy = "y11",$imagem = "0");?></td><td align="center"><a href="#"><?php smap($identx = "x12",$identy = "y12",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x13",$identy = "y13",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x14",$identy = "y14",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x15",$identy = "y15",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x16",$identy = "y16",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x17",$identy = "y17",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x18",$identy = "y18",$imagem = "0");?></a></td>   </tr><tr>
 <td align="center"><font color="red"><?php echo $y19;?></font></td><td align="center"><a href="#"><?php smap($identx = "x19",$identy = "y19",$imagem = "0");?></a></td><td align="center"><?php smap($identx = "x20",$identy = "y20",$imagem = "0");?></td><td align="center"><a href="#"><?php smap($identx = "x21",$identy = "y21",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x22",$identy = "y22",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x23",$identy = "y23",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x24",$identy = "y24",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x25",$identy = "y25",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x26",$identy = "y26",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x27",$identy = "y27",$imagem = "0");?></a></td>   </tr><tr>
 <td align="center"><font color="red"><?php echo $y28;?></font></td><td align="center"><a href="#"><?php smap($identx = "x28",$identy = "y28",$imagem = "0");?></a></td><td align="center"><?php smap($identx = "x29",$identy = "y29",$imagem = "0");?></td><td align="center"><a href="#"><?php smap($identx = "x30",$identy = "y30",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x31",$identy = "y31",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x32",$identy = "y32",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x33",$identy = "y33",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x34",$identy = "y34",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x35",$identy = "y35",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x36",$identy = "y36",$imagem = "0");?></a></td>   </tr><tr>
-<td align="center"><font color="red"><?php echo $y37;?></font></td><td align="center"><a href="#"><?php smap($identx = "x37",$identy = "y37",$imagem = "0");?></a></td><td align="center"><?php smap($identx = "x38",$identy = "y38",$imagem = "0");?></td><td align="center"><a href="#"><?php smap($identx = "x39",$identy = "y39",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x40",$identy = "y40",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x41",$identy = "y41",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x42",$identy = "y42",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x43",$identy = "y43",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x44",$identy = "y44",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x45",$identy = "y45",$imagem = "0");?></a></td>   </tr><tr>
+<td align="center"><font color="black"><?php echo $y37;?></font></td><td align="center"><a href="#"><?php smap($identx = "x37",$identy = "y37",$imagem = "0");?></a></td><td align="center"><?php smap($identx = "x38",$identy = "y38",$imagem = "0");?></td><td align="center"><a href="#"><?php smap($identx = "x39",$identy = "y39",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x40",$identy = "y40",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x41",$identy = "y41",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x42",$identy = "y42",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x43",$identy = "y43",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x44",$identy = "y44",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x45",$identy = "y45",$imagem = "0");?></a></td>   </tr><tr>
 <td align="center"><font color="red"><?php echo $y46;?></font></td><td align="center"><a href="#"><?php smap($identx = "x46",$identy = "y46",$imagem = "0");?></a></td><td align="center"><?php smap($identx = "x47",$identy = "y47",$imagem = "0");?></td><td align="center"><a href="#"><?php smap($identx = "x48",$identy = "y48",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x49",$identy = "y49",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x50",$identy = "y50",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x51",$identy = "y51",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x52",$identy = "y52",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x53",$identy = "y53",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x54",$identy = "y54",$imagem = "0");?></a></td>   </tr><tr>
 <td align="center"><font color="red"><?php echo $y55;?></font></td><td align="center"><a href="#"><?php smap($identx = "x55",$identy = "y55",$imagem = "0");?></a></td><td align="center"><?php smap($identx = "x56",$identy = "y56",$imagem = "0");?></td><td align="center"><a href="#"><?php smap($identx = "x57",$identy = "y57",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x58",$identy = "y58",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x59",$identy = "y59",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x60",$identy = "y60",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x61",$identy = "y61",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x62",$identy = "y62",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x63",$identy = "y63",$imagem = "0");?></a></td>   </tr><tr>
 <td align="center"><font color="red"><?php echo $y64;?></font></td><td align="center"><a href="#"><?php smap($identx = "x64",$identy = "y64",$imagem = "0");?></a></td><td align="center"><?php smap($identx = "x65",$identy = "y65",$imagem = "0");?></td><td align="center"><a href="#"><?php smap($identx = "x66",$identy = "y66",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x67",$identy = "y67",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x68",$identy = "y68",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x69",$identy = "y69",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x70",$identy = "y70",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x71",$identy = "y71",$imagem = "0");?></a></td><td align="center"><a href="#"><?php smap($identx = "x72",$identy = "y72",$imagem = "0");?></a></td>   </tr><tr>
