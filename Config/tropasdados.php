@@ -1,5 +1,4 @@
 <?php
-include "config_sistema.php";
 include "../engine/recursos.php";
 include_once "../Config/formulas.php";
 
@@ -109,7 +108,7 @@ $t15o = "200";
 $t15f = "120";
 $t15c = "70";
 $t15TEMPO = "00:22:30";
-//T15TD NÃO ESTÁ PRONTO! TODOS DE CAVALARIA ESTAO ERRADOS!----------------------------------------------------------------------------------------------.
+//T15TD Nï¿½O ESTï¿½ PRONTO! TODOS DE CAVALARIA ESTAO ERRADOS!----------------------------------------------------------------------------------------------.
 $t15tD = HtoS($t15TEMPO) / 100 * ($linhaconfigCS->quartelnv) * 2;
 $t15t = StoH(HtoS($t15TEMPO) - $t15tD) ;
 $t15con = "2.0";

@@ -1,14 +1,6 @@
 <?php
-include "config_sistema.php";
-
-
 $limit = set_time_limit(0);
-
-
-
-
-
-include "tropasdados.php";
+include_once "tropasdados.php";
 include_once "formulas.php";
 
 $consulta1 = mysql_query("select * from dados_usuarios where ID");
