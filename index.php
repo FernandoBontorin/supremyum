@@ -1,81 +1,28 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
+    <head>
+        <title>Supremyum - War Game Browser</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="icon" type="image/png" href="img/shield.png" sizes="160x160" />
+    </head>
 
-<!--[if IE 5]>
-<script type="text/javascript">window.location.href = "atualize-navegador.html";</script>
-<![endif]-->
-
-<!--[if IE 6]>
-<script type="text/javascript">window.location.href = "atualize-navegador.html";</script>
-<![endif]-->
-
-<!--[if IE 7]>
-<script type="text/javascript">window.location.href = "atualize-navegador.html";</script>
-<![endif]-->
-
-<!--[if IE 8]>
-<script type="text/javascript">window.location.href = "atualize-navegador.html";</script>
-<![endif]-->
-
-<!--[if IE 9]>
-<script type="text/javascript">window.location.href = "atualize-navegador.html";</script>
-<![endif]-->
-
-
-<title>Supremyum | War Game Browser</title>
-
-<link href="style.css" rel="stylesheet" type="text/css" />
-
-</head>
-
-<body>
-
-<div id="barracima">
-
-</div>
-
-<div id="menu">
-
-<center>
-
-<img src="img/banner.png" style="margin-top: 8px;" border="0" alt="Supremyum"></img>
-
-</center>
-
-</div>
-
-<div id="divisao">
-
-</div>
-
-<div id="bg1">
-
-</div>
-
-<div id="barralado1">
-
-</div>
-
-<div id="centro">
-
-</div>
-
-<div id="barralado2">
-
-</div>
-
-<div id="bg2">
-
-</div>
-
-<iframe name="iframe" id="iframe" src="login.php" scrolling="yes">
-
-</iframe>
-
-</body>
-
+    <body>
+        <div class="headerbanner">
+            <img src="img/banner.png" title="banner" class="banner-img">
+            <div class="banner-block"></div>
+        </div>
+        <div class="panel">
+            <img src="img/pikeman.png" title="pikeman" class="pikeman-img">
+            <div class="panel-login">
+                <img src="img/shield.png" class="panel-login-logo-img">
+                <hr>
+                <div class="panel-login-input"><span class="cursive">Nickname: </span><input id="nickname" type="text"></label></div>
+                <div class="panel-login-input"><span class="cursive">Password: </span><input id="password" type="password"></label></div>
+                <div class="panel-login-input"><button class="cursive login">Login</button></div>
+            </div>
+            <img src="img/musketeer.png" title="musketeer" class="musketeer-img">
+        </div>
+    </body>
 </html>
 

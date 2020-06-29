@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de Dados: `cadastro`
+-- Banco de Dados: `supremyum`
 --
 
 -- --------------------------------------------------------
@@ -27,10 +27,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `aldeias` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `dono` varchar(80) NOT NULL,
   `nome` varchar(50) NOT NULL,
-  `clan` text NOT NULL,
   `povo` int(15) NOT NULL,
   `pop` int(10) unsigned NOT NULL DEFAULT '5',
   `popdisponivel` varchar(50) NOT NULL DEFAULT '5',
@@ -117,21 +116,8 @@ CREATE TABLE IF NOT EXISTS `aldeias` (
   `edtnv` varchar(50) NOT NULL DEFAULT '0',
   `quartelvalid` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Extraindo dados da tabela `aldeias`
---
-
-INSERT INTO `aldeias` (`ID`, `dono`, `nome`, `clan`, `povo`, `pop`, `popdisponivel`, `pontosdeprevisao`, `madeira`, `ouro`, `ferro`, `comida`, `capacidade`, `capacidadecomida`, `lealdade`, `x`, `y`, `nivelfundacao`, `nivelmadeira`, `madeirahora`, `ourohora`, `ferrohora`, `comidahora`, `nivelouro`, `nivelferro`, `nivelcomida`, `xy`, `reg`, `eda`, `edb`, `edc`, `edd`, `ede`, `edf`, `edg`, `edh`, `edi`, `edj`, `edk`, `edl`, `edm`, `edn`, `edo`, `edp`, `edq`, `edr`, `eds`, `edt`, `madeiratempodestino`, `madeiratrabalhadores`, `ourotempodestino`, `ourotrabalhadores`, `ferrotempodestino`, `ferrotrabalhadores`, `comidatempodestino`, `comidatrabalhadores`, `edanv`, `edbnv`, `edcnv`, `galpaonv`, `galpaotempodestino`, `galpaotrabalhadores`, `edenv`, `edfnv`, `edgnv`, `edcentralnv`, `edcentraltempodestino`, `edcentraltrabalhadores`, `armazemnv`, `armazemtempodestino`, `armazemtrabalhadores`, `edjnv`, `edknv`, `quartelnv`, `quarteltempodestino`, `quarteltrabalhadores`, `edmnv`, `ednnv`, `cpmnv`, `cpmtempodestino`, `cpmtrabalhadores`, `edpnv`, `edqnv`, `edrnv`, `estabulonv`, `estabulotempodestino`, `estabulotrabalhadores`, `edtnv`, `quartelvalid`) VALUES
-(4, 'aff', 'gfdsh', '', 1, 5, '5', 0, 500.14822, 500.14822, 500.14822, 700.14819, 1000, 1100, 100, 3, 0, 1, 1, 2, 2, 2, 2, 1, 1, 1, '30', 1, '0', '0', '0', '0', '0', '0', '0', 'ed1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 0, 0, '0', '0', '0', '0', 0, 0, '0', 1),
-(5, 'lok', 'hgsh', '', 1, 5, '5', 0, 500.39944, 500.39944, 500.39944, 700.39941, 1000, 1100, 100, -4, 4, 1, 1, 2, 2, 2, 2, 1, 1, 1, '-44', 2, '0', '0', '0', '0', '0', '0', '0', 'ed1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 0, 0, '0', '0', '0', '0', 0, 0, '0', 1),
-(6, 'shadowbr', 'jhgd', 'TST', 1, 26, '24', 0, 1000.00000, 1000.00000, 1000.00000, 1100.00000, 1000, 1100, 100, 5, 3, 1, 20, 800, 2, 2, 8, 1, 1, 2, '53', 1, '0', '0', '0', '0', '0', '0', '0', 'ed1', '0', '0', '0', 'quartel', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1364511308', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 1, '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', 0, 0, '0', '0', '0', '0', 0, 0, '0', 1),
-(7, 'kk', 'fdasg', '', 1, 5, '5', 0, 1000.00000, 1000.00000, 1000.00000, 1100.00000, 1000, 1100, 100, 5, -2, 1, 1, 2, 2, 2, 2, 1, 1, 1, '5-2', 4, '0', '0', '0', '0', '0', '0', '0', 'ed1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 0, 0, '0', '0', '0', '0', 0, 0, '0', 1),
-(8, 'fulano1', 'dad', '', 10, 12, '12', 0, 500.62274, 500.27274, 500.27274, 700.27271, 1000, 1100, 100, -5, -1, 1, 8, 128, 2, 2, 2, 1, 1, 1, '-5-1', 3, '0', '0', '0', '0', '0', '0', '0', 'ed1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 0, 0, '0', '0', '0', '0', 0, 0, '0', 1),
-(9, 'fulano2', '001 - Dominator', '', 9, 5, '5', 0, 500.06110, 500.06110, 500.06110, 700.06110, 1000, 1100, 100, -4, -3, 1, 1, 2, 2, 2, 2, 1, 1, 1, '-4-3', 3, '0', '0', '0', '0', '0', '0', '0', 'ed1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 0, 0, '0', '0', '0', '0', 0, 0, '0', 1),
-(10, 'fulano3', '001 - DominatorLOL', '', 14, 5, '5', 0, 500.35052, 500.35052, 500.35052, 700.35052, 1000, 1100, 100, 4, -1, 1, 1, 2, 2, 2, 2, 1, 1, 1, '4-1', 4, '0', '0', '0', '0', '0', '0', '0', 'ed1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 0, 0, '0', '0', '0', '0', 0, 0, '0', 1),
-(11, 'fulano4', '01 - LOL', '', 15, 5, '5', 0, 506.02094, 506.02094, 506.02094, 706.02081, 1000, 1100, 100, 2, -1, 1, 1, 2, 2, 2, 2, 1, 1, 1, '2-1', 4, '0', '0', '0', '0', '0', '0', '0', 'ed1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 0, 0, '0', '0', '0', '0', 0, 0, '0', 1);
 
 -- --------------------------------------------------------
 
@@ -146,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `ataques` (
   `povorem` int(10) NOT NULL,
   `povodest` int(10) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -157,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `ataques` (
 CREATE TABLE IF NOT EXISTS `config` (
   `tempo` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `time` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `config`
@@ -186,27 +172,7 @@ CREATE TABLE IF NOT EXISTS `dados_usuarios` (
   `pop` int(200) NOT NULL,
   `clan` text NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
-
---
--- Extraindo dados da tabela `dados_usuarios`
---
-
-INSERT INTO `dados_usuarios` (`ID`, `Login`, `Senha`, `Email`, `Pergunta`, `Resposta`, `online`, `povo`, `vilas`, `gold`, `pop`, `clan`) VALUES
-(1, 'Admin', '123890q', 'admin@admin', 'admin', 'admin', 0, 999, 0, 0, 1, 'ADM'),
-(7, 'aff', 'aa', 'aa', 'aa', 'aa', 0, 1, 1, 0, 5, ''),
-(8, 'lok', 'aa', 'aa', 'aa', 'aa', 0, 1, 1, 0, 5, ''),
-(9, 'ShaDoWBR', '123890q', 'aa', 'aa', 'aa', 0, 1, 1, 0, 26, 'TST'),
-(10, 'kk', 'kk', 'kk', 'kk', 'kk', 0, 1, 1, 0, 5, ''),
-(11, 'fulano1', 'aa', 'aa', 'aa', 'aa', 0, 10, 1, 0, 12, ''),
-(12, 'fulano2', 'aa', 'aa', 'aa', 'aa', 0, 9, 1, 0, 5, ''),
-(13, 'fulano3', 'aa', 'aa', 'aa', 'aa', 0, 14, 1, 0, 5, ''),
-(14, 'fulano4', 'aa', 'aa', 'aa', 'aa', 0, 15, 1, 0, 5, ''),
-(15, 'fulano5', 'aa', 'aa', 'aa', 'aa', 0, 2, 0, 0, 0, ''),
-(16, 'fulano6', 'aa', 'aa', 'aa', 'aa', 0, 7, 0, 0, 0, ''),
-(17, 'fulano7', 'aa', 'aa', 'aa', 'aa', 0, 5, 0, 0, 0, '');
-
--- --------------------------------------------------------
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
 -- Estrutura da tabela `fila`
@@ -228,21 +194,7 @@ CREATE TABLE IF NOT EXISTS `fila` (
   `t14` int(11) NOT NULL,
   `t14timecmc` int(90) NOT NULL DEFAULT '0',
   `t14timefim` int(90) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `fila`
---
-
-INSERT INTO `fila` (`aldeiaid`, `dono`, `algo`, `t11`, `t11timecmc`, `t11timefim`, `t12`, `t12timecmc`, `t12timefim`, `t13`, `t13timecmc`, `t13timefim`, `t14`, `t14timecmc`, `t14timefim`) VALUES
-(4, 'aff', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(5, 'lok', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(6, 'shadowbr', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(7, 'kk', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(8, 'fulano1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(9, 'fulano2', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(10, 'fulano3', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(11, 'fulano4', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -257,21 +209,7 @@ CREATE TABLE IF NOT EXISTS `mapaview` (
   `y` int(90) NOT NULL,
   `var1` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
-
---
--- Extraindo dados da tabela `mapaview`
---
-
-INSERT INTO `mapaview` (`id`, `dono`, `x`, `y`, `var1`) VALUES
-(1, '0', 3, 0, 0),
-(2, '0', -4, 4, 0),
-(3, 'shadowbr', 5, 3, 0),
-(4, 'kk', 5, -2, 0),
-(5, 'fulano1', -1, 3, 0),
-(6, 'fulano2', -4, -3, 0),
-(7, 'fulano3', 4, -1, 0),
-(8, 'fulano4', 2, -1, 0);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -280,31 +218,13 @@ INSERT INTO `mapaview` (`id`, `dono`, `x`, `y`, `var1`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `mensagens` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `remetente` varchar(50) NOT NULL,
   `destino` text NOT NULL,
   `assunto` text NOT NULL,
   `mensagem` text NOT NULL,
   KEY `ID` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `teste`
---
-
-CREATE TABLE IF NOT EXISTS `teste` (
-  `aa` int(11) NOT NULL,
-  `lol` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `teste`
---
-
-INSERT INTO `teste` (`aa`, `lol`) VALUES
-(10, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -333,21 +253,8 @@ CREATE TABLE IF NOT EXISTS `tropas` (
   `t27` int(40) NOT NULL,
   `t28` int(40) NOT NULL,
   `t29` int(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `tropas`
---
-
-INSERT INTO `tropas` (`IDaldeia`, `dono`, `t11`, `t12`, `t13`, `t14`, `t15`, `t16`, `t17`, `t18`, `t19`, `t21`, `t22`, `t23`, `t24`, `t25`, `t26`, `t27`, `t28`, `t29`) VALUES
-('4', 'aff', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('5', 'lok', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('6', 'shadowbr', 2, 3, 1, 6, 5, 7, 8, 7, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('7', 'kk', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('8', 'fulano1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('9', 'fulano2', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('10', 'fulano3', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('11', 'fulano4', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
